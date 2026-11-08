@@ -132,28 +132,7 @@
     "2": [
       {
         "from": "start",
-        "to": "08:40",
-        "who": "family",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "start",
-        "to": "08:35",
-        "who": "solo",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "08:40",
-        "to": "09:50",
-        "who": "family",
+        "to": "09:30",
         "legs": [
           {
             "mode": "rail",
@@ -179,74 +158,35 @@
         ]
       },
       {
-        "from": "09:50",
+        "from": "09:30",
         "to": "11:00",
-        "who": "family",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "11:00",
-        "to": "11:45",
-        "who": "family",
         "legs": [
           {
             "mode": "rail",
             "relation": 7215409,
             "label": "東急世田谷線",
             "board": "宮の坂",
-            "alight": "下高井戸"
+            "alight": "山下"
           },
           {
             "mode": "rail",
-            "relation": 11271039,
-            "label": "京王線",
-            "board": "下高井",
+            "relation": 9483158,
+            "label": "小田急線",
+            "board": "豪徳寺",
             "alight": "新宿"
-          }
-        ]
-      },
-      {
-        "from": "08:35",
-        "to": "09:15",
-        "who": "solo",
-        "legs": [
+          },
           {
-            "mode": "subway",
-            "relation": 5375678,
-            "label": "地下鐵 副都心線",
-            "board": "池袋",
-            "alight": "明治神宮前〈原宿〉"
+            "mode": "rail",
+            "relation": 1972920,
+            "label": "JR 山手線 外回り",
+            "board": "新宿",
+            "alight": "原宿"
           }
         ]
       },
       {
-        "from": "09:15",
-        "to": "10:30",
-        "who": "solo",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "10:30",
-        "to": "11:15",
-        "who": "solo",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "11:15",
-        "to": "11:45",
-        "who": "solo",
+        "from": "11:00",
+        "to": "13:30",
         "legs": [
           {
             "mode": "subway",
@@ -258,62 +198,8 @@
         ]
       },
       {
-        "from": "11:45",
-        "to": "13:15",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "13:15",
-        "to": "13:30",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
         "from": "13:30",
-        "to": "16:30",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "13:30",
-        "to": "18:40",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "16:30",
-        "to": "18:40",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "18:40",
         "to": "19:00",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "19:00",
-        "to": "20:30",
         "legs": [
           {
             "mode": "walk"
