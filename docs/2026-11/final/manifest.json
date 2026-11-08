@@ -1,0 +1,20 @@
+{
+  "name": "東京秋季家族之旅｜11/14 - 11/22",
+  "short_name": "東京 2026",
+  "description": "2026年11月14日至22日 東京・鎌倉・高尾山・富士河口湖 家族行程表",
+  "lang": "zh-TW",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF8F5",
+  "theme_color": "#B5451B",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

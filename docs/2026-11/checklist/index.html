@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>行前 Check List｜東京秋季家族之旅 2026</title>
+<meta name="description" content="赴日旅遊行前準備確認清單 — 證件、入境、保險、網路">
+<meta name="theme-color" content="#B5451B">
+<link rel="stylesheet" href="../../assets/base.css">
+<link rel="stylesheet" href="../../assets/checklist.css">
+</head>
+<body>
+
+<header class="site-header" data-hero>
+  <div class="container">
+    <h1>✅ 行前 Check List</h1>
+    <p class="sub">2026 年 11 月 14 日（六）～22 日（日）｜9 天 8 夜</p>
+    <div class="toolbar">
+      <a class="tb-link" href="../../index.html">← 回首頁</a>
+      <a class="tb-link" href="../final/index.html">📅 行程表</a>
+      <a class="tb-link" href="../budget/index.html">💴 預算</a>
+      <button type="button" onclick="window.print()">🖨️ 列印</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <div class="summary">
+      <div class="summary-row">
+        <strong>完成進度</strong>
+        <span><span class="pct" id="pct">0%</span> <span style="font-size:0.78rem;color:var(--muted)" id="count"></span></span>
+      </div>
+      <div class="progress"><span id="bar" style="width:0%"></span></div>
+      <p class="hint" style="margin:10px 0 0">
+        勾選狀態存在這台裝置的瀏覽器裡。已經做完的項目直接打勾就好。
+      </p>
+    </div>
+
+    <div id="groups"></div>
+
+    <div class="btn-row">
+      <button class="btn" type="button" onclick="uncheckAll()">↺ 全部取消勾選</button>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>共 14 組、72 項（2026-11-07 查證）．出發前請再次確認官方最新規定</p>
+</footer>
+
+<script src="../../assets/hero/hero.js"></script>
+<script>
+/* 這趟的 Check List 項目，畫面與勾選邏輯在 ../../assets/checklist.js */
+/* tag: need=必帶 / must=必辦 / rec=建議 / when=時程提醒 / info=須知 */
+window.CHECKLIST = [
+  {
+    id: 'doc', title: '🛂 證件與入境', note: '建議出發前 1 個月完成；9 個人的護照都要檢查',
+    items: [
+      { id: 'passport', t: '護照效期確認（9 個人，含小孩）', tag: 'must',
+        d: '台灣旅客赴日免簽、可停留 90 天。日本要求護照效期涵蓋停留期間，但實務上建議保留 <b>6 個月以上</b>效期，以免在航空公司報到時被刁難。小孩的護照也要看效期。' },
+      { id: 'vjw', t: '登錄 Visit Japan Web，產生入境 QR Code', tag: 'rec',
+        d: '整合「入境審查」與「海關申報」的線上登錄。<b>非強制</b>（現場仍可填紙本），但能大幅縮短排隊時間。成田機場有自助機，可用 QR Code 一次完成入境審查＋海關。<a href="https://services.digital.go.jp/en/visit-japan-web/" target="_blank" rel="noopener">官方網站</a>' },
+      { id: 'vjw-save', t: 'QR Code 截圖存在手機相簿', tag: 'rec',
+        d: '機場網路不一定穩，別只靠現場開網頁。同行家人可在同一組帳號下一起登錄，長輩與小孩的資料請由家人代為輸入。' },
+      { id: 'egate', t: '台灣端 e-Gate 自動查驗通關註冊', tag: 'rec',
+        d: '年滿 <b>10 歲、身高 120cm 以上</b>的有戶籍國民即可辦，<b>免費、不必事先線上申請</b>。直接到機場 e-Gate 閘道用護照掃描、錄存臉部影像即可，約 30 秒完成。註冊後<b>永久有效</b>，換新護照也不必重辦。' },
+      { id: 'copy', t: '護照影本／電子檔備份', tag: 'rec',
+        d: '護照遺失時補辦所需。建議存雲端一份、印一份紙本分開放。' },
+      { id: 'sos', t: '緊急聯絡電話：存手機＋抄一張紙本', tag: 'rec',
+        d: '警察 <b>110</b>、救護車／火警 <b>119</b>（公用電話撥打免費）。<br>'
+         + 'JNTO 訪日旅客熱線 <b>050-3816-2787</b>：24 小時，可以說中文，意外、急病、天災都能求助。<a href="https://www.japan.travel/en/plan/hotline/" target="_blank" rel="noopener">JNTO</a><br>'
+         + '台北駐日經濟文化代表處（東京）急難救助手機 <b>080-1009-7179</b>、<b>080-1009-7436</b>（日本境內直撥）；只限遭逮捕拘禁、重大犯罪受害、緊急就醫等危急狀況。一般護照事務請打辦公室 <b>03-3280-7811</b>（上班時間）；夜間警衛室 03-3280-7917。東京、山梨（河口湖）都在這個代表處的轄區。<a href="https://www.boca.gov.tw/sp-foof-countrycp-03-29-77969-03-1.html" target="_blank" rel="noopener">外交部領事事務局</a><br>'
+         + '在台灣的家人可以打外交部旅外國人急難救助專線 0800-085-095。紙本上再寫各晚住宿的日文名稱與地址，手機沒電時也能拿給計程車司機看。' },
+    ]
+  },
+  {
+    id: 'insure', title: '🛡️ 保險與金流',
+    items: [
+      { id: 'travel-ins', t: '旅遊平安險（含海外醫療），8 位大人＋小孩都要保', tag: 'must',
+        d: '日本醫療費用昂貴，自費就醫動輒數萬日圓起跳。投保時確認<b>海外突發疾病醫療</b>額度。60 歲以上長輩的投保年齡上限與保額，要逐家保險公司確認。' },
+      { id: 'delay-ins', t: '旅遊不便險（班機延誤／行李延誤）', tag: 'rec',
+        d: '部分信用卡刷機票即附贈，先確認自己的卡有沒有、理賠門檻是幾小時。這趟有兩家航空公司，各自的訂位要分開看。' },
+      { id: 'card', t: '信用卡開通海外交易、確認回饋', tag: 'rec',
+        d: '出發前確認海外刷卡功能已開通、額度足夠。<b>富士回遊票是用信用卡訂的，領票要用同一張實體卡</b>（見「交通與票券」），這張卡要帶出門。' },
+      { id: 'cash', t: '換日圓現金', tag: 'rec',
+        d: '建議每人先換 <b>¥20,000～30,000</b>。阿美橫町的部分攤販、小型食堂、神社授與所只收現金。' },
+      { id: 'suica', t: 'Suica 交通卡：準備買 Welcome Suica 或確認手機可綁', tag: 'rec',
+        d: '行程中大量使用地鐵與 JR。細節見「🚆 交通與票券」。iPhone 可直接在錢包 App 加入 Suica，Android 可用 Google 錢包的 Suica 或相容 App。' },
+    ]
+  },
+  {
+    id: 'net', title: '📶 網路與 App',
+    items: [
+      { id: 'esim', t: 'eSIM 或 WiFi 分享器', tag: 'must',
+        d: '整份行程表與地圖雖然可離線閱讀，但查即時電車班次、Google Maps 導航仍需網路。eSIM 需在出發前先安裝設定檔。8 位大人分頭行動時，每人都要有網路。' },
+      { id: 'offline-map', t: 'Google Maps 下載東京離線地圖', tag: 'rec',
+        d: '在 Google Maps 搜尋「東京」→ 點選地區 → 下載離線地圖；鎌倉、高尾山、河口湖可另外各下載一份。地下鐵收訊差時很有用。' },
+      { id: 'apps', t: '安裝乘換案內（Japan Transit Planner）', tag: 'rec',
+        d: '查日本電車轉乘比 Google Maps 精準，會標出月台號碼與車廂位置。' },
+      { id: 'pwa', t: '把行程表加到手機主畫面', tag: 'info',
+        d: '用手機瀏覽器開<a href="../final/index.html">行程表</a>，選「加入主畫面」，即可像 App 一樣開啟並<b>離線閱讀</b>。' },
+    ]
+  },
+  {
+    id: 'booked', title: '📌 已預約項目確認', note: '出發前一週再確認一次；訂位代號、聯絡電話放在群組記事本，不放在網站上',
+    items: [
+      { id: 'flight-cx', t: '航班（林葉組，含小孩）：中華航空 CI104／CI101', tag: 'info',
+        d: '去程 <b>11/14（六）12:35 桃園第 2 航廈 → 16:35 成田第 2 航廈</b>；回程 <b>11/22（日）14:35 成田第 2 航廈 → 17:45 桃園第 2 航廈</b>。'
+         + '華航官網建議起飛前 <b>2 小時</b>前完成報到（去程約 10:35 前到、回程約 12:35 前到）。成田的櫃檯開放時間未查到，以訂位確認信為準。'
+         + '<a href="https://www.china-airlines.com/us/en/prepare-for-the-fly/information/check-in/service" target="_blank" rel="noopener">華航報到說明</a>' },
+      { id: 'flight-it', t: '航班（邱家組）：台灣虎航 IT202／IT201', tag: 'info',
+        d: '去程 <b>11/14（六）13:30 桃園第 1 航廈 → 17:30 成田第 2 航廈</b>；回程 <b>11/22（日）11:25 成田第 2 航廈 → 14:45 桃園第 1 航廈</b>。'
+         + '虎航櫃檯起飛前約 <b>2.5 小時開放、45 分鐘前截止</b>：去程約 11:00～12:45、回程約 08:55～10:40（依官網搭機指南的一般規定推算）。'
+         + '邱家組沒有小孩，可以先網路報到（起飛前 48 小時至 1 小時）。<a href="https://www.tigerairtw.com/en/welcome-on-board/boarding" target="_blank" rel="noopener">虎航搭機指南</a>' },
+      { id: 'hotel1', t: '住宿①：東池袋民宿（11/14～11/17，4 晚）', tag: 'info',
+        d: '地址、入住方式還沒補上，見下一組「要先訂、要先查的」。去程兩組抵達成田時間不同（16:35／17:30），入住前先確認誰先到、怎麼進門。' },
+      { id: 'hotel2', t: '住宿②：東横INN 富士河口湖大橋（11/18，1 晚）', tag: 'info',
+        d: '11/18 搭富士回遊 7 號（08:30 新宿發、10:26 到河口湖）。船津 294-1，Check-in 15:00／Check-out 10:00，免費早餐 6:30～9:00，電話 0555-68-3045。到飯店的接駁車時刻與計程車備案見下一組。<a href="https://toyoko-inn.com/search/detail/00299/" target="_blank" rel="noopener">官網</a>' },
+      { id: 'hotel3', t: '住宿③：淺草 台東區千束 3-17-4 民宿（11/19～11/21，3 晚）', tag: 'info',
+        d: '最近車站是日比谷線入谷站（3 號出口，步行約 8 分，依 Yahoo!乘換案內）。11/22 退房後直接去機場，退房時間見下一組。' },
+      { id: 'fuji-ticket', t: '富士回遊 7 號紙本票 9 張（11/18 08:30 新宿 → 10:26 河口湖）：邱家組在成田領', tag: 'must',
+        d: '已用えきねっと訂票。<b>要在成田機場領紙本票</b>，領票見「🚆 交通與票券」。9 張票由<b>邱家組</b>在成田第 2 航廈領，領完當場確認張數、座位、車次是 7 號。' },
+      { id: 'bus', t: '高速巴士：11/19 15:30 河口湖 → 東京駅 → 上野駅（便 22）', tag: 'must',
+        d: '已預約。富士急「便 22」15:30 河口湖駅 → 17:35 東京駅日本橋口 → <b>18:00 上野駅入谷口</b>（直達，不用在東京駅換車）；河口湖駅 <b>2 番のりば</b>（PDF 寫 3 番，官方路線圖是 2 番），提早 15 分到。<b>帶預約憑證</b>（截圖＋紙本）；大人 ¥2,300、小孩 ¥1,150。8 件大行李放車下トランク、不能預約，客滿可能放不下，建議先打富士急コールセンター 0570-022956 確認。<a href="https://bus.fujikyu.co.jp/highway/detail/id/37" target="_blank" rel="noopener">官網</a>' },
+    ]
+  },
+  {
+    id: 'reserve', title: '🗓️ 要先訂、要先查的', note: '9 個人一起吃飯，能訂位的先訂；時間還沒公布的項目在出發前再查',
+    items: [
+      { id: 'lemon', t: '牛たんの檸檬 新宿総本店：訂 9 人 19:00', tag: 'when',
+        d: '11/15 晚餐。新宿總本店約 49 席，9 人團體要先訂位；9 人 19:00 的訂位規定未查到明確條文，請直接向店家確認，並確認可不可以併桌。' },
+      { id: 'ueno-zoo', t: '上野動物園：確認 11/21 當天開園', tag: 'when',
+        d: '官網寫開園 <b>9:30～17:00</b>（入園到 16:00）、週一休園，11/21（六）依規則開園。官網年度日曆 PDF 沒取到，出發前再看一次有沒有臨時休園。<a href="https://www.tokyo-zoo.net/zoo/ueno/hours" target="_blank" rel="noopener">官網</a>' },
+      { id: 'rikugien', t: '六義園：11/21 紅葉狀況與開園時間', tag: 'when',
+        d: '一般開園 9:00～17:00（最後入園 16:30）。<b>夜間點燈是 11/25～12/6，11/21 沒有</b>，當天只看白天。當年紅葉狀況出發前一週再查。<a href="https://www.tokyo-park.or.jp/park/rikugien/index.html" target="_blank" rel="noopener">官網</a>' },
+      { id: 'toyoko-shuttle', t: '東横INN 富士河口湖大橋：接駁車時刻', tag: 'when',
+        d: '官網接駁專頁：河口湖駅發 8～10 時每 10 分、11 時 00／10／30／50、13 時 00／30／45、14 時 00／15／45；飯店發 11 時 00／20／40、13 時 20／35／50、<b>14 時 05／35</b>、15 時 05～。上車處在出站右手邊的「旅館・ホテル送迎用バスのりば」。先到先上、滿座就走，9 人＋8 件行李可能要分兩趟。另外要打 0555-68-3045 問：11/18 10:40 前後能不能先寄放 8 件行李、11/19 退房後能不能寄放到 14:30、能不能代叫計程車。<a href="https://www.toyoko-inn.com/feature/pickup/station/kawaguchiko?lcl_id=ja" target="_blank" rel="noopener">接駁車時刻</a>' },
+      { id: 'kawaguchi-taxi', t: '河口湖計程車：9 人要 3 台，11/18 夜楓回程一定要先約', tag: 'when',
+        d: '一般計程車坐 4 人，9 人要 <b>3 台</b>。11/18 要用三次：17:33 河口湖駅 → 紅葉迴廊、19:40 紅葉迴廊 → 飯店（<b>紅線公車 18:35 就是末班，回程只能計程車</b>）、11/19 09:05 飯店 → 遊覽船碼頭。河口湖站前的車行電話與車資都沒查到，請飯店代叫或前一天預約。' },
+      { id: 'ikebukuro-bnb', t: '東池袋民宿：地址與入住方式', tag: 'when',
+        d: '地址還沒補上。出發前向民宿問清楚：地址（日文）、怎麼進門（密碼鎖或有人接待）、入住時間、有沒有電梯。抵達當天是週六傍晚，行李多，要先知道從池袋站怎麼走。' },
+      { id: 'arakura-slope', t: '新倉山淺間公園：問有沒有不走 398 階的路線', tag: 'when',
+        d: 'PDF 寫「走緩坡道」，但官方資料只有 398 階的「咲くや姫階段」（慢走約 15 分），沒查到無階梯路線。出發前打 ふじよしだ観光振興サービス 0555-21-1000 問；沒有的話長輩在浅間神社等，腳力組上展望デッキ。' },
+      { id: 'lemon-branch', t: '牛たんの檸檬：訂到哪一家分店要回報', tag: 'when',
+        d: '品牌沒有池袋店，行程表先排新宿総本店（49 席、可網路預約、混雜時限時 60 分、每人要點定食）。訂到浅草店或渋谷店的話，行程表與地圖要改。' },
+      { id: 'senzoku', t: '千束民宿：退房時間與行李寄放', tag: 'when',
+        d: '11/22 要在清晨出發去成田（虎航 11:25、華航 14:35），要確認退房時間、鑰匙怎麼還。另外 11/19 從河口湖回東京後，也問可不可以先寄放行李。' },
+    ]
+  },
+  {
+    id: 'transit', title: '🚆 交通與票券', note: 'JR 東日本官網在查證時打不開，下列細節出發前請再看一次官網',
+    items: [
+      { id: 'welcome-suica', t: 'Welcome Suica：成田機場買，每人先儲值 ¥3,000', tag: 'must',
+        d: '在成田機場的 JR EAST Travel Service Center 或 Welcome Suica 專用售票機購買，<b>無押金、有效期 28 天</b>，原則上一人限購一張。每人先儲值 <b>¥3,000</b>，不夠再加值。'
+         + '小孩（在林葉組，12 歲以下）要買兒童版，<b>購買時要出示護照</b>，由林葉組在 11/14 一起買。<a href="https://www.jreast.co.jp/en/multi/welcomesuica/purchase.html" target="_blank" rel="noopener">JR 東日本</a>' },
+      { id: 'skyliner', t: 'Skyliner：成田第 2 航廈 → 日暮里／京成上野（約 ¥2,570）', tag: 'rec',
+        d: '大人約 ¥2,567（IC）／¥2,580（紙票），小孩約半價；<b>全車指定席</b>，沒買特急券直接上車要補收。發車前 1 個月開賣，可先用官網 e-ticket 買。'
+         + '11/14（六）第 2 航廈發車有 17:42、18:02、18:22…；16:35 降落後要入境、領行李、領票，建議搭 17:42 或 18:02 之後的班。'
+         + '<a href="https://www.keisei.co.jp/keisei/tetudou/skyliner/us/skyliner/purchase.php" target="_blank" rel="noopener">京成官網</a>' },
+      { id: 'fuji-pickup', t: '富士回遊紙本票：11/14 邱家組在成田領', tag: 'must',
+        d: '到成田機場站的<b>指定席券売機（6:30～21:45）</b>或綠色窗口領票。要用<b>訂票時的同一張信用卡實體卡</b>，帶預約編號。9 張票的付款卡不同時，每張卡都要帶。'
+         + '富士回遊專屬領票規則、領票期限沒查到官網說明，傍晚抵達先領比較安全。<a href="https://www.eki-net.com/top/jrticket/guide/uketori/" target="_blank" rel="noopener">えきねっと</a>' },
+      { id: 'takao-kippu', t: '高尾山きっぷ：新宿站買（11/17）', tag: 'rec',
+        d: '京王線新宿～高尾山口往復＋纜車或吊椅折扣，<b>大人往復 ¥1,450、小孩 ¥740</b>，比分開買約省 ¥390。<b>當日發售、高尾山口站不賣</b>，要在新宿的京王線售票機買。另外 2026/11/1 起纜車、吊椅也可以直接刷交通 IC 卡。'
+         + '<a href="https://www.keio.co.jp/train/ticket/profitable/" target="_blank" rel="noopener">京王官網</a>' },
+      { id: 'enoden', t: '江ノ電可用 IC 卡，不用買一日券', tag: 'info',
+        d: '11/16 鎌倉～長谷～江ノ島只搭 2 段，約 ¥460／人，低於一日券「のりおりくん」¥800，直接刷 Suica 就好。江ノ電兒童 IC 運賃沒查到。' },
+      { id: 'ic-topup', t: '手上的 IC 卡餘額：每天看一次', tag: 'rec',
+        d: '纜車、吊椅不能自動加值，餘額不足不能進場。出發去高尾山前，先在車站加值。' },
+    ]
+  },
+  {
+    id: 'elder', title: '👴 長輩與小孩', note: '8 位大人含 60 歲以上長輩、1 位小孩；寧可少走一個景點',
+    items: [
+      { id: 'pace', t: '體力分配：每天最多一個主要景點加一個輕鬆景點', tag: 'rec',
+        d: '11/16 鎌倉江之島、11/17 高尾山、11/18 河口湖是走路最多的三天。每天排半小時的休息時間，找好有座位的咖啡店。' },
+      { id: 'split', t: '分頭行動的備案：集合點與時間', tag: 'rec',
+        d: '體力不同時可以分兩組。出發前講好集合地點、時間、誰帶小孩，並建立群組，電話號碼互相存好。' },
+      { id: 'kid-id', t: '小孩票價要帶證件', tag: 'must',
+        d: 'Welcome Suica 兒童版買卡要護照；各景點（上野動物園、晴空塔、纜車等）的小孩價依年齡，常要證明年齡。<b>護照正本隨身帶</b>，影本當備用。' },
+      { id: 'warm', t: '長輩與小孩的保暖', tag: 'need',
+        d: '高尾山與河口湖早晚冷（見「🍁 秋季加帶」）。長輩帶好穿脫的外套與暖暖包，小孩多帶一件，流汗後要換。' },
+      { id: 'bag-light', t: '長輩的隨身包越輕越好', tag: 'rec',
+        d: '大件行李集中給年輕人拿；長輩只帶藥、水、外套與錢包。階梯多的地方（高尾山、新倉山）先講好可以在下面等。' },
+    ]
+  },
+  {
+    id: 'carry', title: '🎒 隨身包（每天出門帶）', note: '每天出門前看一眼。免稅購物要用的護照正本也要帶',
+    items: [
+      { id: 'umbrella', t: '摺疊傘（或輕便雨衣）', tag: 'need',
+        d: '固定放在包包裡。東京 11 月平年降水量 96.3 mm（氣象廳），晴雨不定。' },
+      { id: 'towel', t: '手帕或小毛巾', tag: 'need',
+        d: '不少公廁沒有擦手紙或烘手機，日本人習慣隨身帶手帕擦手。' },
+      { id: 'tissue', t: '面紙＋濕紙巾', tag: 'rec',
+        d: '小孩吃東西、擦手都用得到。公廁一般都有衛生紙，面紙當備用。' },
+      { id: 'coins', t: '零錢包', tag: 'rec',
+        d: '日本的硬幣有 1、5、10、50、100、500 圓六種，付現找零很快就一大把。和鈔票分開放，結帳比較好拿。' },
+      { id: 'trashbag', t: '幾個小塑膠袋（裝垃圾）', tag: 'rec',
+        d: '街上垃圾桶很少，垃圾先裝袋帶著走，到超商或車站再丟。濕掉的摺疊傘也可以套著收。' },
+      { id: 'sunset', t: '日落約 16:30：爬山與賞景要在天黑前結束', tag: 'rec',
+        d: '11 月中旬東京日落約 <b>16:31～16:35</b>、甲府（河口湖附近）約 16:35～16:40（國立天文台）。看景點、爬山要在天黑前回到車站，手機也要留電（行動電源放隨身包）。' },
+    ]
+  },
+  {
+    id: 'pack', title: '👕 衣物與鞋子', note: '11 月是秋末，早晚冷、中午暖：洋蔥式穿法；保暖用品集中在「🍁 秋季加帶」',
+    items: [
+      { id: 'clothes', t: '衣物：洋蔥式、好穿脫', tag: 'info',
+        d: '東京 11 月平均氣溫 12.5°C（日最高 16.7°C、最低 8.8°C），河口湖 7.5°C（13.8°C／2.2°C），氣象廳平年值。每天準備「薄長袖＋薄外套＋防風外套」，熱了脫一件。' },
+      { id: 'shoes', t: '好走的鞋（防滑、已穿過）', tag: 'need',
+        d: '高尾山與新倉山淺間公園都有大量階梯與坡道，落葉濕滑。<b>不要穿新鞋上路</b>，出發前先穿著走過幾次。' },
+      { id: 'socks', t: '好穿脫的鞋＋沒破洞的襪子', tag: 'rec',
+        d: '神社寺院、部分餐廳要脫鞋。襪子厚一點，天氣冷時腳比較暖。' },
+      { id: 'slippers', t: '拖鞋', tag: 'rec',
+        d: '民宿備品各家不同，<b>訂房頁沒寫拖鞋就自己帶</b>，選輕、薄、可以壓平收納的。' },
+      { id: 'laundry', t: '換洗衣物、睡衣、髒衣袋', tag: 'rec',
+        d: '9 天 8 夜，民宿有洗衣機的話中途洗一次可以少帶幾天份。先看訂房頁的洗衣設備。髒衣服分袋裝，回程好整理。' },
+    ]
+  },
+  {
+    id: 'wash', title: '🪥 盥洗與保養',
+    items: [
+      { id: 'toiletry', t: '牙刷牙膏、刮鬍刀、梳子', tag: 'rec',
+        d: '日本 2022/4/1 起施行《塑膠資源循環促進法》，牙刷、梳子、刮鬍刀、浴帽被列為要減量的拋棄式塑膠製品。有些住宿改成<b>開口才給</b>或不再放。民宿尤其不一定有備品，自己帶最省事。' },
+      { id: 'skincare', t: '保養品、卸妝、防曬（分裝）', tag: 'rec',
+        d: '要放隨身行李的液體每瓶 <b>100 ml 以下</b>（見「✈️ 搭機與行李」），大瓶的放託運。' },
+      { id: 'lens', t: '隱形眼鏡、藥水、備用眼鏡', tag: 'rec',
+        d: '藥水一樣受 100 ml 限制。帶一副眼鏡，備用。' },
+    ]
+  },
+  {
+    id: 'elec', title: '🔌 電子用品',
+    items: [
+      { id: 'charger', t: '手機充電器與線（每人一套）＋多孔充電頭', tag: 'need',
+        d: '一個插座接多孔 USB 充電頭，手機、行動電源可以一起充。9 個人住民宿，插座會不夠用，多帶延長線或多孔充電頭。' },
+      { id: 'powerbank', t: '行動電源：只能隨身、最多 2 個、機上不能用', tag: 'must',
+        d: '台灣民航局 2026/4/8 起、日本國土交通省 2026/4/24 起都規定：每人<b>最多 2 個</b>、<b>不能放託運行李</b>、<b>飛行中不能拿它充手機，也不能幫它充電</b>。'
+         + '從日本出發的班機還要放在座位口袋等手邊的地方，<b>不能放頭頂的行李櫃</b>。容量上限 160Wh（國交省的例子：3.7V、27,000 mAh 約 99.9Wh）。'
+         + '<a href="https://www.mlit.go.jp/common/001469460.pdf" target="_blank" rel="noopener">國土交通省說明</a>' },
+      { id: 'plug', t: '插頭：兩孔扁腳免轉接，三孔要帶轉接頭', tag: 'info',
+        d: '日本是 <b>A 型插座、100V</b>，台灣的兩孔扁腳插頭可以直接插。<b>筆電、吹風機這類三孔插頭要帶「三轉二」轉接頭</b>。日本電壓較低，部分電器充電會較慢。' },
+    ]
+  },
+  {
+    id: 'health', title: '💊 藥品與小護理',
+    items: [
+      { id: 'meds', t: '常備藥＋個人處方藥（長輩的慢性病藥帶足）', tag: 'rec',
+        d: '感冒、腸胃、止痛等依自己習慣帶，處方藥建議附英文處方箋或診斷證明。厚生勞動省的自用數量標準：<b>處方藥 1 個月份、一般成藥 2 個月份以內</b>，外用藥每種 24 個以內。<br>'
+         + '⚠️ <b>感冒藥、鼻炎藥先看成分有沒有 Pseudoephedrine（偽麻黃鹼）</b>：日本把含量超過 10% 的列為「覺醒劑原料」，要在入境 <b>2 週前</b>向地方厚生局申請許可才能帶。不確定的話，換一種不含這個成分的。'
+         + '<a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/kojinyunyu/topics/tp010401-1.html" target="_blank" rel="noopener">厚生勞動省</a>' },
+      { id: 'firstaid', t: 'OK 繃、水泡貼、痠痛貼布', tag: 'rec',
+        d: '爬高尾山與逛街都走很多路，腳磨破了貼上水泡貼會好走很多。' },
+      { id: 'kid-med', t: '小孩的退燒藥、常用藥', tag: 'rec',
+        d: '依小孩年齡與用藥習慣帶；日本的藥品成分與劑量標示不同，自己熟悉的藥先帶。' },
+    ]
+  },
+  {
+    id: 'flight', title: '✈️ 搭機與行李', note: '兩家航空公司規定不同，行李以自己訂位的票種為準',
+    items: [
+      { id: 'liquids', t: '液體分裝＋一個透明夾鏈袋', tag: 'rec',
+        d: '國際線隨身行李的液體（含乳液、膏狀、噴霧）：每個容器 <b>100 ml 以下</b>，全部放進<b>一個 1 公升以下、可封口的透明袋</b>，<b>每人一袋</b>，安檢時拿出來。'
+         + '容器超過 100 ml，就算裡面只剩一點也不行。藥品不受限，但要主動向安檢人員申報。回程買的醬油、酒、化妝水一樣要放託運。'
+         + '<a href="https://www.mlit.go.jp/koku/15_bf_000006.html" target="_blank" rel="noopener">國土交通省說明</a>' },
+      { id: 'cx-bag', t: '華航（林葉組）：託運件數依票種，每件 23 公斤', tag: 'rec',
+        d: '官網「亞洲短程」經濟艙每件 <b>23 公斤</b>、三邊合計不超過 158 cm；Discount／Basic 票種免費託運 <b>1 件</b>，Standard／Flex 票種 <b>2 件</b>，依訂位艙等。'
+         + '手提行李的公斤數官網頁面沒列數字（只說要符合行李櫃的尺寸與重量限制），請以訂位確認信為準。'
+         + '<a href="https://www.china-airlines.com/jp/en/prepare-for-the-fly/information/baggage/checked-baggage" target="_blank" rel="noopener">華航官網</a>' },
+      { id: 'it-bag', t: '虎航（邱家組）：手提 10 公斤、託運已加購 20 公斤', tag: 'rec',
+        d: '官網寫手提行李 <b>1 件＋1 件個人物品，尺寸 54×38×23 cm（含輪子），合計 10 公斤以內</b>，超過要加收費用。託運行李<b>已加購 20 公斤</b>（每人，以訂位確認信為準），超重要補費。'
+         + '<a href="https://www.tigerairtw.com/en/welcome-on-board/baggage" target="_blank" rel="noopener">虎航官網</a>' },
+      { id: 'scale', t: '行李秤：出發前與回程各秤一次', tag: 'rec',
+        d: '8 位大人加小孩，行李多。兩家公司額度不同，各自秤。回程留 1/3 箱空位給伴手禮。' },
+      { id: 'taxfree', t: '免稅制度：先付含稅價、出境時退稅（2026/11/1 起新制）', tag: 'info',
+        d: '2026/11/1 起不再是「出示護照當場扣稅」，改成：<br>'
+         + '① 結帳先付<b>含稅價</b>；② 出境當天，在機場<b>託運行李之前</b>，到免稅手續機台出示護照，接受海關確認；③ 確認後由免稅店或它委託的業者退錢，結帳時先問清楚退款方式。<br>'
+         + '⚠️ 辦的時候<b>買的東西要全部帶在身上、還沒託運</b>；同一張收據少一樣，<b>整張都不退</b>；要在購買後 <b>90 天內</b>辦。免稅品別放進託運行李。同一家店、同一天買滿 <b>¥5,000（未稅）</b>才能免稅，要帶<b>護照正本</b>。'
+         + '<a href="https://www.mlit.go.jp/kankocho/tax-free/page01_000001_00021.html" target="_blank" rel="noopener">觀光廳說明</a>' },
+    ]
+  },
+  {
+    id: 'autumn', title: '🍁 秋季加帶（11 月）',
+    note: '東京 11 月平均最高 16.7°C、最低 8.8°C；河口湖 13.8°C／2.2°C（氣象廳 1991～2020 年平年值）',
+    items: [
+      { id: 'coat', t: '保暖外套（防風、可折疊）', tag: 'need',
+        d: '河口湖 11 月平均最低只有 2.2°C，11/18 住河口湖、11/17 爬高尾山，早晚很冷。東京市區平均最低 8.8°C，一般秋外套就夠。'
+         + '<a href="https://www.data.jma.go.jp/stats/etrn/view/nml_sfc_ym.php?prec_no=49&block_no=47640&year=&month=&day=&view=" target="_blank" rel="noopener">河口湖平年值</a>、<a href="https://www.data.jma.go.jp/obd/stats/etrn/view/nml_sfc_ym.php?prec_no=44&block_no=47662" target="_blank" rel="noopener">東京平年值</a>' },
+      { id: 'scarf', t: '圍巾、薄手套', tag: 'rec',
+        d: '圍巾輕又好收，山上、河口湖夜裡用得到。手套選可以滑手機的。' },
+      { id: 'kairo', t: '暖暖包', tag: 'rec',
+        d: '貼在衣服上的和手握的各帶一些，長輩與小孩更需要。要放隨身還是託運行李，出發前看航空公司的規定。' },
+      { id: 'rain', t: '雨具：折傘＋防水外套', tag: 'rec',
+        d: '東京 11 月平年降水量 96.3 mm、河口湖 76.0 mm（氣象廳）。爬山遇雨比較冷，輕便雨衣比傘好用。' },
+      { id: 'moist', t: '乳液、護唇膏、護手霜', tag: 'rec',
+        d: '東京 11 月平均相對濕度 64%、河口湖 74%（氣象廳平年值），加上暖氣，皮膚容易乾。' },
+    ]
+  },
+];
+</script>
+<script src="../trip.js"></script>
+<script src="../../assets/checklist.js"></script>
+
+</body>
+</html>

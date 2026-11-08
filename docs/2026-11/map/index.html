@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>行程地圖｜東京秋季家族之旅 2026</title>
+<meta name="description" content="2026 年 11 月 14 日～22 日東京行程地圖 — 每天的地點與實際移動路線">
+<meta name="theme-color" content="#B5451B">
+
+<!-- Leaflet：開源地圖元件，圖資來自 OpenStreetMap，不需 API key -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<link rel="stylesheet" href="../../assets/map.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-row">
+    <h1>🗺️ 行程地圖</h1>
+    <a class="tb-link" href="../../index.html">← 回首頁</a>
+    <a class="tb-link" href="../final/index.html">📅 行程表</a>
+  </div>
+</header>
+
+<div class="filters">
+  <div class="filter-scroll" id="dayChips"></div>
+  <div class="cat-row" id="catChips"></div>
+</div>
+
+<div id="map"><p class="loading">地圖載入中…</p></div>
+
+<div class="statusbar">
+  <span id="status">—</span>
+  <button class="locate-btn" id="locateBtn" type="button">📍 我的位置</button>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../trip.js"></script>
+<script src="../../assets/map.js"></script>
+</body>
+</html>

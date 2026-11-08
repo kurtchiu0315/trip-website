@@ -1,0 +1,545 @@
+/* 行程地圖的樣式（兩趟旅行共用）。頁面在 docs/<trip>/map/index.html */
+:root {
+  --primary: #B5451B;
+  --primary-dark: #8C2E0A;
+  --primary-light: #D4652F;
+  --secondary: #4A6FA5;
+  --accent: #C49A3C;
+  --bg: #FAF8F5;
+  --surface: #FFFFFF;
+  --surface-alt: #F1F4F8;
+  --text: #2C2416;
+  --muted: #7A6E5D;
+  --border: #E0D8CC;
+  --shadow: 0 2px 8px rgba(44,36,22,0.10);
+  --font: 'Noto Sans TC', 'PingFang TC', 'Hiragino Sans', 'Microsoft JhengHei',
+          'Yu Gothic UI', system-ui, -apple-system, sans-serif;
+
+  --c-spot: #B5451B;
+  --c-food: #C2571C;
+  --c-transport: #4A6FA5;
+  --c-hotel: #6B4E9B;
+  --c-fixed: #B8901F;
+  --c-bus: #2E8B57;         /* 市巴士路線：綠色，和鐵路（主色）、地鐵（次色）分開 */
+  --c-car: #C2407A;         /* 接送車（機場小巴士）：桃紅色，和住宿的紫色分開 */
+  /* 推薦景點用低彩度的青綠，和行程地點的暖色系明顯區隔 */
+  --c-reco: #4E8C7A;
+  --c-reco-must: #2F7A62;
+  --chip-border: #C0D3E3;
+  --shadow: 0 2px 8px rgba(44,36,22,0.10);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #E8825A;
+    --primary-dark: #C4603A;
+    --primary-light: #F0A181;
+    --secondary: #8FB3DE;
+    --accent: #D9B463;
+    --bg: #17140F;
+    --surface: #221E17;
+    --surface-alt: #1C2430;
+    --text: #EDE6DA;
+    --muted: #A69A88;
+    --border: #3A332A;
+    --shadow: 0 2px 8px rgba(0,0,0,0.5);
+    --c-spot: #E8825A;
+    --c-food: #E09048;
+    --c-transport: #8FB3DE;
+    --c-hotel: #A68BD4;
+    --c-fixed: #D9B463;
+    --c-bus: #5CC48C;
+    --c-car: #E57AA6;
+    --c-reco: #6FB8A2;
+    --c-reco-must: #8FD4BB;
+    --chip-border: #35485C;
+    --shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { height: 100%; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === 頂部列 === */
+.topbar {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary) 60%, var(--primary-light));
+  color: #fff;
+  padding: 10px 14px;
+  flex-shrink: 0;
+}
+
+.topbar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.topbar h1 { font-size: 1rem; font-weight: 700; flex: 1; min-width: 0; }
+
+.tb-link {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.42);
+  color: #fff;
+  text-decoration: none;
+  padding: 4px 11px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.tb-link:hover { background: rgba(255,255,255,0.36); }
+
+/* === 篩選列 === */
+.filters {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.filter-scroll {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filter-scroll::-webkit-scrollbar { display: none; }
+
+.chip {
+  flex: 0 0 auto;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.chip:hover { border-color: var(--primary); color: var(--primary); }
+
+.chip[aria-pressed="true"] {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.cat-row {
+  display: flex;
+  gap: 6px;
+  padding: 0 12px 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.cat-row::-webkit-scrollbar { display: none; }
+
+.chip.cat[aria-pressed="true"] {
+  background: var(--cat-color);
+  border-color: var(--cat-color);
+  color: #fff;
+}
+
+.chip.cat[aria-pressed="false"] { opacity: 0.45; }
+
+/* === 地圖 === */
+#map {
+  flex: 1;
+  min-height: 320px;
+  background: var(--surface-alt);
+  z-index: 1;
+}
+
+/* === 行程地點：水滴狀大頭針 === */
+.pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50% 50% 50% 4px;
+  transform: rotate(-45deg);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+  font-size: 15px;
+}
+
+.pin > span { transform: rotate(45deg); }
+
+.pin-seq {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  background: #fff;
+  color: #222;
+  border: 1.5px solid currentColor;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 15px;
+  text-align: center;
+  transform: rotate(45deg);
+}
+
+/* === 推薦景點：小圓點，明顯比行程地點低調 === */
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--c-reco);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  opacity: 0.88;
+}
+
+.dot-star {
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: var(--c-reco-must);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  line-height: 1;
+}
+
+/* === 行程地點旁浮現的時間標籤 === */
+.leaflet-tooltip.time-tip {
+  background: var(--primary);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  white-space: nowrap;
+}
+
+.leaflet-tooltip.time-tip::before { display: none; }   /* 拿掉小箭頭 */
+
+/* 路線上的交通方式說明（滑過路線才出現） */
+.leaflet-tooltip.route-tip {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* 地圖左下角的交通方式圖例：只列這一天用到的 */
+.legend-ctl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 10px;
+  max-width: calc(100vw - 90px);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 4px 9px;
+  font-family: var(--font);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+.legend-ctl[hidden] { display: none; }
+.legend-ctl span { white-space: nowrap; }
+.legend-ctl i { display: inline-block; width: 22px; height: 0; vertical-align: middle; margin-right: 4px; }
+.legend-ctl .lg-rail { border-top: 5px solid var(--primary); }
+.legend-ctl .lg-subway { border-top: 5px solid var(--secondary); }
+.legend-ctl .lg-bus { border-top: 5px solid var(--c-bus); }
+.legend-ctl .lg-car { border-top: 5px solid var(--c-car); }
+.legend-ctl .lg-walk { border-top: 3px dashed var(--muted); }
+.legend-ctl .lg-stn { width: 9px; height: 9px; border: 2px solid var(--text); border-radius: 50%; background: var(--surface); }
+.legend-ctl .lg-miss { border-top: 3px dashed #C62828; }
+
+/* 放大或移動地圖後出現的「回到全觀」按鈕（左上角縮放鈕下面） */
+.home-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 6px 11px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.home-btn:hover { border-color: var(--primary); color: var(--primary); }
+.home-btn[hidden] { display: none; }
+
+/* 上下車站：白底小圓圈，放大到一定程度才顯示 */
+.leaflet-tooltip.stn-tip {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  box-shadow: var(--shadow);
+}
+
+/* 推薦景點的名稱標籤（hover 才出現） */
+.leaflet-tooltip.reco-tip {
+  background: var(--surface);
+  color: var(--on-surface, var(--text));
+  border: 1px solid var(--chip-border);
+  border-radius: 6px;
+  font-family: var(--font);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 7px;
+  box-shadow: var(--shadow);
+}
+
+.leaflet-tooltip.reco-tip::before { display: none; }
+
+/* 彈窗 */
+.leaflet-popup-content-wrapper {
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.leaflet-popup-tip { background: var(--surface); }
+.leaflet-popup-content { margin: 12px 14px; font-family: var(--font); line-height: 1.55; }
+
+.pop-day {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  background: var(--surface-alt);
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.pop-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 2px; }
+.pop-ja { font-size: 0.78rem; color: var(--muted); margin-bottom: 5px; }
+.pop-note { font-size: 0.76rem; color: var(--muted); margin-bottom: 8px; }
+
+.pop-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.pop-actions a {
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  color: var(--secondary);
+  background: var(--surface-alt);
+}
+
+.pop-actions a:hover { border-color: var(--secondary); }
+
+/* === 底部狀態列 === */
+.statusbar {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 7px 14px;
+  font-size: 0.74rem;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.statusbar a { color: var(--muted); }
+
+.locate-btn {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 4px 11px;
+  border-radius: 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.locate-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+.me-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2E7CF6;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px rgba(46,124,246,0.4);
+}
+
+.loading {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* === 彈性行程：切換方案（地圖右上角，可收合） ===
+   行程表的彈性行程有 A～E 幾個方案，地圖上一次只標「目前選的那一個」，
+   其他方案的位置預設隱藏，要看再打開，畫面才不會亂 */
+.flex-ctl { font-family: var(--font); }
+.flex-ctl[hidden] { display: none; }
+
+.flex-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 6px 11px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.flex-toggle:hover { border-color: var(--primary); color: var(--primary); }
+.flex-toggle b { color: var(--secondary); }
+
+.flex-panel {
+  margin-top: 6px;
+  width: 264px;
+  max-width: calc(100vw - 70px);
+  max-height: 52vh;
+  overflow-y: auto;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 6px 10px 8px;
+  font-size: 0.74rem;
+}
+
+.fp-note { color: var(--muted); font-size: 0.68rem; line-height: 1.45; margin: 2px 0 4px; }
+
+.fp-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 0;
+  border-top: 1px dashed var(--border);
+}
+
+.fp-time { font-weight: 800; color: var(--primary); min-width: 36px; }
+.fp-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fp-btns { display: flex; gap: 3px; flex-shrink: 0; }
+
+/* 方案按鈕：A＝主色（原訂／首選），B～E＝次色（替代方案），和行程表一致 */
+.pk {
+  width: 23px;
+  height: 23px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+  color: var(--muted);
+  font-family: var(--font);
+  font-weight: 800;
+  font-size: 0.7rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+
+.pk:hover { border-color: var(--primary); color: var(--primary); }
+.pk.on { background: var(--primary); border-color: var(--primary); color: #fff; }
+.pk.alt.on { background: var(--secondary); border-color: var(--secondary); }
+.pk.nopt { border-style: dashed; }
+
+.fp-foot {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding-top: 7px;
+  border-top: 1px solid var(--border);
+  margin-top: 2px;
+}
+
+.fp-btn {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.fp-btn[aria-pressed="true"] { background: var(--secondary); border-color: var(--secondary); color: #fff; }
+
+/* 沒選的方案：虛線框的小圓點＋字母，明顯比行程地點低調 */
+.alt-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px dashed var(--secondary);
+  color: var(--secondary);
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  opacity: 0.92;
+}
+
+.pop-plans { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 2px 0 8px; font-size: 0.72rem; color: var(--muted); }
+
+/* 手機、平板（觸控）：按鈕放大到手指點得準 */
+@media (pointer: coarse) {
+  .pk { width: 34px; height: 34px; font-size: 0.82rem; border-radius: 8px; }
+  .fp-btns { gap: 5px; }
+  .flex-toggle, .home-btn { padding: 9px 14px; font-size: 0.8rem; }
+  .fp-btn { padding: 7px 12px; font-size: 0.76rem; }
+  .flex-panel { width: 300px; }
+}
+
+@media (min-width: 640px) {
+  .topbar h1 { font-size: 1.15rem; }
+}

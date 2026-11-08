@@ -1,0 +1,98 @@
+/* 行前 Check List 的樣式（兩趟旅行共用）。頁面在 docs/<trip>/checklist/index.html */
+.summary {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 14px 16px;
+  margin-bottom: 18px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 9px;
+}
+
+.summary-row strong { font-size: 1.05rem; }
+.summary-row .pct { font-size: 1.35rem; font-weight: 800; color: var(--ok); }
+
+.group-head .meta.done { color: var(--ok); font-weight: 700; }
+
+/* === 項目 === */
+.item {
+  display: flex;
+  gap: 11px;
+  padding: 11px 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.item:last-child { border-bottom: none; }
+
+.item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--ok);
+  cursor: pointer;
+}
+
+.item .body { flex: 1; min-width: 0; }
+
+.item .t {
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.item.checked .t { text-decoration: line-through; color: var(--muted); }
+
+.item .d {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 3px;
+}
+
+.item .d a { color: var(--secondary); }
+
+.tagline {
+  display: inline-block;
+  font-size: 0.66rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-left: 6px;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
+.tagline.must,
+.tagline.need  { background: #FDE8E0; color: #A8391A; }
+.tagline.rec   { background: #E3EEF7; color: #34557F; }
+.tagline.when  { background: #FEF3D8; color: #7A4F1A; }
+.tagline.info  { background: #E8F0E9; color: #2F6B49; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tagline.must,
+  :root:not([data-theme="light"]) .tagline.need { background: #4E2A1C; color: #F5B79B; }
+  :root:not([data-theme="light"]) .tagline.rec  { background: #1E3A52; color: #A8CBEC; }
+  :root:not([data-theme="light"]) .tagline.when { background: #4A3A18; color: #F0D9A0; }
+  :root:not([data-theme="light"]) .tagline.info { background: #22402F; color: #9AD9B5; }
+}
+
+.callout {
+  background: var(--surface-alt);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 10px 13px;
+  margin: 10px 0 2px;
+  font-size: 0.78rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+
+.callout b { color: var(--primary); }

@@ -1,0 +1,123 @@
+/* 預算追蹤的樣式（兩趟旅行共用）。頁面在 docs/<trip>/budget/index.html */
+/* === 每日面板 === */
+.day-panel .panel-head { cursor: pointer; user-select: none; }
+.day-panel .panel-head .caret { color: var(--muted); font-size: 0.8rem; transition: transform 0.2s; }
+.day-panel.open .panel-head .caret { transform: rotate(90deg); }
+.day-panel .panel-body { display: none; }
+.day-panel.open .panel-body { display: block; }
+
+.day-badge {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 800;
+  flex-shrink: 0;
+}
+
+.day-sum { font-size: 0.86rem; font-weight: 700; color: var(--primary); white-space: nowrap; }
+
+/* === 金額列 === */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 0.84rem;
+}
+
+.row:last-child { border-bottom: none; }
+.row .label { flex: 1; min-width: 0; }
+.row .label small { display: block; color: var(--muted); font-size: 0.72rem; line-height: 1.45; }
+.row .yen { color: var(--muted); }
+
+.row input[type="number"] {
+  width: 96px;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.84rem;
+  text-align: right;
+}
+
+.row input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.row.fixed .amount {
+  width: 96px;
+  text-align: right;
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+/* === 總計 === */
+.total-card {
+  position: sticky;
+  bottom: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--primary);
+  border-radius: var(--radius) var(--radius) 0 0;
+  box-shadow: var(--shadow-lg);
+  padding: 14px 16px;
+  margin-top: 18px;
+  z-index: 10;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.total-row .t-label { font-size: 0.86rem; font-weight: 700; }
+.total-row .t-jpy { font-size: 1.45rem; font-weight: 800; color: var(--primary); }
+.total-row .t-twd { font-size: 0.8rem; color: var(--muted); }
+
+.breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+
+.breakdown span {
+  font-size: 0.7rem;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--surface-alt);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.rate-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.rate-row input {
+  width: 78px;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.8rem;
+  text-align: right;
+}

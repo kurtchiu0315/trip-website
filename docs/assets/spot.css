@@ -1,0 +1,45 @@
+/* 景點小地圖的樣式（兩趟旅行共用）。頁面在 docs/<trip>/map/spot.html */
+:root {
+  --primary: #B5451B;
+  --secondary: #4A6FA5;
+  --bg: #FAF8F5;
+  --surface: #FFFFFF;
+  --text: #2C2416;
+  --muted: #7A6E5D;
+  --border: #E0D8CC;
+  --route: #4A6FA5;
+  --font: 'Noto Sans TC', 'PingFang TC', 'Hiragino Sans', 'Microsoft JhengHei', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #17140F; --surface: #221E17; --text: #EDE6DA; --muted: #A69A88; --border: #3A332A; --route: #8FB3DE; }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); display: flex; flex-direction: column; }
+
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 10px 14px; background: var(--surface); border-bottom: 1px solid var(--border); }
+.bar h1 { font-size: 1rem; font-weight: 700; margin-right: auto; }
+.bar a { font-size: 0.8rem; font-weight: 600; color: var(--secondary); text-decoration: none; }
+.bar a:hover { text-decoration: underline; }
+body.embed .bar { display: none; }
+
+#map { flex: 1; min-height: 240px; }
+
+/* 編號標記：主色圓點＋白字，和行程地圖的橘色大頭針同一套顏色 */
+.stop-pin { width: 26px; height: 26px; border-radius: 50%; background: var(--primary); color: #fff;
+  font: 800 13px/26px var(--font); text-align: center; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.35); }
+.stop-pin.is-end { background: var(--secondary); }
+
+.pop-time { font-size: 0.72rem; font-weight: 700; color: var(--primary); }
+.pop-name { font-size: 0.92rem; font-weight: 700; margin: 2px 0; }
+.pop-ja { font-size: 0.75rem; color: #7A6E5D; }
+.pop-desc { font-size: 0.78rem; margin-top: 4px; line-height: 1.5; }
+.pop-link { display: inline-block; margin-top: 6px; font-size: 0.75rem; font-weight: 600; color: #4A6FA5; }
+
+/* 嵌在行程表卡片裡時，左上角放日落時間，右上角放「放大」 */
+.chip { position: absolute; z-index: 500; top: 8px; font: 700 12px/1 var(--font); padding: 6px 9px; border-radius: 14px;
+  background: rgba(255,255,255,.94); color: #2C2416; box-shadow: 0 1px 4px rgba(0,0,0,.25); text-decoration: none; }
+.chip.sunset { left: 52px; } /* 讓出左上角的縮放按鈕 */
+.chip.expand { right: 8px; color: #4A6FA5; }
+body:not(.embed) .chip.expand { display: none; }
+.msg { padding: 16px; font-size: 0.85rem; color: var(--muted); }

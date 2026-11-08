@@ -1,0 +1,8 @@
+{
+  "_說明": [
+    "推薦景點資料庫（地圖「💡 推薦景點」圖層的來源）。2026-11-07 隨東京這趟重建，原作者的關西資料已移除。",
+    "每筆：id、name、city、area、category、features、price、duration、address、hours、transport、link、tags、mapq（Google Maps 查詢字串，明文日文）。",
+    "所有票價、營業時間都要有查證來源，記在 reference/trip-2026-11/。"
+  ],
+  "attractions": []
+}

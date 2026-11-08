@@ -1,0 +1,25 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build outputs (if any)
+dist/
+build/
+
+# Logs
+*.log
+
+# build-routes.js 抓下來的 OpenStreetMap relation 原始資料（本機快取，可隨時刪）
+scripts/.cache/

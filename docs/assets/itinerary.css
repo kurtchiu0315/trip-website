@@ -1,0 +1,1581 @@
+/* ==========================================
+   日本關西行程 - 樣式表
+   Responsive Design for Mobile & Desktop
+   ========================================== */
+
+/* === CSS Variables === */
+:root {
+  /* 暖色和風配色 */
+  --primary: #B5451B;          /* 柿子赤陶 - 溫暖的赭紅 */
+  --primary-light: #D4652F;    /* 淺柿 */
+  --primary-dark: #8C2E0A;     /* 深柿 */
+  --secondary: #4A6FA5;         /* 靛藍 - 寧靜的藍 */
+  --accent: #C49A3C;            /* 銀杏金 */
+  --accent-light: #E8C97A;      /* 淺金 */
+  --bg-light: #FAF8F5;          /* 和紙米白 */
+  --bg-warm: #F5F0E8;          /* 溫暖米色 */
+  --bg-white: #FFFFFF;
+  --text-dark: #2C2416;        /* 墨色 */
+  --text-gray: #7A6E5D;        /* 淡墨 */
+  --border: #E0D8CC;            /* 淡墨灰 */
+  --shadow: 0 2px 8px rgba(44,36,22,0.08);
+  --shadow-lg: 0 4px 20px rgba(44,36,22,0.12);
+  --radius: 12px;
+  --radius-sm: 8px;
+  /* 字體：先用系統內建字型，離線／CDN 失效時仍可正常顯示中日文 */
+  --font-noto: 'Noto Sans TC', 'Noto Sans JP', 'PingFang TC', 'Hiragino Sans',
+               'Microsoft JhengHei', 'Yu Gothic UI', system-ui, -apple-system, sans-serif;
+  --max-w: 800px;
+
+  /* 語意化色票（深色模式會覆寫這組） */
+  --surface: var(--bg-white);
+  --surface-alt: #EFF3F9;
+  --on-surface: var(--text-dark);
+  --on-surface-muted: var(--text-gray);
+  --chip-bg: #EEF3FA;
+  --chip-border: #C0D3E3;
+}
+
+/* === Reset & Base === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-noto);
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === Container === */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* === Header（底圖為隨機關西風景照） === */
+.site-header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  /* 照片還沒載入、或離線讀不到時，維持原本的漸層底色 */
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+  color: white;
+  padding: 28px 16px 24px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.site-header .hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* 直式照片也能填滿橫幅而不變形 */
+  object-position: center 38%;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.site-header .hero-img.is-loaded { opacity: 1; }
+
+/* 壓在照片上的暗色罩，確保白字在任何照片上都讀得清楚 */
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg,
+    rgba(90, 30, 10, 0.72) 0%,
+    rgba(90, 30, 10, 0.55) 45%,
+    rgba(60, 20, 8, 0.78) 100%);
+}
+
+.site-header .hero-credit {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.62rem;
+  color: rgba(255,255,255,0.62);
+  text-decoration: none;
+  letter-spacing: 0.2px;
+}
+
+.site-header .hero-credit:hover {
+  color: rgba(255,255,255,0.9);
+  text-decoration: underline;
+}
+
+.site-header h1,
+.site-header .trip-dates,
+.site-header .toolbar { position: relative; }
+
+.site-header h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.site-header .trip-dates {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.site-header .lang-toggle {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.site-header .lang-btn {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.site-header .lang-btn.active,
+.site-header .lang-btn:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+/* === Flight Banner === */
+.flight-banner {
+  background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary) 50%, var(--secondary) 100%);
+  color: white;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: clamp(0.68rem, 2.6vw, 0.85rem);
+}
+
+/* 固定兩排：第一排去程、第二排回程，每排兩組航班各一格，手機也不折行
+   （使用者 2026-11-08 要求「固定兩行，不用管桌面還是手機」）。
+   窄螢幕用 .fb-ap 把機場代碼藏起來，只留時間 */
+.flight-banner .flight-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  max-width: 720px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.flight-banner .flight-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.flight-banner .flight-item strong {
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  .flight-banner .fb-ap { display: none; }
+}
+
+/* === Sticky Day Navigation === */
+.day-nav {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  /* header 不再 sticky，日期列直接吸附在視窗頂端 —— 手機上任何位置都能切換日期 */
+  top: 0;
+  z-index: 90;
+  box-shadow: 0 2px 6px rgba(44,36,22,0.06);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.day-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.day-nav-inner {
+  display: flex;
+  padding: 0 8px;
+  /* 寬螢幕時置中；窄螢幕放不下就靠左並可橫向捲動
+     （min-width:max-content 會讓 justify-content 失效，所以改用 width:fit-content + margin auto） */
+  width: fit-content;
+  min-width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+@media (max-width: 560px) {
+  .day-nav-inner {
+    justify-content: flex-start;
+    min-width: max-content;
+  }
+}
+
+.day-nav button {
+  flex: 0 0 auto;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 10px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-gray);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.2s, border-color 0.2s;
+  font-family: var(--font-noto);
+}
+
+.day-nav button:hover {
+  color: var(--primary);
+}
+
+.day-nav button.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* 今天那一天：小圓點標記，旅途中一眼看到自己在第幾天 */
+.day-nav button.is-today {
+  position: relative;
+}
+
+.day-nav button.is-today::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* === Main Content === */
+main {
+  padding: 16px 0 40px;
+}
+
+/* === Day Section === */
+.day-section {
+  display: none;
+  animation: fadeIn 0.3s ease;
+  /* 網址帶 #day-N 開啟時（例如從地圖頁回來），瀏覽器會自己捲到那一天。
+     日期列是 sticky，會蓋住當天標題，所以預留「日期列高度＋main 上邊距 16px」，
+     停下來的位置剛好是日期列貼齊頂端。--nav-h 由 JS 量測後寫入 */
+  scroll-margin-top: calc(var(--nav-h, 62px) + 16px);
+}
+
+.day-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--primary);
+}
+
+.day-badge {
+  background: var(--primary);
+  color: white;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 3px 8px rgba(181,69,27,0.3);
+}
+
+.day-badge .day-num {
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.day-badge .day-label {
+  font-size: 0.55rem;
+  opacity: 0.85;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.day-info h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.day-info .date-str {
+  font-size: 0.82rem;
+  color: var(--text-gray);
+}
+
+/* === Timeline === */
+.timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 16px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--border);
+  transition: border-color 0.2s;
+}
+
+.timeline-item:hover {
+  border-left-color: var(--primary);
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Time dot */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -17px;
+  top: 16px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2.5px solid var(--border);
+  z-index: 1;
+}
+
+.timeline-item.highlight::before {
+  border-color: var(--primary);
+  background: var(--primary);
+}
+
+.timeline-item.transport::before {
+  border-color: var(--secondary);
+}
+
+.timeline-item.fixed::before {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+/* Timeline item header */
+.tl-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.tl-time {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  white-space: nowrap;
+  padding-top: 1px;
+  min-width: 44px;
+}
+
+.tl-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.tl-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  flex: 1;
+  /* flex 項目預設 min-width:auto 不會縮到比內容小，長標題會把右側標籤擠出畫面 */
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.tl-tag {
+  font-size: 0.65rem;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tl-tag.fixed {
+  background: #FEF3D8;
+  color: #7A4F1A;
+}
+
+.tl-tag.transport {
+  background: #E3EEF7;
+  color: var(--secondary);
+}
+
+.tl-tag.highlight {
+  background: #FDE8E0;
+  color: var(--primary);
+}
+
+/* Timeline content */
+.tl-detail {
+  font-size: 0.85rem;
+  color: var(--text-dark);
+  line-height: 1.65;
+  padding-left: 0;
+}
+
+.tl-detail p {
+  margin-bottom: 4px;
+}
+
+.tl-detail p:last-child {
+  margin-bottom: 0;
+}
+
+.tl-detail ol {
+  margin: 4px 0 4px 16px;
+  padding-left: 0;
+}
+
+.tl-detail li {
+  margin-bottom: 3px;
+}
+
+/* Map link */
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-top: 6px;
+  padding: 3px 10px 3px 6px;
+  background: var(--chip-bg);
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+
+.map-link:hover {
+  background: #C0D3E3;
+  text-decoration: none;
+}
+
+.map-link svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Note text */
+.tl-note {
+  font-size: 0.78rem;
+  color: var(--text-gray);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* === 補充資訊（注意事項／附近推薦／預約） === */
+.tl-tips {
+  margin-top: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tip {
+  display: flex;
+  gap: 7px;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+  border-left: 3px solid var(--border);
+}
+
+.tip .tip-ico { flex-shrink: 0; line-height: 1.5; }
+.tip .tip-body { min-width: 0; }
+.tip b { color: var(--primary); }
+.tip a { color: var(--secondary); }
+
+/* 會撲空、會關門 —— 最需要被看到的那種 */
+.tip.warn {
+  background: #FDECE4;
+  border-left-color: #C4562C;
+  color: #6E2A12;
+}
+
+.tip.warn b { color: #A8391A; }
+
+/* 需要預約／有時限 */
+.tip.book {
+  background: #FEF6E2;
+  border-left-color: var(--accent);
+}
+
+/* 附近推薦 */
+.tip.near {
+  background: #ECF3EE;
+  border-left-color: #4E8C7A;
+}
+
+/* 營業時間、實務提醒 */
+.tip.info {
+  background: var(--surface-alt);
+  border-left-color: var(--secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tip.warn { background: #432114; border-left-color: #C4562C; color: #F3C4AE; }
+  :root:not([data-theme="light"]) .tip.warn b { color: #FF9E75; }
+  :root:not([data-theme="light"]) .tip.book { background: #3B2F14; }
+  :root:not([data-theme="light"]) .tip.near { background: #1B2F26; }
+}
+
+:root[data-theme="dark"] .tip.warn { background: #432114; border-left-color: #C4562C; color: #F3C4AE; }
+:root[data-theme="dark"] .tip.warn b { color: #FF9E75; }
+:root[data-theme="dark"] .tip.book { background: #3B2F14; }
+:root[data-theme="dark"] .tip.near { background: #1B2F26; }
+
+/* === Section Divider === */
+.section-divider {
+  border: none;
+  border-top: 1px dashed var(--border);
+  margin: 12px 0;
+}
+
+/* === Map Links Footer (per day) === */
+.day-maps {
+  margin-top: 16px;
+  background: var(--surface-alt);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+.day-maps h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+
+.day-maps .map-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.day-maps .map-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--secondary);
+  background: var(--surface);
+  border: 1px solid var(--chip-border);
+  border-radius: 20px;
+  padding: 3px 10px 3px 6px;
+  transition: background 0.2s;
+}
+
+.day-maps .map-chip:hover {
+  background: #D6E8F2;
+  text-decoration: none;
+}
+
+/* 連往地圖頁的 chip，跟 Google Maps 的地點 chip 區隔開 */
+.day-maps .map-chip-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.day-maps .map-chip-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+}
+
+/* === Footer === */
+.site-footer {
+  background: var(--text-dark);
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  padding: 20px 16px;
+  font-size: 0.78rem;
+}
+
+.site-footer a {
+  color: rgba(255,255,255,0.85);
+}
+
+/* === Back to Top === */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.2s;
+  z-index: 80;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1);
+}
+
+/* === Responsive === */
+@media (min-width: 640px) {
+  .site-header h1 {
+    font-size: 1.7rem;
+  }
+
+  .timeline {
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    left: 9px;
+  }
+
+  .timeline-item {
+    padding: 14px 18px;
+  }
+
+  .timeline-item::before {
+    left: -22px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .tl-title {
+    font-size: 1rem;
+  }
+
+  .tl-detail {
+    font-size: 0.88rem;
+  }
+
+  .day-nav button {
+    padding: 12px 16px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --max-w: 860px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+}
+
+/* === 工具列（語言／主題切換） === */
+.toolbar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.toolbar button,
+.toolbar .tb-link {
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.42);
+  color: white;
+  padding: 5px 13px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-family: var(--font-noto);
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.toolbar .tb-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.toolbar button:hover,
+.toolbar .tb-link:hover,
+.toolbar button[aria-pressed="true"] {
+  background: rgba(255,255,255,0.36);
+  color: white;
+  text-decoration: none;
+}
+
+/* 日文地名（預設隱藏，切換後顯示於中文名下一行） */
+.ja-name {
+  display: none;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: var(--on-surface-muted);
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+}
+
+body.show-ja .ja-name {
+  display: block;
+}
+
+/* === 延伸連結（預算、Check List、地圖） === */
+.more-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin: 22px 0 8px;
+}
+
+.more-links a {
+  display: block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 13px 15px;
+  box-shadow: var(--shadow);
+  color: var(--on-surface);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: transform 0.15s, border-left-color 0.15s;
+}
+
+.more-links a:hover {
+  transform: translateY(-2px);
+  border-left-color: var(--accent);
+  text-decoration: none;
+  color: var(--on-surface);
+}
+
+.more-links a small {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.74rem;
+  font-weight: 400;
+  color: var(--on-surface-muted);
+}
+
+/* === 離線提示 === */
+.offline-badge {
+  display: none;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  background: var(--text-dark);
+  color: white;
+  font-size: 0.76rem;
+  padding: 7px 16px;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  z-index: 200;
+}
+
+body.is-offline .offline-badge {
+  display: block;
+}
+
+/* === 深色模式 === */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #E8825A;
+    --primary-light: #F0A181;
+    --primary-dark: #C4603A;
+    --secondary: #8FB3DE;
+    --accent: #D9B463;
+    --bg-light: #17140F;
+    --bg-warm: #1E1A14;
+    --bg-white: #221E17;
+    --text-dark: #EDE6DA;
+    --text-gray: #A69A88;
+    --border: #3A332A;
+    --shadow: 0 2px 8px rgba(0,0,0,0.5);
+    --shadow-lg: 0 4px 20px rgba(0,0,0,0.6);
+    --surface: #221E17;
+    --surface-alt: #1C2430;
+    --on-surface: #EDE6DA;
+    --on-surface-muted: #A69A88;
+    --chip-bg: #1E2833;
+    --chip-border: #35485C;
+  }
+}
+
+:root[data-theme="dark"] {
+  --primary: #E8825A;
+  --primary-light: #F0A181;
+  --primary-dark: #C4603A;
+  --secondary: #8FB3DE;
+  --accent: #D9B463;
+  --bg-light: #17140F;
+  --bg-warm: #1E1A14;
+  --bg-white: #221E17;
+  --text-dark: #EDE6DA;
+  --text-gray: #A69A88;
+  --border: #3A332A;
+  --shadow: 0 2px 8px rgba(0,0,0,0.5);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.6);
+  --surface: #221E17;
+  --surface-alt: #1C2430;
+  --on-surface: #EDE6DA;
+  --on-surface-muted: #A69A88;
+  --chip-bg: #1E2833;
+  --chip-border: #35485C;
+}
+
+/* 深色模式下的標籤配色（淺底色在深色背景會刺眼） */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tl-tag.fixed    { background: #4A3A18; color: #F0D9A0; }
+  :root:not([data-theme="light"]) .tl-tag.transport { background: #1E3A52; color: #A8CBEC; }
+  :root:not([data-theme="light"]) .tl-tag.highlight { background: #4E2A1C; color: #F5B79B; }
+  :root:not([data-theme="light"]) .site-footer      { background: #100E0A; }
+}
+
+:root[data-theme="dark"] .tl-tag.fixed     { background: #4A3A18; color: #F0D9A0; }
+:root[data-theme="dark"] .tl-tag.transport { background: #1E3A52; color: #A8CBEC; }
+:root[data-theme="dark"] .tl-tag.highlight { background: #4E2A1C; color: #F5B79B; }
+:root[data-theme="dark"] .site-footer      { background: #100E0A; }
+
+/* 地圖按鈕 hover 的淺藍底在深色模式下會變成「淺底淺字」，改用深一階的藍 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .map-link:hover,
+  :root:not([data-theme="light"]) .pr-map:hover,
+  :root:not([data-theme="light"]) .day-maps .map-chip:hover { background: #2A3F55; }
+}
+
+:root[data-theme="dark"] .map-link:hover,
+:root[data-theme="dark"] .pr-map:hover,
+:root[data-theme="dark"] .day-maps .map-chip:hover { background: #2A3F55; }
+
+/* === Print === */
+@media print {
+  .day-nav,
+  .back-to-top,
+  .offline-badge,
+  .budget-reset,
+  .site-header .toolbar {
+    display: none;
+  }
+
+  .day-section {
+    display: block !important;
+    page-break-after: always;
+  }
+
+  /* 列印時一併顯示日文地名，方便在當地出示給站務人員 */
+  .ja-name {
+    display: block !important;
+  }
+}
+
+
+/* === 主行程 / 彈性行程 === */
+
+/* 主行程：左側實心粗邊，視覺上「定下來了」 */
+.timeline-item.is-main {
+  border-left-color: var(--primary);
+}
+
+/* 彈性行程：左側虛線邊，暗示「可以換」 */
+.timeline-item.is-flex {
+  border-left-style: dashed;
+  border-left-color: var(--secondary);
+}
+
+/* 交通：左側點線＋灰色，視覺上比主行程與彈性都更輕 */
+.timeline-item.is-move {
+  border-left-style: dotted;
+  border-left-color: var(--on-surface-muted);
+}
+
+.tl-kind {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 1px;
+}
+
+.tl-kind.main {
+  background: var(--primary);
+  color: #fff;
+}
+
+.tl-kind.flex {
+  background: transparent;
+  color: var(--secondary);
+  border: 1px dashed var(--secondary);
+}
+
+/* 交通：不是「行程」而是兩個行程之間的移動，所以既不實線也不虛線，
+   用低調的點線與灰字，讓視線可以直接跳過 */
+.tl-kind.move {
+  background: transparent;
+  color: var(--on-surface-muted);
+  border: 1px dotted var(--on-surface-muted);
+  font-weight: 700;
+}
+
+/* 目前顯示的是哪個方案（A / B / C），和方案輪播的 plan-tag 同一套顏色語言 */
+.tl-plan {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border-radius: 5px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.64rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 1px;
+}
+
+/* 換到 B／C 時改用次色，一眼看出「現在看的不是原訂行程」 */
+.tl-plan.is-alt { background: var(--secondary); }
+
+/* 方案自己的標題：平常只給 JS 讀，不佔版面；列印時攤平顯示才需要看到 */
+.plan-title[hidden] { display: none; }
+
+/* === 方案輪播 === */
+/* 只顯示目前選中的方案，容器高度自然貼合內容 —— 不需要用 JS 量高度，
+   因此在 display:none 的分頁裡也不會出錯 */
+.plans { margin-top: 2px; }
+
+.plans-viewport { /* 保留結構層，不再裁切內容 */ }
+
+.plans-track { display: block; }
+
+.plan { display: none; }
+
+.plan.is-active {
+  display: block;
+  animation: planIn 0.22s ease;
+}
+
+@keyframes planIn {
+  from { opacity: 0; transform: translateX(6px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.plan-head {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-bottom: 5px;
+}
+
+.plan-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 19px;
+  height: 19px;
+  border-radius: 5px;
+  background: var(--secondary);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* 方案 A（原訂行程）用主色，和推薦方案區隔 */
+.plan[data-i="0"] .plan-tag { background: var(--primary); }
+
+.plan-body { font-size: 0.85rem; line-height: 1.65; }
+.plan-body > p { margin-bottom: 6px; color: var(--on-surface-muted); }
+
+/* 方案裡引用的店家／景點小卡（資料來自已查證的資料庫） */
+.plan-ref {
+  background: var(--surface-alt);
+  border-left: 3px solid var(--secondary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 9px 12px;
+  margin-top: 6px;
+}
+
+.pr-name { font-size: 0.85rem; font-weight: 700; color: var(--on-surface); }
+.pr-feat { font-size: 0.78rem; color: var(--on-surface-muted); margin-top: 2px; line-height: 1.6; }
+.pr-facts { font-size: 0.75rem; color: var(--on-surface-muted); margin-top: 5px; line-height: 1.7; }
+
+.pr-map {
+  display: inline-block;
+  margin-top: 7px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--secondary);
+  background: var(--chip-bg);
+  border-radius: 20px;
+  padding: 3px 10px;
+  text-decoration: none;
+}
+
+.pr-map:hover { text-decoration: none; background: #C0D3E3; }
+
+/* 地圖＋查證來源兩顆按鈕並排 */
+.pr-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+.pr-links .pr-map { margin-top: 0; }
+
+.pr-src {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--on-surface-muted);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2px 10px;
+  text-decoration: none;
+}
+
+.pr-src:hover { text-decoration: none; border-color: var(--secondary); color: var(--secondary); }
+
+/* 同一個方案引用兩個地點時，卡片之間留點距離 */
+.plan-ref + .plan-ref { margin-top: 8px; }
+
+/* 方案內的提醒（預約、會撲空）跟卡片之間的間距 */
+.plan-body > .tl-tips { margin: 4px 0 2px; }
+
+/* 方案自己的導遊型交通指引（從前一站怎麼過去）。
+   灰色左邊線＝「交通」，和交通項目 .is-move 的配色一致；前一張交通卡已經寫過、
+   或離方案 A 走路 3 分鐘內的方案不寫 */
+.plan-route {
+  margin: 6px 0;
+  padding: 8px 12px;
+  background: var(--surface-alt);
+  border-left: 3px solid var(--on-surface-muted);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--on-surface);
+}
+.plan-route-title { font-weight: 700; font-size: 0.78rem; margin-bottom: 3px; }
+.plan-route ol { margin: 0 0 0 1.3em; padding: 0; }
+.plan-route li { margin-bottom: 2px; }
+.plan-route-step { margin: 0; }
+.plan-route-note { margin-top: 4px; font-size: 0.75rem; color: var(--on-surface-muted); }
+
+/* === 景點卡片的照片與小地圖（目前是 Day 6 嵐山） ===
+   照片橫向捲動；地圖是 iframe 嵌入 ../map/spot.html?id=…&embed=1，Leaflet 只在那一頁載入。
+   日期滑動會略過起點落在 .spot-photos 的手勢（見 index.html 的 enableSwipe）。 */
+.spot-media { margin-top: 10px; }
+
+.spot-photos {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.spot-photos figure {
+  flex: 0 0 min(78%, 280px);
+  scroll-snap-align: start;
+  margin: 0;
+}
+
+.spot-photos img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: var(--surface-alt);
+}
+
+.spot-photos figcaption {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin-top: 4px;
+}
+
+.spot-photos figcaption small {
+  display: block;
+  font-size: 0.66rem;
+  font-weight: 500;
+  color: var(--on-surface-muted);
+}
+
+.spot-photos figcaption a { color: inherit; }
+
+.spot-map {
+  margin-top: 8px;
+  height: 280px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-alt);
+}
+
+.spot-map iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+.spot-offline { display: none; font-size: 0.76rem; color: var(--on-surface-muted); margin-top: 6px; }
+body.is-offline .spot-map { display: none; }
+body.is-offline .spot-offline { display: block; }
+
+.spot-credit { font-size: 0.66rem; color: var(--on-surface-muted); margin-top: 6px; line-height: 1.5; }
+
+/* 順路清單不加序號：序號後面緊接時間（「1. 14:50」）很難讀，改成圓點＋主色的時間標籤 .sr-time */
+.tl-detail ul.spot-route { list-style: none; margin: 6px 0 4px; padding: 0; }
+.tl-detail ul.spot-route li { position: relative; padding-left: 14px; margin-bottom: 4px; }
+.tl-detail ul.spot-route li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+.spot-route .sr-time {
+  font-weight: 800;
+  color: var(--primary);
+  margin-right: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* === 主行程的「計畫B」 ===
+   主行程是已訂或非去不可的項目，不做成輪播：輪播代表「任選一個」，而且會換掉標題。
+   計畫B 只是備案 —— 平常收成一列（B＋名稱＋什麼情況用），點開才看查證過的細節。
+   顏色沿用次色＝「替代方案」，和輪播的 B 同一套語言；B 字方塊直接沿用 .plan-tag */
+.alt-plan {
+  margin-top: 10px;
+  border: 1px dashed var(--secondary);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.alt-plan > summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  list-style: none;   /* 拿掉瀏覽器預設的三角形，改用右側的 ▾ */
+  border-radius: var(--radius-sm);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.alt-plan > summary::-webkit-details-marker { display: none; }
+.alt-plan > summary:hover { background: var(--surface-alt); }
+
+.alt-plan[open] > summary {
+  border-bottom: 1px dashed var(--border);
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+}
+
+.ap-text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.ap-name { font-size: 0.84rem; font-weight: 700; color: var(--on-surface); }
+.ap-when { font-size: 0.72rem; font-weight: 600; color: var(--on-surface-muted); margin-top: 1px; }
+
+.ap-arrow {
+  color: var(--secondary);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.alt-plan[open] .ap-arrow { transform: rotate(180deg); }
+
+.ap-body { padding: 8px 10px 10px; font-size: 0.85rem; line-height: 1.65; }
+.ap-body > p { margin-bottom: 6px; color: var(--on-surface-muted); }
+
+/* 導覽列：放在輪播「上方」。
+   放下方的話，A／B／C 內容長度不同會讓整排按鈕上下跳 84～230px，
+   按鈕才 26px 高，桌機連點兩下第二下必定落空 —— 不要搬回去。 */
+.plans-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding-bottom: 7px;
+  border-bottom: 1px dashed var(--border);
+}
+
+.plans-hint {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--on-surface-muted);
+  letter-spacing: 0.5px;
+}
+
+.plan-arrow {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--on-surface-muted);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  font-family: var(--font-noto);
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.plan-arrow:hover:not(:disabled) { border-color: var(--secondary); color: var(--secondary); }
+.plan-arrow:disabled { opacity: 0.3; cursor: default; }
+
+.plan-dots { display: flex; gap: 5px; }
+
+.plan-dot {
+  min-width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--on-surface-muted);
+  font-size: 0.7rem;
+  font-weight: 800;
+  font-family: var(--font-noto);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.plan-dot:hover { border-color: var(--secondary); color: var(--secondary); }
+
+.plan-dot.active {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: #fff;
+}
+
+.plan-dot:first-child.active {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+
+/* 頁尾臨時墊片：切換方案時若捲動位置被夾住，暫時撐開以補回位移 */
+.scroll-slack { height: 0; pointer-events: none; }
+
+/* 圖例 */
+.kind-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 0.74rem;
+  color: var(--on-surface-muted);
+  margin: 0 0 14px;
+  padding: 9px 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.kind-legend span { display: inline-flex; align-items: center; gap: 5px; }
+
+/* 列印時把所有方案攤平顯示，不要只印出目前那一個 */
+@media print {
+  .plan { display: block !important; animation: none !important; break-inside: avoid; margin-bottom: 8px; }
+  .plans-nav { display: none; }
+
+  /* 地圖在紙上沒有用；照片縮小成一排小圖 */
+  .spot-map, .spot-offline { display: none !important; }
+  .spot-photos { overflow: visible; flex-wrap: wrap; }
+  .spot-photos figure { flex: 0 0 23%; }
+
+  /* 計畫B 由 JS 在 beforeprint 時展開；箭頭在紙上沒有意義 */
+  .alt-plan { break-inside: avoid; }
+  .ap-arrow { display: none; }
+
+  /* 列印時所有方案都攤開，各自的標題要顯示出來才分得清誰是誰 */
+  .plan-title[hidden] {
+    display: block !important;
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: var(--on-surface);
+    margin-bottom: 3px;
+  }
+}
+
+
+/* === 餐飲建議收合（.is-suggest）：方案都是 AI 建議，預設收起，點開才看 === */
+.tl-sugg {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: flex-start;
+  margin-top: 1px;
+  background: transparent;
+  color: var(--secondary);
+  border: 1px dashed var(--secondary);
+}
+
+.timeline-item.is-suggest .tl-header { cursor: pointer; }
+
+.sugg-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  margin: 0 0 6px;
+  padding: 6px 10px;
+  font: inherit;
+  font-size: 0.82rem;
+  color: var(--secondary);
+  text-align: left;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.sugg-toggle:hover { border-color: var(--secondary); }
+.sugg-arrow { flex-shrink: 0; width: 1em; text-align: center; }
+
+@media (pointer: coarse) {
+  .sugg-toggle { min-height: 36px; }
+}
+
+/* 展開後文字改成「收起建議」 */
+.timeline-item.is-suggest:not(.is-collapsed) .sugg-text { font-size: 0; }
+.timeline-item.is-suggest:not(.is-collapsed) .sugg-text::after { content: '收起建議'; font-size: 0.82rem; }
+
+.timeline-item.is-suggest.is-collapsed .plans,
+.timeline-item.is-suggest.is-collapsed .tl-tips,
+.timeline-item.is-suggest.is-collapsed > .map-link { display: none; }
+
+@media print {
+  .sugg-toggle { display: none; }
+  .timeline-item.is-suggest.is-collapsed .plans,
+  .timeline-item.is-suggest.is-collapsed .tl-tips,
+  .timeline-item.is-suggest.is-collapsed > .map-link { display: block; }
+  .timeline-item.is-suggest.is-collapsed > .map-link { display: inline-flex; }
+}
+
+
+/* === 分頭行動：家人／獨旅兩條線（2026-11-05 起；寫法見 templates/itinerary-snippets.html） ===
+   .split 包住分開的那一段，裡面兩個 .lane（data-who="family"／"solo"），各自是一條小時間軸。
+   一次只顯示 .is-current 那一條（手機用分頁切；工具列「看：家人／獨旅」只留那一條）；
+   寬螢幕又是「看：全部」時兩條線並排。body[data-who] 由 itinerary.js 在頁面有 .split 時才設定 */
+.split {
+  position: relative;
+  margin: 0 0 16px;
+  padding: 10px 10px 12px;
+  border: 1.5px dashed var(--secondary);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+}
+
+.split:last-child { margin-bottom: 0; }
+
+/* 主時間軸上的圓點，和一般項目對齊 */
+.split::before {
+  content: '';
+  position: absolute;
+  left: -17px;
+  top: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2.5px solid var(--secondary);
+  z-index: 1;
+}
+
+.split-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin-bottom: 8px;
+}
+
+.split-badge { font-weight: 800; color: var(--secondary); }
+.split-when { font-weight: 700; color: var(--on-surface); font-variant-numeric: tabular-nums; }
+.split-meet { font-size: 0.85rem; color: var(--on-surface-muted); }
+
+.split-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.split-tab {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1.5px solid var(--chip-border);
+  background: var(--surface);
+  color: var(--on-surface);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.split-tab.active {
+  background: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--surface);
+}
+
+/* 每條線自己一條細時間軸，項目的圓點對齊這條線 */
+.lane {
+  position: relative;
+  padding-left: 20px;
+}
+
+.lane::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.lane:not(.is-current) { display: none; }
+
+/* 線的名稱只在兩條線並排時顯示；用分頁切換時分頁本身就寫了是誰 */
+.lane-label {
+  display: none;
+  margin: 0 0 8px -20px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--on-surface-muted);
+}
+
+.lane .timeline-item:last-child { margin-bottom: 0; }
+
+/* 還沒排的那條線：先佔一個位置 */
+.lane-empty {
+  padding: 12px 14px;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--on-surface-muted);
+  font-size: 0.88rem;
+}
+
+@media (min-width: 900px) {
+  body[data-who="all"] .split-tabs { display: none; }
+  body[data-who="all"] .split-lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  body[data-who="all"] .lane { display: block; }
+  body[data-who="all"] .lane-label { display: block; }
+}
+
+/* 日期列：有分頭行動的那幾天，左上角一個小圖示 */
+.day-nav button.has-split { position: relative; }
+.day-nav button.has-split::before {
+  content: '🔀';
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  font-size: 0.62rem;
+  line-height: 1;
+}
+
+@media print {
+  .split-tabs { display: none; }
+  .lane { display: block !important; margin-bottom: 10px; }
+  .lane-label { display: block !important; }
+}

@@ -1,0 +1,47 @@
+name: Deploy docs to GitHub Pages
+
+# 本站是純靜態 HTML（無 build step），直接把 docs/ 上傳部署。
+# 改用 Actions 而非 Pages 內建的 Jekyll 流程，因為後者會嘗試處理
+# docs/ 下的 Markdown 文件並導致 "Page build failed"，且沒有可查的錯誤記錄。
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:      # 也可在 Actions 頁面手動觸發
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時只跑一個部署；排隊中的舊任務不取消，確保最後一次推送一定會上線
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # repository 是 private 時（2026-10-14 起），GitHub Free 不能用 Pages，部署一定失敗 —— 直接跳過。
+    # 改回 public 之後自動恢復部署，不用改這裡
+    if: ${{ !github.event.repository.private }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload docs/
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
