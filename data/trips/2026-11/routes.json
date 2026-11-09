@@ -189,16 +189,9 @@
           {
             "mode": "rail",
             "relation": 9483158,
-            "label": "小田急線",
+            "label": "小田急線 各停",
             "board": "豪徳寺",
-            "alight": "代々木上原"
-          },
-          {
-            "mode": "subway",
-            "relation": 443284,
-            "label": "地下鐵 千代田線",
-            "board": "代々木上原",
-            "alight": "明治神宮前〈原宿〉"
+            "alight": "参宮橋"
           }
         ]
       },
