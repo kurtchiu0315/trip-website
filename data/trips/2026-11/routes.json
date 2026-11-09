@@ -132,38 +132,56 @@
     "2": [
       {
         "from": "start",
-        "to": "10:00～",
+        "to": "10:00",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "10:00",
+        "to": "11:00",
         "legs": [
           {
             "mode": "rail",
-            "relation": 4684034,
-            "label": "JR 湘南新宿ライン",
+            "relation": 1972960,
+            "label": "JR 山手線 內回り",
             "board": "池袋",
             "alight": "新宿"
           },
           {
             "mode": "rail",
-            "relation": 11271039,
-            "label": "京王線",
+            "relation": 9483158,
+            "label": "小田急線 各停",
             "board": "新宿",
-            "alight": "下高井"
+            "alight": "豪徳寺"
           },
           {
             "mode": "rail",
-            "relation": 7215410,
+            "relation": 7215409,
             "label": "東急世田谷線",
-            "board": "下高井戸",
+            "board": "山下",
             "alight": "宮の坂"
           }
         ]
       },
       {
-        "from": "10:00～",
-        "to": "19:00",
+        "from": "11:00",
+        "to": "12:00",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "12:00",
+        "to": "12:40",
         "legs": [
           {
             "mode": "rail",
-            "relation": 7215409,
+            "relation": 7215410,
             "label": "東急世田谷線",
             "board": "宮の坂",
             "alight": "山下"
@@ -173,7 +191,99 @@
             "relation": 9483158,
             "label": "小田急線",
             "board": "豪徳寺",
-            "alight": "新宿"
+            "alight": "代々木上原"
+          },
+          {
+            "mode": "subway",
+            "relation": 443284,
+            "label": "地下鐵 千代田線",
+            "board": "代々木上原",
+            "alight": "明治神宮前〈原宿〉"
+          }
+        ]
+      },
+      {
+        "from": "12:40",
+        "to": "14:00",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "14:00",
+        "to": "14:15",
+        "legs": [
+          {
+            "mode": "subway",
+            "relation": 5375678,
+            "label": "地下鐵 副都心線",
+            "board": "明治神宮前〈原宿〉",
+            "alight": "新宿三丁目"
+          }
+        ]
+      },
+      {
+        "from": "14:15",
+        "to": "15:10",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "15:10",
+        "to": "15:15",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "15:15",
+        "to": "16:30",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "16:30",
+        "to": "18:40",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "15:15",
+        "to": "18:40",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "18:40",
+        "to": "19:00",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "19:00",
+        "to": "20:30",
+        "legs": [
+          {
+            "mode": "walk"
           }
         ]
       }
