@@ -215,6 +215,27 @@ img {
 .flight-banner.is-forecast .flight-row { grid-template-columns: 1fr; gap: 4px; }
 .flight-banner.is-forecast .flight-item { white-space: normal; justify-content: flex-start; text-align: left; line-height: 1.4; }
 
+/* 雨天備案頁的分頁列：三個備案版本，切換後日期列只顯示該分頁的天 */
+.scheme-nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 10px 0; }
+.scheme-tabs { display: flex; gap: 8px; overflow-x: auto; flex-wrap: nowrap; }
+.scheme-tabs button {
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--on-surface);
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: var(--font-noto);
+}
+.scheme-tabs button.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+.scheme-desc { margin: 8px 0 0; font-size: 13px; color: var(--on-surface-muted); }
+.scheme-desc[hidden] { display: none; }
+.day-nav button[hidden] { display: none; }
+
 /* === Sticky Day Navigation === */
 .day-nav {
   background: var(--surface);

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>☔ 雨天備案｜11/15・11/17・11/18・11/19</title>
-  <meta name="description" content="雨天備案：11/15 與 11/17 交換（高尾山提前到 11/15），11/18 早上下雨時改走室內，11/19 晴天把富士山改到早上看">
+  <title>☔ 雨天備案｜高尾山 11/15 版・11/20 版・富士河口湖</title>
+  <meta name="description" content="雨天備案三個版本：高尾山改到 11/15 或 11/20（建議），富士河口湖 11/18 早上下雨改室內、新倉山搬到 11/19 早上">
   <meta name="theme-color" content="#B5451B">
-    <link rel="stylesheet" href="../../assets/itinerary.css?v=20261110b">
+    <link rel="stylesheet" href="../../assets/itinerary.css?v=20261110c">
   <!-- 字體非阻塞載入：CDN 連不上（例如在日本沒網路）時直接用系統內建中日文字型 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +18,11 @@
   <!-- ====== HEADER ====== -->
   <header class="site-header" data-hero>
     <div class="container">
-      <h1>☔ 雨天備案｜富士河口湖</h1>
-      <p class="trip-dates">11/15・11/17・11/18・11/19｜預報下雨就照這一版走</p>
+      <h1>☔ 雨天備案</h1>
+      <p class="trip-dates">三個版本：高尾山 11/15 版・高尾山 11/20 版（建議）・富士河口湖｜預報下雨就照這一版走</p>
       <div class="toolbar">
         <a class="tb-link" href="../../index.html">← 回首頁</a>
-        <a class="tb-link" href="../final/index.html#day-5">📅 主行程表</a>
+        <a class="tb-link" href="../final/index.html#day-4">📅 主行程表</a>
         <a class="tb-link" href="../map/index.html?day=5">🗺️ 地圖</a>
         <button id="jaToggle" type="button" aria-pressed="false" onclick="toggleJa()">🇯🇵 顯示日文地名</button>
         <button id="themeToggle" type="button" onclick="cycleTheme()">🌗 主題</button>
@@ -35,29 +35,583 @@
   <div class="flight-banner is-forecast">
     <div class="flight-row">
       <div class="flight-item"><span>🌥️</span><span><strong>11/15（日）</strong> 新宿 曇時々晴 15°／12°、降水 40%；高尾山 晴のち曇 20°／7°、20%</span></div>
-      <div class="flight-item"><span>🌧️</span><span><strong>11/17（二）</strong> 高尾山 曇のち雨 13°／10°，12 時起 70%、18 時起 80%；新宿 70%</span></div>
+      <div class="flight-item"><span>🌧️</span><span><strong>11/17（二）</strong> 高尾山（八王子）曇のち雨 12°／10°、降水 90%、19 mm；都心 13°／11°、90%、22 mm</span></div>
       <div class="flight-item"><span>🌧️</span><span><strong>11/18（三）</strong> 雨のち曇 15°／7°，上午降水 90%、下午 40%、晚上 20%</span></div>
       <div class="flight-item"><span>☀️</span><span><strong>11/19（四）</strong> 晴のち雪 11°／2°，白天晴，18 時後降雪 60%</span></div>
+      <div class="flight-item"><span>☀️</span><span><strong>11/20（五）</strong> 高尾山（八王子）晴時々曇 17°／4°、降水 20%；都心 17°／8°、20%（10 天後的預報，信賴度低）</span></div>
     </div>
     <div class="flight-row">
       <div class="flight-item"><span>📆</span><span>11/10 看的預報，出發前再看一次；下雨與否以當天早上 6 點為準</span></div>
     </div>
   </div>
 
+  <!-- ====== 備案分頁 ====== -->
+  <nav class="scheme-nav" aria-label="備案分頁">
+    <div class="container">
+      <div class="scheme-tabs" role="tablist">
+        <button type="button" role="tab" data-scheme="1" aria-selected="false" onclick="showScheme(1)">🍁 高尾山 11/15 版</button>
+        <button type="button" role="tab" data-scheme="2" aria-selected="true" class="active" onclick="showScheme(2)">🍁 高尾山 11/20 版</button>
+        <button type="button" role="tab" data-scheme="3" aria-selected="false" onclick="showScheme(3)">🗻 富士雨天備案</button>
+      </div>
+      <p class="scheme-desc" data-scheme="1" hidden>11/15（日）去高尾山、11/17（二）走豪徳寺・明治神宮・新宿御苑；11/14 晚上就要決定。</p>
+      <p class="scheme-desc" data-scheme="2">建議版：11/17（二）在淺草躲雨、11/20（五）去高尾山；11/15 不動，11/16 晚上看預報再決定就好。</p>
+      <p class="scheme-desc" data-scheme="3" hidden>11/18 早上下雨：新倉山不去改室內，新倉山搬到 11/19 早上（晴）。</p>
+    </div>
+  </nav>
+
   <!-- ====== STICKY DAY NAV ====== -->
   <nav class="day-nav" id="dayNav" aria-label="日期切換">
     <div class="day-nav-inner" role="tablist">
-      <button role="tab" aria-selected="true"  aria-controls="day-1" onclick="showDay(1)" id="nav-1" class="active">DAY 2<br><small>11/15 (日)</small></button>
-      <button role="tab" aria-selected="false" aria-controls="day-2" onclick="showDay(2)" id="nav-2">DAY 4<br><small>11/17 (二)</small></button>
-      <button role="tab" aria-selected="false" aria-controls="day-3" onclick="showDay(3)" id="nav-3">DAY 5<br><small>11/18 (三)</small></button>
-      <button role="tab" aria-selected="false" aria-controls="day-4" onclick="showDay(4)" id="nav-4">DAY 6<br><small>11/19 (四)</small></button>
+      <button role="tab" aria-selected="true" aria-controls="day-1" onclick="showDay(1)" id="nav-1" data-scheme="2" class="active">DAY 4<br><small>11/17 (二)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-2" onclick="showDay(2)" id="nav-2" data-scheme="2">DAY 7<br><small>11/20 (五)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-3" onclick="showDay(3)" id="nav-3" data-scheme="1" hidden>DAY 2<br><small>11/15 (日)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-4" onclick="showDay(4)" id="nav-4" data-scheme="1" hidden>DAY 4<br><small>11/17 (二)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-5" onclick="showDay(5)" id="nav-5" data-scheme="3" hidden>DAY 5<br><small>11/18 (三)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-6" onclick="showDay(6)" id="nav-6" data-scheme="3" hidden>DAY 6<br><small>11/19 (四)</small></button>
     </div>
   </nav>
 
   <main>
 
+    <!-- ====== DAY 4（11/17 淺草雨天版） ====== -->
+    <section class="day-section active" id="day-1" data-scheme="2" data-date="2026-11-17">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge"><span class="day-num">4</span><span class="day-label">DAY</span></div>
+          <div class="day-info">
+            <h2>Day 4｜11月17日（二）淺草雨天版</h2>
+            <p class="date-str">和 11/20 交換：早上浅草寺・仲見世撐傘走，11:15 浅草牛かつ，下午全員東京ソラマチ躲雨（不上晴空塔），淺草晚餐後回池袋打包</p>
+          </div>
+        </div>
+        <div class="timeline">
+
+          <div class="tl-tips">
+          <div class="tip info"><span class="tip-ico">💡</span><span class="tip-body"><b>什麼時候用</b><br>11/17 預報全天 90% 雨（八王子 19 mm、都心 22 mm），高尾山改到 11/20（五，預報晴時々曇 20%）；把主行程表 11/20 的淺草搬到這天、從池袋出發。11/16 晚上再看一次 11/17 與 11/20 的預報再決定。</span></div>
+            <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>晚上要打包</b><br>隔天 06:50 出發去河口湖、帶 8 件大行李；晚餐後直接回池袋，富士回遊紙本票、Suica 放好。</span></div>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">09:00</span>
+              <span class="tl-icon">🚃</span>
+              <span class="tl-title">交通｜民宿 → 池袋 → 山手線 → 上野 → 銀座線 → 浅草</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>約 50 分含步行，IC ¥387（209＋178），全程隨到隨搭。</p>
+              <p>導遊型交通指引：</p>
+              <ol>
+                <li>09:00 出發，步行約 14 分到池袋站</li>
+                <li>JR 山手線 外回り（上野・東京方面）→ 上野，約 17 分（¥209）</li>
+                <li>上野站換東京メトロ銀座線（浅草行），約 5 分到終點浅草（¥178）</li>
+                <li>出站步行幾分鐘到雷門</li>
+              </ol>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=池袋駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              池袋駅
+            </a>
+          </div>
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">09:50</span>
+              <span class="tl-icon">⛩️</span>
+              <span class="tl-title">淺草寺｜雷門 → 仲見世通り → 宝蔵門 → 本堂<span class="ja-name">浅草寺</span></span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>本堂 11 月 6:30～17:00（官網），境內免費。雷門到本堂約 300 m（估算）。仲見世各店約 9:00／10:00 開（第三方，各店不同）。</p>
+              <ul class="spot-route">
+                <li><span class="sr-time">09:50</span><b>雷門</b> — 大燈籠合照</li>
+                <li><span class="sr-time">10:00</span><b>仲見世通り</b> — 人形焼、雷おこし</li>
+                <li><span class="sr-time">10:20</span>宝蔵門・五重塔</li>
+                <li><span class="sr-time">10:30</span><b>本堂</b> — 抽籤、御守</li>
+                <li><span class="sr-time">10:50</span>浅草神社</li>
+                <li><span class="sr-time">11:10</span>走到雷門前的牛かつ排隊</li>
+              </ul>
+            </div>
+            <div class="tl-tips">
+              <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>下雨的仲見世</b><br>仲見世通り是露天街道，只有各店門口的遮簷；人多時撐傘慢慢走，本堂前有屋簷可以站著躲。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=浅草寺" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              浅草寺
+            </a>
+          </div>
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">11:15</span>
+              <span class="tl-icon">🥩</span>
+              <span class="tl-title">午餐｜浅草 牛かつ（雷門前）</span>
+              <span class="tl-tag">指定</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>「Asakusa Gyukatsu」就是食べログ的「浅草 牛かつ」（雷門2-17-10 雷門上村ビル 1F・B1F），不是「牛かつ もと村」。食べログ 3.45（384 則評論，2026/11 查）；11:00～22:00（L.O. 21:30），每天營業；午餐價位 ¥2,000～2,999（食べログ；口コミ平均 ¥1,000～1,999）。<b>只有 20 席吧台（1F 11 席、B1F 9 席）、不接受預約。</b></p>
+            </div>
+            <div class="tl-tips">
+              <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>10 人要分兩批入座</b><br>9 位大人加 1 位小孩不可能同時入座，也不保證坐在一起。提早在 11:10 到門口排隊，避開 12:00 的排隊尖峰。先進去的一批吃完換下一批，等的人在雷門旁逛。</span></div>
+            </div>
+            <details class="alt-plan">
+              <summary>
+                <span class="plan-tag">B</span>
+                <span class="ap-text">
+                  <span class="ap-name">計畫B｜浅草牛かつ 分店</span>
+                  <span class="ap-when">⏳ 排隊超過 40 分時</span>
+                </span>
+                <span class="ap-arrow" aria-hidden="true">▾</span>
+              </summary>
+              <div class="ap-body">
+                <p>「浅草牛かつ 分店」在 ザ・シティ浅草雷門 2F，食べログ約 3.1～3.2（二手資料）。營業時間與訂位：未查到（只有一則個人部落格稱分店可網路預約，單一來源、二手）。<a class="pr-map" href="https://maps.google.com/maps?q=浅草牛かつ+分店" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/tokyo/A1311/A131102/13172454/" target="_blank" rel="noopener">查證來源（搜尋摘要）</a></p>
+                <p>也可以改吃下面四家（週二都有開）：<br>
+<b>Kaminarimon Sansada（食べログ英文站名稱）</b>｜天ぷら，320 席、有包廂｜週二 11:00～20:30｜<a class="pr-map" href="https://maps.google.com/maps?q=Kaminarimon+Sansada" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131102/13003675/" target="_blank" rel="noopener">查證來源</a><br>
+<b>Daikokuya Tempura Honten（食べログ英文站名稱）</b>｜天ぷら，200 席、不接受預約｜每日 11:00～20:00｜<a class="pr-map" href="https://maps.google.com/maps?q=Daikokuya+Tempura+Honten" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131102/13003696/" target="_blank" rel="noopener">查證來源</a><br>
+<b>Namiki Yabu Soba（食べログ英文站名稱）</b>｜蕎麥麵，36 席、不接受預約｜週二 11:00～19:00｜<a class="pr-map" href="https://maps.google.com/maps?q=Namiki+Yabu+Soba" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131102/13003650/" target="_blank" rel="noopener">查證來源</a><br>
+<b>Tonkatsu Yutaka（食べログ英文站名稱）</b>｜炸豬排，38 席（二樓個室僅限套餐）｜週二 11:30～14:30、17:00～20:30｜<a class="pr-map" href="https://maps.google.com/maps?q=Tonkatsu+Yutaka" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131102/13003669/" target="_blank" rel="noopener">查證來源</a></p>
+              </div>
+            </details>
+            <a class="map-link" href="https://maps.google.com/maps?q=浅草+牛かつ" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              浅草 牛かつ
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">12:45</span>
+              <span class="tl-icon">🚃</span>
+              <span class="tl-title">東武スカイツリーライン｜浅草 → とうきょうスカイツリー</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>浅草駅（東武）→ とうきょうスカイツリー駅約 3 分、¥160（第三方）；或走吾妻橋步行約 25 分（2 km）。<b>銀座線不到押上</b>，要搭東武線。</p>
+              
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=浅草駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              浅草駅（東武）
+            </a>
+          </div>
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">13:00</span>
+              <span class="tl-icon">🗼</span>
+              <span class="tl-title">東京ソラマチ（晴空塔腳下，不上展望台）<span class="ja-name">東京ソラマチ</span></span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>商店 10:00～21:00、6F・7F・30F・31F 餐廳 11:00～23:00（官網）。全室內、有電梯與座位；在塔下拍照、逛伴手禮、咖啡休息到 16:30。不買天望デッキ門票。</p>
+            </div>
+            <div class="tl-tips">
+              <div class="tip near"><span class="tip-ico">📍</span><span class="tip-body"><b>すみだ水族館（ソラマチ 5F・6F）想進再進</b><br>可在入口售票機當日買票（現金、信用卡、電子支付），也可 WEB 先買（官網）；票價與一般營業時間還沒查到；11/17 沒有短縮營業公告（官網）。</span></div>
+              <div class="tip near"><span class="tip-ico">📍</span><span class="tip-body"><b>不想去ソラマチ：合羽橋道具街</b><br>入谷駅步行 6 分、田原町駅 5 分（官網）；週二多數店有開（營業時間官網沒列）；店與店之間要撐傘。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=東京スカイツリー" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              東京スカイツリー
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">16:45</span>
+              <span class="tl-icon">🚃</span>
+              <span class="tl-title">東武スカイツリーライン｜とうきょうスカイツリー → 浅草</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>約 3 分、¥160；到浅草駅後步行到晚餐店。</p>
+              
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=とうきょうスカイツリー駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              とうきょうスカイツリー駅
+            </a>
+          </div>
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">17:30</span>
+              <span class="tl-icon">🍲</span>
+              <span class="tl-title">晚餐｜Edo Niku Kappou Sasaya Asakusa</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🍲" role="tabpanel" aria-label="方案 A"><span class="plan-title" hidden>晚餐｜Edo Niku Kappou Sasaya Asakusa</span><div class="plan-head"><span class="plan-tag">A</span>原訂行程：榻榻米宴會廳吃江戸肉割烹</div><div class="plan-body"><p>週二有開、容得下一行人，和 11/19 不同店。榻榻米宴會廳可坐 20～30 人，含すき焼き。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">全員一起從浅草駅步行過去；步行分鐘數未查到。店址在浅草1-35-3。</p></div><div class="plan-ref"><div class="pr-name">Edo Niku Kappou Sasaya Asakusa（食べログ英文站名稱）</div><div class="pr-feat">江戸肉割烹（含すき焼き），180 席，榻榻米宴會廳 20～30 人</div><div class="pr-facts">⭐ 食べログ <b>3.55</b>（270 則評論，2026/11 查）<br>🕐 每日 11:00～22:00（L.O. 食 21:00、飲 21:30），週二有開<br>🎫 晚 ¥5,000～5,999（午 ¥3,000～3,999）<br>📍 東京都台東区浅草1-35-3<br>可預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=Edo+Niku+Kappou+Sasaya+Asakusa" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131102/13316569/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="1" data-icon="🥞" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>晚餐｜Asakusa Monja Monro</span><div class="plan-head"><span class="plan-tag">B</span>もんじゃ，83 席</div><div class="plan-body"><p>每日營業到深夜、席數多。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">全員一起從浅草駅步行過去；步行分鐘數未查到。店址在浅草1-41-2。</p></div><div class="plan-ref"><div class="pr-name">Asakusa Monja Monro（食べログ英文站名稱）</div><div class="pr-feat">もんじゃ，83 席</div><div class="pr-facts">⭐ 食べログ <b>3.46</b>（814 則評論，2026/11 查）<br>🕐 每日 11:00～23:00（L.O. 食 22:00、飲 22:30）<br>🎫 晚 ¥2,000～2,999（午 ¥1,000～1,999）<br>📍 東京都台東区浅草1-41-2<br>⚠️ 2、3 樓走室外樓梯，長輩行動不便要注意；11 人以上只能電話預約；要點一杯飲料</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=Asakusa+Monja+Monro" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131102/13300191/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=Edo+Niku+Kappou+Sasaya+Asakusa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Edo Niku Kappou Sasaya Asakusa
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">19:00</span>
+              <span class="tl-icon">🚃</span>
+              <span class="tl-title">交通｜浅草 → 銀座線 → 上野 → 山手線 → 池袋 → 民宿</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>約 50 分，IC ¥387。</p>
+              <p>導遊型交通指引：</p>
+              <ol>
+                <li>浅草駅搭銀座線（渋谷行）→ 上野 約 5 分（¥178）</li>
+                <li>上野換 JR 山手線 内回り（池袋・新宿方面）→ 池袋 約 17 分（¥209）</li>
+                <li>池袋東口步行約 14 分回民宿。<b>明天 06:50 出發</b>、要帶 8 件大行李去河口湖，今晚打包；富士回遊紙本票、Suica 放好</li>
+              </ol>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=浅草駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              浅草駅
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 7（11/20 高尾山版） ====== -->
+    <section class="day-section" id="day-2" data-scheme="2" data-date="2026-11-20">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge"><span class="day-num">7</span><span class="day-label">DAY</span></div>
+          <div class="day-info">
+            <h2>Day 7｜11月20日（五）高尾山版</h2>
+            <p class="date-str">和 11/17 交換：從千束出發去高尾山賞楓・薬王院，腳力組加登山頂，高尾 599 博物館，回淺草晚餐</p>
+          </div>
+        </div>
+        <div class="timeline">
+
+          <div class="tl-tips">
+            <div class="tip info"><span class="tip-ico">💡</span><span class="tip-body"><b>什麼時候用</b><br>11/17 下雨就把高尾山移到這天。11/20 預報晴時々曇、降水 20%、17°／4°（11/10 15:00 tenki.jp，10 天後的預報信賴度低，11/16 晚上再看一次）。</span></div>
+            <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>前一晚到得晚、這天出門早</b><br>11/19 高速巴士 18:00 才到上野，這天 07:20 又出門；長輩前一晚早點休息，早餐在車站買。</span></div>
+            <div class="tip near"><span class="tip-ico">📍</span><span class="tip-body"><b>週五是平日</b><br>沒有 Mt.TAKAO 號（只有土日假日），搭一般特急；平日纜車排隊比週末短（第三方，沒有數字）。</span></div>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">07:20</span>
+              <span class="tl-icon">🚃</span>
+              <span class="tl-title">交通｜民宿 → 入谷 → 日比谷線 → 上野 → 山手線 → 新宿 → 京王線特急 → 高尾山口 09:37</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>合計約 2 小時 15 分含買票，IC ¥178＋¥253＋高尾山きっぷ。</p>
+              <p>導遊型交通指引：</p>
+              <ol>
+                <li>07:20 出發，步行約 15 分到日比谷線 入谷駅（1.2 km，OSRM）</li>
+                <li>日比谷線（中目黒方面）1 站到上野，約 2 分（¥178），隨到隨搭</li>
+                <li>上野換 JR 山手線 内回り（池袋・新宿方面）→ 新宿 約 26 分（¥253），隨到隨搭；JR 到京王線連絡口長輩預留 10～15 分</li>
+                <li>新宿京王線售票機買「高尾山きっぷ」（大人往復 ¥1,450，含纜車往復；當日有效、高尾山口站不賣）</li>
+                <li>08:35 京王線 特急（京王八王子行）→ 北野 09:20，同月台換 09:24 高尾線（高尾山口行）→ 高尾山口 09:37；買票快的話 08:10 特急（高尾山口行，直達）→ 09:11</li>
+              </ol>
+            </div>
+            <div class="tl-tips">
+              <div class="tip near"><span class="tip-ico">📍</span><span class="tip-body"><b>不繞新宿、少走路，但買不到きっぷ</b><br>入谷 07:30 日比谷線 → 秋葉原 07:37，走約 6 分到都營新宿線 岩本町，07:48 搭往笹塚／橋本的車 → 笹塚 08:09，同站換 08:16 京王特急（高尾山口行）→ 高尾山口 09:11；IC ¥747，不用在新宿換線，但高尾山きっぷ買不到，纜車直接刷 IC（單程 ¥490）。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=東京都台東区千束3-17-4" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              淺草民宿（千束）
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">09:45</span>
+              <span class="tl-icon">🚶</span>
+              <span class="tl-title">步行｜高尾山口駅 → 清滝駅</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>約 5 分（第三方）。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=高尾山口駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              高尾山口駅
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">09:50</span>
+              <span class="tl-icon">🚡</span>
+              <span class="tl-title">高尾登山電鉄 ケーブルカー｜清滝 → 高尾山</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>約 6 分，11 月每 15 分一班（繁忙加開），日本最陡 31°18′。大人單程 ¥490／往復 ¥980（きっぷ已含）。兩站都有電梯與職員協助。</p>
+            </div>
+            <div class="tl-tips">
+              <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>紅葉季會排隊</b><br>平日沒有具體數字，週末尖峰 30 分以上；吊椅（9:00 起、票價同）可以分流，但是雙人座、無遮蔽。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=清滝駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              清滝駅（纜車下站）
+            </a>
+          </div>
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">10:05</span>
+              <span class="tl-icon">🍁</span>
+              <span class="tl-title">高尾山｜霞台展望台 → 1 号路 → 薬王院<span class="ja-name">高尾山薬王院</span></span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>高尾山駅出站旁就是霞台展望台（關東平野、晴天看得到都心）。1 号路是鋪裝的表參道，經たこ杉、浄心門，境內案內圖寫「薬王院まで徒歩約 8 分」（OSRM 1.08 km 約 14 分，有石階）。薬王院參拜免費，二手資料 8:30～16:00；天狗像、大本堂。<b>高尾山もみじまつり 10/24～12/13</b>，見頃預測 11/13 前後（ウェザーニューズ），11/20 是否仍在見頃未查到；平日沒有夜間點燈。</p>
+              <ul class="spot-route">
+                <li><span class="sr-time">10:05</span><b>霞台展望台</b></li>
+                <li><span class="sr-time">10:30</span><b>たこ杉・浄心門</b></li>
+                <li><span class="sr-time">10:45</span><b>男坂／女坂</b> — 長輩走女坂</li>
+                <li><span class="sr-time">11:00</span><b>薬王院 大本堂・天狗</b></li>
+                <li><span class="sr-time">11:45</span><b>分頭行動</b></li>
+              </ul>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=高尾山薬王院" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              高尾山薬王院
+            </a>
+          </div>
+          <div class="split">
+            <div class="split-head">
+              <span class="split-badge">🔀 分頭行動</span>
+              <span class="split-when">11:45～13:30</span>
+              <span class="split-meet">13:30 在十一丁目茶屋（高尾山駅旁）會合</span>
+            </div>
+            <div class="split-tabs" role="tablist" aria-label="看誰的行程">
+              <button type="button" class="split-tab" data-lane="family" role="tab">🅰 慢行組</button>
+              <button type="button" class="split-tab" data-lane="solo" role="tab">🅱 腳力組</button>
+            </div>
+            <div class="split-lanes">
+              <div class="lane" data-who="family">
+                <div class="lane-label">🅰 慢行組（長輩・小孩）</div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">11:45</span>
+              <span class="tl-icon">🚶</span>
+              <span class="tl-title">步行｜薬王院 → 高尾山駅（1 号路下行）</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>原路慢慢走回霞台，約 15 分。</p>
+            </div>
+          </div>
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">12:00</span>
+              <span class="tl-icon">🍜</span>
+              <span class="tl-title">午餐｜十一丁目茶屋</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🍜" role="tabpanel" aria-label="方案 A"><span class="plan-title" hidden>午餐｜十一丁目茶屋</span><div class="plan-head"><span class="plan-tag">A</span>首選：高尾山駅旁，離纜車山上站最近</div><div class="plan-body"><p>高尾山駅旁，13:30 全員就在這裡會合。とろろそば ¥900（二手）。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">照上一張交通卡走回高尾山駅，店就在高尾山駅旁。</p></div><div class="plan-ref"><div class="pr-name">十一丁目茶屋</div><div class="pr-feat">高尾山駅旁的茶屋，席數未查到，不接受預約</div><div class="pr-facts">⭐ 食べログ <b>3.49</b>（358 則評論，2026/11 查）<br>🕐 每日 10:00～15:20（食物最後點餐 14:50），週五有開<br>🎫 未查到（とろろそば ¥900 為二手）<br>📍 東京都八王子市高尾町2179</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=十一丁目茶屋" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1329/A132905/13030891/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="1" data-icon="🍜" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>午餐｜高尾山 ごまどころ 権現茶屋</span><div class="plan-head"><span class="plan-tag">B</span>浄心門與薬王院之間的芝麻料理茶屋</div><div class="plan-body"><p>50 席（桌席 27、榻榻米 8、露台 15），不接受預約。位置在浄心門與薬王院之間，下山路上就會經過。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">不走上一張交通卡的全程：沿 1 号路下行，在浄心門與薬王院之間就到，步行時間未查到。</p></div><div class="plan-ref"><div class="pr-name">高尾山 ごまどころ 権現茶屋</div><div class="pr-feat">山上茶屋，50 席，不接受預約</div><div class="pr-facts">⭐ 食べログ <b>3.49</b>（381 則評論，2026/11 查）<br>🕐 週一至週五 10:00～15:30（週五有開）<br>🎫 未查到<br>📍 東京都八王子市高尾町2177</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=高尾山+ごまどころ+権現茶屋" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1329/A132905/13010283/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🍜" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>午餐｜高橋家</span><div class="plan-head"><span class="plan-tag">C</span>山下的大店，改成下山後再吃</div><div class="plan-body"><p>150 席，不接受預約。位置在山下，選這家就改成下山後再吃。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">不走上一張交通卡：照 14:00 纜車下山後，從清滝駅走到山下的店；距離未查到。</p></div><div class="plan-ref"><div class="pr-name">高橋家</div><div class="pr-feat">山下的老店，150 席</div><div class="pr-facts">⭐ 食べログ <b>3.49</b>（1,459 則評論，2026/11 查）<br>🕐 週五 10:00～17:00（最後點餐 16:30），公休不固定<br>🎫 ¥1,000～1,999<br>📍 東京都八王子市高尾町2209</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=高橋家" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1329/A132905/13016415/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=十一丁目茶屋" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              十一丁目茶屋
+            </a>
+          </div>
+              </div><!-- /lane -->
+              <div class="lane" data-who="solo">
+                <div class="lane-label">🅱 腳力組（登山頂）</div>
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">11:45</span>
+              <span class="tl-icon">⛰️</span>
+              <span class="tl-title">高尾山 山頂（599.3 m）<span class="ja-name">高尾山山頂</span></span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>薬王院再往上約 20 分（二手），山頂有大見晴園地；晴天看得到富士山。12:15 到、12:35 下山，13:10 回到高尾山駅。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=高尾山" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              高尾山 山頂
+            </a>
+          </div>
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">12:20</span>
+              <span class="tl-icon">🍜</span>
+              <span class="tl-title">午餐｜やまびこ茶屋</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🍜" role="tabpanel" aria-label="方案 A"><span class="plan-title" hidden>午餐｜やまびこ茶屋</span><div class="plan-head"><span class="plan-tag">A</span>首選：山頂附近，山上唯一可預約</div><div class="plan-body"><p>120 席，可預約（山上唯一）。位置在山頂附近，腳力組登頂後在這裡吃；離纜車山上站較遠。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從山頂往下走即到，步行時間未查到。</p></div><div class="plan-ref"><div class="pr-name">やまびこ茶屋</div><div class="pr-feat">山頂附近的茶屋，120 席，可預約</div><div class="pr-facts">⭐ 食べログ <b>3.43</b>（282 則評論，2026/11 查）<br>🕐 每日 10:00～15:00（公休不固定），週五有開<br>🎫 未查到<br>📍 東京都八王子市高尾町2176</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=やまびこ茶屋" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1329/A132905/13042679/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="1" data-icon="🍜" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>午餐｜十一丁目茶屋</span><div class="plan-head"><span class="plan-tag">B</span>下山後 13:10 再吃</div><div class="plan-body"><p>下山回到高尾山駅（13:10）再吃，店就在高尾山駅旁，13:30 在這裡和慢行組會合。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">下山後回到高尾山駅，店就在駅旁。</p></div><div class="plan-ref"><div class="pr-name">十一丁目茶屋</div><div class="pr-feat">高尾山駅旁的茶屋，席數未查到，不接受預約</div><div class="pr-facts">⭐ 食べログ <b>3.49</b>（358 則評論，2026/11 查）<br>🕐 每日 10:00～15:20（食物最後點餐 14:50），週五有開<br>🎫 未查到（とろろそば ¥900 為二手）<br>📍 東京都八王子市高尾町2179</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=十一丁目茶屋" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1329/A132905/13030891/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=やまびこ茶屋" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              やまびこ茶屋
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">12:35</span>
+              <span class="tl-icon">🚶</span>
+              <span class="tl-title">步行｜山頂 → 高尾山駅（下山）</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>12:35 從山頂下山，13:10 回到高尾山駅；下山走哪條路、步行時間未查到。</p>
+            </div>
+          </div>
+              </div><!-- /lane -->
+            </div>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">13:45</span>
+              <span class="tl-icon">🚶</span>
+              <span class="tl-title">步行｜霞台 → 高尾山駅（纜車上站）</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>2 分。</p>
+            </div>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">14:00</span>
+              <span class="tl-icon">🚡</span>
+              <span class="tl-title">ケーブルカー｜高尾山 → 清滝</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>14:00／14:15 班，6 分。平日末班 17:45。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=高尾山駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              高尾山駅（纜車上站）
+            </a>
+          </div>
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">14:15</span>
+              <span class="tl-icon">🛍️</span>
+              <span class="tl-title">高尾山口 商店街・高橋家周邊</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>清滝駅前廣場到高尾山口站之間的商店街，買天狗燒等點心；もみじまつり期間在「高尾山商店會」消費每 ¥1,000 有一張抽獎券（兌換處：高尾山口觀光案內所 むささびハウス）。</p>
+            </div>
+          </div>
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">15:00</span>
+              <span class="tl-icon">🏛️</span>
+              <span class="tl-title">高尾599ミュージアム</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>4～11 月 8:00～17:00（最後入館 16:30），免費；11 月沒有公告休館日（12/3 休）。高尾山口駅步行約 4 分。自然生態展示，小孩適合。</p>
+            </div>
+            <div class="tl-tips">
+              <div class="tip near"><span class="tip-ico">📍</span><span class="tip-body"><b>替代方案：京王高尾山温泉 極楽湯</b><br>高尾山口駅旁，8:00～22:30、年中無休；入浴料平日 ¥1,100（二手）。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=高尾599ミュージアム" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              高尾 599 博物館
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">16:10</span>
+              <span class="tl-icon">🚃</span>
+              <span class="tl-title">交通｜高尾山口 16:26 特急 → 新宿 17:27 → 秋葉原 → 日比谷線 → 入谷 18:01</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>導遊型交通指引：</p>
+              <ol>
+                <li>步行約 4 分到高尾山口駅</li>
+                <li>16:26 京王高尾線 特急（新宿行，直達）→ 新宿 17:27（¥430，用きっぷ回程票）</li>
+                <li>新宿 17:35 JR 中央線快速（東京行）→ 御茶ノ水 17:44，同月台對面換 17:45 総武線（西船橋行）→ 秋葉原 17:47（¥209）</li>
+                <li>秋葉原換日比谷線（北越谷・北千住方面）17:56 → 入谷 18:01（¥178）</li>
+              </ol>
+            </div>
+            <div class="tl-tips">
+              <div class="tip near"><span class="tip-ico">📍</span><span class="tip-body"><b>少換一次車</b><br>新宿搭 JR 山手線 外回り（池袋・上野方面）到上野，再換日比谷線 1 站到入谷，約 18:10 到（估算），換車少、走得少。</span></div>
+              <div class="tip near"><span class="tip-ico">📍</span><span class="tip-body"><b>16:30 各停也行</b><br>16:30 各停（北野行）→ 北野 16:51 換特急 → 新宿 17:35，之後照上面。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=高尾山口駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              高尾山口駅
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">18:15</span>
+              <span class="tl-icon">🚶</span>
+              <span class="tl-title">步行｜入谷駅 → 民宿</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>約 15 分（1.2 km，OSRM），放東西休息一下再去吃飯。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=東京都台東区千束3-17-4" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              淺草民宿（千束）
+            </a>
+          </div>
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">18:45</span>
+              <span class="tl-icon">🍲</span>
+              <span class="tl-title">晚餐｜Edo Niku Kappou Sasaya Asakusa</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🍲" role="tabpanel" aria-label="方案 A"><span class="plan-title" hidden>晚餐｜Edo Niku Kappou Sasaya Asakusa</span><div class="plan-head"><span class="plan-tag">A</span>原訂行程：榻榻米宴會廳吃江戸肉割烹</div><div class="plan-body"><p>週五有開、容得下一行人，和 11/19 不同店。榻榻米宴會廳可坐 20～30 人，含すき焼き。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從民宿步行約 15 分到浅草寺一帶（OSRM 1.23 km）；店址在浅草1-35-3。</p></div><div class="plan-ref"><div class="pr-name">Edo Niku Kappou Sasaya Asakusa（食べログ英文站名稱）</div><div class="pr-feat">江戸肉割烹（含すき焼き），180 席，榻榻米宴會廳 20～30 人</div><div class="pr-facts">⭐ 食べログ <b>3.55</b>（270 則評論，2026/11 查）<br>🕐 每日 11:00～22:00（L.O. 食 21:00、飲 21:30），週五有開<br>🎫 晚 ¥5,000～5,999（午 ¥3,000～3,999）<br>📍 東京都台東区浅草1-35-3<br>可預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=Edo+Niku+Kappou+Sasaya+Asakusa" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131102/13316569/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="1" data-icon="🥞" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>晚餐｜Tsukushi</span><div class="plan-head"><span class="plan-tag">B</span>もんじゃ，40 席</div><div class="plan-body"><p>想吃もんじゃ時的選擇，有榻榻米席，個室可到 20～30 人。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從民宿步行約 15 分到浅草寺一帶（OSRM 1.23 km）；店址在浅草2-4-13。</p></div><div class="plan-ref"><div class="pr-name">Tsukushi（食べログ英文站名稱）</div><div class="pr-feat">もんじゃ，40 席（含榻榻米 18 席、高床 8 席），個室 20～30 人</div><div class="pr-facts">⭐ 食べログ <b>3.48</b>（596 則評論，2026/11 查）<br>🕐 週五 11:00～23:00（L.O. 22:00）；週二公休<br>🎫 晚 ¥2,000～2,999（午 ¥1,000～1,999）<br>📍 東京都台東区浅草2-4-13<br>可預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=Tsukushi" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131102/13010498/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🥞" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>晚餐｜Asakusa Monja Monro</span><div class="plan-head"><span class="plan-tag">C</span>もんじゃ，83 席</div><div class="plan-body"><p>每日營業到深夜、席數多。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從民宿步行約 15 分到浅草寺一帶（OSRM 1.23 km）；店址在浅草1-41-2。</p></div><div class="plan-ref"><div class="pr-name">Asakusa Monja Monro（食べログ英文站名稱）</div><div class="pr-feat">もんじゃ，83 席</div><div class="pr-facts">⭐ 食べログ <b>3.46</b>（814 則評論，2026/11 查）<br>🕐 每日 11:00～23:00（L.O. 食 22:00、飲 22:30）<br>🎫 晚 ¥2,000～2,999（午 ¥1,000～1,999）<br>📍 東京都台東区浅草1-41-2<br>⚠️ 2、3 樓走室外樓梯，長輩行動不便要注意；11 人以上只能電話預約；要點一杯飲料</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=Asakusa+Monja+Monro" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131102/13300191/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=Edo+Niku+Kappou+Sasaya+Asakusa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Edo Niku Kappou Sasaya Asakusa
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">20:30</span>
+              <span class="tl-icon">🚶</span>
+              <span class="tl-title">步行｜浅草 → 民宿</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>浅草寺一帶回千束約 15 分。明早 08:50 出發去六義園。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=浅草駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              浅草駅
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ====== DAY 2（11/15 高尾山版） ====== -->
-    <section class="day-section active" id="day-1" data-date="2026-11-15">
+    <section class="day-section" id="day-3" data-scheme="1" data-date="2026-11-15">
       <div class="container">
         <div class="day-header">
           <div class="day-badge"><span class="day-num">2</span><span class="day-label">DAY</span></div>
@@ -69,7 +623,7 @@
         <div class="timeline">
 
           <div class="tl-tips">
-            <div class="tip info"><span class="tip-ico">💡</span><span class="tip-body"><b>什麼時候用</b><br>11/17 下午預報 70～80% 雨時，把高尾山提前到 11/15；晚餐訂位在新宿不受影響。</span></div>
+            <div class="tip info"><span class="tip-ico">💡</span><span class="tip-body"><b>什麼時候用</b><br>11/17 預報全天 90% 雨時的另一個選擇：把高尾山提前到 11/15（週日，人多）；晚餐訂位在新宿不受影響。建議優先用「高尾山 11/20 版」，11/15 照主行程表走。</span></div>
             <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>週日的高尾山很擠</b><br>紅葉祭週末，纜車排隊週末尖峰 30 分以上（第三方）、山上餐廳也要排；早點到。</span></div>
           </div>
 
@@ -400,7 +954,7 @@
     </section>
 
     <!-- ====== DAY 4（11/17 新宿版） ====== -->
-    <section class="day-section" id="day-2" data-date="2026-11-17">
+    <section class="day-section" id="day-4" data-scheme="1" data-date="2026-11-17">
       <div class="container">
         <div class="day-header">
           <div class="day-badge"><span class="day-num">4</span><span class="day-label">DAY</span></div>
@@ -412,7 +966,7 @@
         <div class="timeline">
 
           <div class="tl-tips">
-            <div class="tip info"><span class="tip-ico">💡</span><span class="tip-body"><b>什麼時候用</b><br>11/17 預報 12 時後開始下雨（12～18 時 70%、1 mm；18～24 時 80%、5 mm），早上陰 30～40%。戶外的豪徳寺排最早，明治神宮中午在林子裡撐傘，新宿御苑下午雨大就進溫室。</span></div>
+            <div class="tip info"><span class="tip-ico">💡</span><span class="tip-body"><b>什麼時候用</b><br>只有選「高尾山 11/15 版」時才用這一版。11/17 預報全天 90% 雨（都心 22 mm）：豪徳寺、明治神宮都是露天，撐傘慢慢走；新宿御苑雨大就進溫室。</span></div>
             <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>11/17 東京都庁南展望室休室</b><br>自由時間不要排都庁（南展望室 11/4、11/17 休）。</span></div>
           </div>
 
@@ -665,7 +1219,7 @@
     </section>
 
     <!-- ====== DAY 5（雨天版） ====== -->
-    <section class="day-section" id="day-3" data-date="2026-11-18">
+    <section class="day-section" id="day-5" data-scheme="3" data-date="2026-11-18">
       <div class="container">
         <div class="day-header">
           <div class="day-badge"><span class="day-num">5</span><span class="day-label">DAY</span></div>
@@ -951,7 +1505,7 @@
     </section>
 
     <!-- ====== DAY 6（晴天版） ====== -->
-    <section class="day-section" id="day-4" data-date="2026-11-19">
+    <section class="day-section" id="day-6" data-scheme="3" data-date="2026-11-19">
       <div class="container">
         <div class="day-header">
           <div class="day-badge"><span class="day-num">6</span><span class="day-label">DAY</span></div>
@@ -1251,7 +1805,7 @@
   </footer>
 
   <!-- ====== 回主行程表（浮動按鈕） ====== -->
-  <a class="rain-fab" href="../final/index.html#day-2" data-days='{"1":"../final/index.html#day-2","2":"../final/index.html#day-4","3":"../final/index.html#day-5","4":"../final/index.html#day-6"}' hidden title="回晴天版主行程表" aria-label="回晴天版主行程表">☀️</a>
+  <a class="rain-fab" href="../final/index.html#day-4" data-days='{"1":"../final/index.html#day-4","2":"../final/index.html#day-7","3":"../final/index.html#day-2","4":"../final/index.html#day-4","5":"../final/index.html#day-5","6":"../final/index.html#day-6"}' hidden title="回晴天版主行程表" aria-label="回晴天版主行程表">☀️</a>
 
   <!-- ====== BACK TO TOP ====== -->
   <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">↑</button>
@@ -1264,7 +1818,30 @@
   </script>
   <script src="../trip.js"></script>
   <script>/* 雨天備案頁：記住的日期、建議收合狀態和主行程表分開存 */ window.TRIP.key = function (k) { return '2026-11-rain:' + k; };</script>
-  <script src="../../assets/itinerary.js?v=20261110b"></script>
+  <script src="../../assets/itinerary.js?v=20261110c"></script>
+
+  <script>
+    /* 備案分頁：包一層 showDay，切到哪天就顯示那天所屬分頁的日期按鈕與說明 */
+    (function () {
+      var orig = window.showDay;
+      function schemeOf(n) { var s = document.getElementById('day-' + n); return s ? s.getAttribute('data-scheme') : '2'; }
+      function applyScheme(s) {
+        document.querySelectorAll('.scheme-tabs [data-scheme]').forEach(function (b) {
+          var on = b.getAttribute('data-scheme') === s;
+          b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        document.querySelectorAll('.day-nav button[data-scheme]').forEach(function (b) { b.hidden = b.getAttribute('data-scheme') !== s; });
+        document.querySelectorAll('.scheme-desc[data-scheme]').forEach(function (p) { p.hidden = p.getAttribute('data-scheme') !== s; });
+      }
+      window.showDay = function (n, opts) { orig(n, opts); applyScheme(schemeOf(n)); };
+      window.showScheme = function (s) {
+        var first = document.querySelector('.day-section[data-scheme="' + s + '"]');
+        if (first) window.showDay(first.id.replace('day-', ''), { noScroll: true });
+      };
+      var act = document.querySelector('.day-section.active');
+      applyScheme(act ? act.getAttribute('data-scheme') : '2');
+    })();
+  </script>
 
 </body>
 </html>
