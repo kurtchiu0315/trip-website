@@ -6,7 +6,7 @@
   <title>☔ 雨天備案｜高尾山 11/15 版・11/20 版・富士河口湖</title>
   <meta name="description" content="雨天備案三個版本：高尾山改到 11/15 或 11/20（建議），富士河口湖 11/18 早上下雨改室內、新倉山搬到 11/19 早上">
   <meta name="theme-color" content="#B5451B">
-    <link rel="stylesheet" href="../../assets/itinerary.css?v=20261110c">
+    <link rel="stylesheet" href="../../assets/itinerary.css?v=20261110d">
   <!-- 字體非阻塞載入：CDN 連不上（例如在日本沒網路）時直接用系統內建中日文字型 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,31 +31,55 @@
     </div>
   </header>
 
-    <!-- ====== 預報列（取代航班列） ====== -->
-  <div class="flight-banner is-forecast">
-    <div class="flight-row">
-      <div class="flight-item"><span>🌥️</span><span><strong>11/15（日）</strong> 新宿 曇時々晴 15°／12°、降水 40%；高尾山 晴のち曇 20°／7°、20%</span></div>
-      <div class="flight-item"><span>🌧️</span><span><strong>11/17（二）</strong> 高尾山（八王子）曇のち雨 12°／10°、降水 90%、19 mm；都心 13°／11°、90%、22 mm</span></div>
-      <div class="flight-item"><span>🌧️</span><span><strong>11/18（三）</strong> 雨のち曇 15°／7°，上午降水 90%、下午 40%、晚上 20%</span></div>
-      <div class="flight-item"><span>☀️</span><span><strong>11/19（四）</strong> 晴のち雪 11°／2°，白天晴，18 時後降雪 60%</span></div>
-      <div class="flight-item"><span>☀️</span><span><strong>11/20（五）</strong> 高尾山（八王子）晴時々曇 17°／4°、降水 20%；都心 17°／8°、20%（10 天後的預報，信賴度低）</span></div>
+    <!-- ====== 預報（表格，預設收起） ====== -->
+  <details class="forecast">
+    <summary>🌦️ 天氣預報（11/10 15:00 tenki.jp 看的）｜點開看表，出發前再看一次</summary>
+    <div class="forecast-scroll">
+      <table class="forecast-table">
+        <thead><tr><th>地點 ＼ 日期</th><th>11/15<br>(日)</th><th>11/17<br>(二)</th><th>11/18<br>(三)</th><th>11/19<br>(四)</th><th>11/20<br>(五)</th></tr></thead>
+        <tbody>
+          <tr><th>高尾山<br><small>八王子</small></th>
+            <td>🌥️ 晴のち曇<br>20°／7°<br>20%</td>
+            <td>🌧️ 曇のち雨<br>12°／10°<br>90%・19 mm</td>
+            <td>—</td><td>—</td>
+            <td>☀️ 晴時々曇<br>17°／4°<br>20%</td></tr>
+          <tr><th>東京都心<br><small>新宿</small></th>
+            <td>🌥️ 曇時々晴<br>15°／12°<br>40%</td>
+            <td>🌧️ 曇後雨<br>13°／11°<br>90%・22 mm</td>
+            <td>—</td><td>—</td>
+            <td>☀️ 晴時多雲<br>17°／8°<br>20%</td></tr>
+          <tr><th>河口湖</th>
+            <td>—</td><td>—</td>
+            <td>🌧️ 雨のち曇<br>15°／7°<br>上午 90%・下午 40%・晚上 20%</td>
+            <td>☀️ 晴のち雪<br>11°／2°<br>白天晴，18 時後降雪 60%</td>
+            <td>—</td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="flight-row">
-      <div class="flight-item"><span>📆</span><span>11/10 看的預報，出發前再看一次；下雨與否以當天早上 6 點為準</span></div>
-    </div>
-  </div>
+    <p class="forecast-note">下雨與否以當天早上 6 點為準；11/20 是 10 天後的預報，信賴度低。</p>
+  </details>
 
   <!-- ====== 備案分頁 ====== -->
   <nav class="scheme-nav" aria-label="備案分頁">
     <div class="container">
+      <p class="scheme-title">先選一個版本</p>
       <div class="scheme-tabs" role="tablist">
-        <button type="button" role="tab" data-scheme="1" aria-selected="false" onclick="showScheme(1)">🍁 高尾山 11/15 版</button>
-        <button type="button" role="tab" data-scheme="2" aria-selected="true" class="active" onclick="showScheme(2)">🍁 高尾山 11/20 版</button>
-        <button type="button" role="tab" data-scheme="3" aria-selected="false" onclick="showScheme(3)">🗻 富士雨天備案</button>
+        <button type="button" role="tab" data-scheme="1" aria-selected="false" onclick="showScheme(1)">
+          <span class="st-ico">🍁</span>
+          <span class="st-name">高尾山 11/15 版</span>
+          <span class="st-desc">11/15（日）去高尾山、11/17（二）走豪徳寺・明治神宮・新宿御苑。11/14 晚上就要決定。</span>
+        </button>
+        <button type="button" role="tab" data-scheme="2" aria-selected="true" class="active" onclick="showScheme(2)">
+          <span class="st-ico">🍁</span>
+          <span class="st-name">高尾山 11/20 版 <small>建議</small></span>
+          <span class="st-desc">11/17（二）在淺草躲雨、11/20（五）去高尾山。11/15 不動，11/16 晚上看預報再決定。</span>
+        </button>
+        <button type="button" role="tab" data-scheme="3" aria-selected="false" onclick="showScheme(3)">
+          <span class="st-ico">🗻</span>
+          <span class="st-name">富士雨天備案</span>
+          <span class="st-desc">11/18 早上下雨：新倉山不去改室內，新倉山搬到 11/19 早上（晴）。</span>
+        </button>
       </div>
-      <p class="scheme-desc" data-scheme="1" hidden>11/15（日）去高尾山、11/17（二）走豪徳寺・明治神宮・新宿御苑；11/14 晚上就要決定。</p>
-      <p class="scheme-desc" data-scheme="2">建議版：11/17（二）在淺草躲雨、11/20（五）去高尾山；11/15 不動，11/16 晚上看預報再決定就好。</p>
-      <p class="scheme-desc" data-scheme="3" hidden>11/18 早上下雨：新倉山不去改室內，新倉山搬到 11/19 早上（晴）。</p>
     </div>
   </nav>
 
@@ -1818,7 +1842,7 @@
   </script>
   <script src="../trip.js"></script>
   <script>/* 雨天備案頁：記住的日期、建議收合狀態和主行程表分開存 */ window.TRIP.key = function (k) { return '2026-11-rain:' + k; };</script>
-  <script src="../../assets/itinerary.js?v=20261110c"></script>
+  <script src="../../assets/itinerary.js?v=20261110d"></script>
 
   <script>
     /* 備案分頁：包一層 showDay，切到哪天就顯示那天所屬分頁的日期按鈕與說明 */
@@ -1831,7 +1855,6 @@
           b.classList.toggle('active', on); b.setAttribute('aria-selected', on ? 'true' : 'false');
         });
         document.querySelectorAll('.day-nav button[data-scheme]').forEach(function (b) { b.hidden = b.getAttribute('data-scheme') !== s; });
-        document.querySelectorAll('.scheme-desc[data-scheme]').forEach(function (p) { p.hidden = p.getAttribute('data-scheme') !== s; });
       }
       window.showDay = function (n, opts) { orig(n, opts); applyScheme(schemeOf(n)); };
       window.showScheme = function (s) {
