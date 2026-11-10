@@ -98,6 +98,9 @@ const WANTED = [
 ];
 
 /* 可接受的自由授權；注意要能同時對到 "CC BY-SA 4.0" 與 "Public domain" */
+/* 有些 Commons 作者欄位塞了整段授權聲明（新倉山那張），頁首只顯示人名 */
+const AUTHOR_OVERRIDE = { 'arakura': 'Supanut Arunoprayote' };
+
 const FREE = /^(cc0|cc[ -]by|pd|public[ -]domain|no restrictions)/i;
 const isFree = (lic) => FREE.test(String(lic || '').trim());
 
@@ -259,7 +262,7 @@ async function download() {
     credits.push({
       slug: w.slug, caption: w.caption, file: w.slug + '.jpg',
       sourceTitle: d.title, sourceUrl: d.descurl,
-      author: d.artist, license: d.license, licenseUrl: d.licenseUrl,
+      author: AUTHOR_OVERRIDE[w.slug] || d.artist, license: d.license, licenseUrl: d.licenseUrl,
       taken: d.taken, original: d.width + 'x' + d.height,
       bytes: buf.length,
     });

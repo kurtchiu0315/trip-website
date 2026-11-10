@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>☔ 雨天備案｜11/18・11/19 富士河口湖</title>
+  <meta name="description" content="富士河口湖兩天的雨天備案：11/18 早上下雨時改走室內，11/19 晴天把富士山改到早上看">
+  <meta name="theme-color" content="#B5451B">
+    <link rel="stylesheet" href="../../assets/itinerary.css?v=20261108b">
+  <!-- 字體非阻塞載入：CDN 連不上（例如在日本沒網路）時直接用系統內建中日文字型 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header" data-hero>
+    <div class="container">
+      <h1>☔ 雨天備案｜富士河口湖</h1>
+      <p class="trip-dates">11/18（三）・11/19（四）｜早上下雨就照這一版走</p>
+      <div class="toolbar">
+        <a class="tb-link" href="../../index.html">← 回首頁</a>
+        <a class="tb-link" href="../final/index.html#day-5">📅 主行程表</a>
+        <a class="tb-link" href="../map/index.html?day=5">🗺️ 地圖</a>
+        <button id="jaToggle" type="button" aria-pressed="false" onclick="toggleJa()">🇯🇵 顯示日文地名</button>
+        <button id="themeToggle" type="button" onclick="cycleTheme()">🌗 主題</button>
+        <button id="copyDayBtn" type="button" onclick="copyDay()">📋 複製這天行程</button>
+      </div>
+    </div>
+  </header>
+
+    <!-- ====== 預報列（取代航班列） ====== -->
+  <div class="flight-banner is-forecast">
+    <div class="flight-row">
+      <div class="flight-item"><span>🌧️</span><span><strong>11/18（三）</strong> 雨のち曇 15°／7°，上午降水 90%、下午 40%、晚上 20%</span></div>
+      <div class="flight-item"><span>☀️</span><span><strong>11/19（四）</strong> 晴のち雪 11°／2°，白天晴，18 時後降雪 60%</span></div>
+    </div>
+    <div class="flight-row">
+      <div class="flight-item"><span>📆</span><span>11/10 看的預報，出發前再看一次；下雨與否以當天早上 6 點為準</span></div>
+    </div>
+  </div>
+
+  <!-- ====== STICKY DAY NAV ====== -->
+  <nav class="day-nav" id="dayNav" aria-label="日期切換">
+    <div class="day-nav-inner" role="tablist">
+      <button role="tab" aria-selected="true"  aria-controls="day-1" onclick="showDay(1)" id="nav-1" class="active">DAY 5<br><small>11/18 (三)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-2" onclick="showDay(2)" id="nav-2">DAY 6<br><small>11/19 (四)</small></button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ====== DAY 5（雨天版） ====== -->
+    <section class="day-section active" id="day-1" data-date="2026-11-18">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge"><span class="day-num">5</span><span class="day-label">DAY</span></div>
+          <div class="day-info">
+            <h2>Day 5｜11月18日（三）雨天版</h2>
+            <p class="date-str">早上下雨：新倉山不去、改成河口湖北岸的美術館（室內），傍晚雨停再去紅葉迴廊夜楓；新倉山搬到 11/19 早上</p>
+          </div>
+        </div>
+        <div class="timeline">
+
+          <div class="tl-tips">
+            <div class="tip info"><span class="tip-ico">💡</span><span class="tip-body"><b>這一版什麼時候用</b><br>這一版只在 11/18 早上下雨時用：新倉山改到 11/19 早上（晴）；主行程表的 13:39 富士急行線、下吉田那幾張卡這天不用。</span></div>
+            <div class="tip near"><span class="tip-ico">📍</span><span class="tip-body"><b>中午前雨停的話</b><br>中午前雨停、而且從河口湖看得到富士山的話，可以照主行程表 13:39 去新倉山看夕照，晚上一樣紅葉迴廊。</span></div>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">06:50</span>
+              <span class="tl-icon">🚃</span>
+              <span class="tl-title">交通｜民宿 → 池袋 → 山手線 → 新宿 10 番線</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>全員帶大行李出發。雨具放隨身包、大行李套防水套。</p>
+              <p>導遊型交通指引：</p>
+              <ol>
+                <li>06:50 出發，步行約 14 分到池袋站東口（行李多，走慢一點）</li>
+                <li>07:10 前後搭 JR 山手線 內回り → 新宿，約 10 分（¥199，用 Suica）</li>
+                <li>新宿站：先刷 Suica 出站（南口），再用<b>富士回遊紙本票</b>從 JR 改札進站，往 <b>10 番線</b>（Yahoo!路線情報顯示 3 號、7 號都是 10 番線，以站內看板為準）</li>
+                <li>07:35～08:15 在月台上的 NewDays 買早餐，派 2 人去買，其餘在月台長椅休息</li>
+                <li>08:15 列車開門，先把 8 件大行李放前後行李架再就座</li>
+              </ol>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=池袋駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              池袋駅
+            </a>
+          </div>
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">08:30</span>
+              <span class="tl-icon">🚄</span>
+              <span class="tl-title">特急 富士回遊 7 号｜新宿 08:30 → 河口湖 10:26</span><span class="tl-tag">已訂票</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>全車指定席（沒有自由席），新宿 → 河口湖 ¥4,200（乘車券 ¥2,580＋特急券 ¥1,620），小孩半額。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=新宿駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              新宿駅
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">10:30</span>
+              <span class="tl-icon">🚌</span>
+              <span class="tl-title">東横INN 免費接駁車｜河口湖駅 10:30 → 飯店</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>出站後<b>右手邊的「旅館・ホテル送迎用バスのりば」</b>上車，約 10 分；步行也可以，約 16 分（1.25 km）。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=河口湖駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              河口湖駅
+            </a>
+          </div>
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">10:45</span>
+              <span class="tl-icon">🧳</span>
+              <span class="tl-title">寄放行李｜東横INN富士河口湖大橋</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>船津 294-1；Check-in 15:00。東横INN 全館 FAQ 寫「入住前當天早上起可寄放行李，視情況可能無法處理」，<b>請先打電話確認</b>。晚上再正式入住。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=東横INN富士河口湖大橋" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              東横INN富士河口湖大橋
+            </a>
+          </div>
+
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">11:30</span>
+              <span class="tl-icon">🥘</span>
+              <span class="tl-title">午餐｜ほうとう不動 河口湖駅前店</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🥘" role="tabpanel" aria-label="方案 A"><span class="plan-title" hidden>午餐｜ほうとう不動 河口湖駅前店</span><div class="plan-head"><span class="plan-tag">A</span>首選：離河口湖駅最近（120 m），110 席</div><div class="plan-body"><p>每日營業、賣完為止，110 席，不接受預約；離河口湖駅 120 m。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">搭 11:00／11:20 的飯店接駁車回河口湖駅（飯店發 11:00／11:20／11:40），出站步行約 1 分。</p></div><div class="plan-ref"><div class="pr-name">ほうとう不動 河口湖駅前店</div><div class="pr-feat">河口湖駅前的ほうとう店，110 席</div><div class="pr-facts">⭐ 食べログ <b>3.48</b>（489 則評論，2026/11 查）<br>🕐 每日 11:00～19:00（麵賣完就打烊）<br>🎫 未查到<br>📍 山梨県南都留郡富士河口湖町船津3631-2<br>⚠️ 不接受預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=ほうとう不動+河口湖駅前店" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/yamanashi/A1903/A190303/19004308/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="1" data-icon="🥘" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>午餐｜甲州ほうとう小作 河口湖店</span><div class="plan-head"><span class="plan-tag">B</span>250 席、有 4 間 10 人個室</div><div class="plan-body"><p>250 席，個室（10 人×4 間），不接受預約。離河口湖駅約 1.1 km，役場入口站步行 5 分。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從飯店步行約 16 分，或搭計程車（以座標直線距離約 1.0 km 估算，步行時間為估算）。</p></div><div class="plan-ref"><div class="pr-name">甲州ほうとう小作 河口湖店</div><div class="pr-feat">席數最大的ほうとう店，250 席</div><div class="pr-facts">⭐ 食べログ <b>3.49</b>（1,608 則評論，2026/11 查）<br>🕐 每日 11:00～20:00（最後點餐 19:30）<br>🎫 未查到<br>📍 山梨県南都留郡富士河口湖町船津1638-1<br>⚠️ 不接受預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=甲州ほうとう小作+河口湖店" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/yamanashi/A1903/A190303/19000046/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🥘" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>午餐｜ほうとう蔵 歩成 河口湖店</span><div class="plan-head"><span class="plan-tag">C</span>200 席、有隔板座位</div><div class="plan-body"><p>200 席，不接受預約。離河口湖駅約 1.1 km。開店前會發整理券（口コミ，二手）。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從飯店步行約 25 分，或搭計程車（以座標直線距離約 1.5 km 估算，步行時間為估算）。</p></div><div class="plan-ref"><div class="pr-name">ほうとう蔵 歩成 河口湖店</div><div class="pr-feat">ほうとう專門店，200 席，有隔板座位</div><div class="pr-facts">⭐ 食べログ <b>3.49</b>（1,534 則評論，2026/11 查）<br>🕐 每日 11:00～21:00（最後點餐 20:30）<br>🎫 ¥1,000～1,999<br>📍 山梨県南都留郡富士河口湖町船津6931<br>⚠️ 不接受預約；開店前發整理券（口コミ）</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=ほうとう蔵+歩成+河口湖店" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/yamanashi/A1903/A190303/19010099/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=ほうとう不動+河口湖駅前店" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              ほうとう不動 河口湖駅前店
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">13:00</span>
+              <span class="tl-icon">🚌</span>
+              <span class="tl-title">河口湖周遊バス レッドライン｜河口湖駅 → 北岸的美術館</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>紅線河口湖駅發每 15 分一班（:00、:15、:30、:45），到 14 號 河口湖美術館 +18 分、15 號 音楽と森の美術館 +19 分、17 號 久保田一竹美術館 +21 分。單程區間制最低 ¥180；2Day Pass ¥2,000（明天還要搭，今天買 2 日券划算，小孩 ¥1,000）。</p>
+            </div>
+            <div class="tl-tips">
+              <div class="tip info"><span class="tip-ico">💡</span><span class="tip-body"><b>下雨的話</b><br>河口湖駅前的巴士站有遮雨棚與否未查到；撐傘排隊。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=河口湖駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              河口湖駅
+            </a>
+          </div>
+
+          <div class="timeline-item is-flex">
+            <div class="tl-header">
+              <span class="tl-time">13:30</span>
+              <span class="tl-icon">🎻</span>
+              <span class="tl-title">下午室內｜河口湖北岸三選一</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🎻" role="tabpanel" aria-label="方案 A"><span class="plan-title" hidden>下午室內｜河口湖 音楽と森の美術館</span><div class="plan-head"><span class="plan-tag">A</span>樂器與音樂的美術館，室內設施多</div><div class="plan-body"><p>室內有オルガンホール、チムニーシアター、餐廳、商店；戶外噴水秀每小時整點 11:00～17:00，下雨時在戶外看不成，室內的樂器表演照常。三個美術館都在紅葉迴廊旁邊的北岸，逛到 16:00 前後走路或搭一站紅線到紅葉迴廊。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">紅線 15 號站下車。</p></div><div class="plan-ref"><div class="pr-name">河口湖 音楽と森の美術館</div><div class="pr-feat">室內有オルガンホール、チムニーシアター、餐廳、商店</div><div class="pr-facts">🕐 10:00～17:30（最終入館 17:00），11 月每天營業<br>🎫 平日 大人 ¥1,800、高中大學生 ¥1,300、小中學生 ¥1,000（沒有長者價）<br>📍 河口湖周遊バス レッドライン 15 號站</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=河口湖+音楽と森の美術館" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://kawaguchikomusicforest.jp/info/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="1" data-icon="🎨" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>下午室內｜久保田一竹美術館</span><div class="plan-head"><span class="plan-tag">B</span>離紅葉迴廊最近，「徒歩すぐ」</div><div class="plan-body"><p>室內有本館、新館、茶房，庭園在戶外；展覽「奧入瀨之秋」到 12 月中旬。三個美術館都在紅葉迴廊旁邊的北岸，逛到 16:00 前後走路或搭一站紅線到紅葉迴廊。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">紅線 17 號站下車；紅葉迴廊「徒歩すぐ」（官方）。</p></div><div class="plan-ref"><div class="pr-name">久保田一竹美術館</div><div class="pr-feat">和服染織藝術家久保田一竹的美術館</div><div class="pr-facts">🕐 4～11 月 10:00～17:00（最終入館 16:30）；官方營業日曆 11 月只休 11/24，11/18 有開<br>🎫 一般 ¥1,300（第三方資料）<br>📍 河口湖周遊バス レッドライン 17 號站</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=久保田一竹美術館" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://itchiku-museum.com/museum/access.html" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🖼️" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>下午室內｜河口湖美術館</span><div class="plan-head"><span class="plan-tag">C</span>企劃展、常設展，週二休</div><div class="plan-body"><p>企劃展與常設展都在室內。三個美術館都在紅葉迴廊旁邊的北岸，逛到 16:00 前後走路或搭一站紅線到紅葉迴廊。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">紅線 14 號站下車。</p></div><div class="plan-ref"><div class="pr-name">河口湖美術館</div><div class="pr-feat">河口湖北岸的美術館</div><div class="pr-facts">🕐 9:30～17:00，週二休（11/18 週三有開）<br>🎫 企劃展 一般 ¥800、中高生 ¥500、小學生以下免費；常設展 ¥500<br>📍 河口湖周遊バス レッドライン 14 號站</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=河口湖美術館" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://fkchannel.jp/facility-01" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=河口湖+音楽と森の美術館" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              河口湖 音楽と森の美術館
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">16:15</span>
+              <span class="tl-icon">🚶</span>
+              <span class="tl-title">步行｜美術館 → もみじ回廊</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>久保田一竹美術館到紅葉迴廊「徒歩すぐ」（官方）；從音楽と森、河口湖美術館走過去的分鐘數未查到，也可以搭紅線到 17 號站（久保田一竹美術館）下車。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=久保田一竹美術館" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              久保田一竹美術館
+            </a>
+          </div>
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">16:30</span>
+              <span class="tl-icon">🍁</span>
+              <span class="tl-title">富士河口湖紅葉まつり｜もみじ回廊 白天＋夜楓</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>同主行程表（11/7～11/29，點燈日沒～21:00，日落 16:37）。雨天版提早到 16:30 先看白天的紅葉，天黑後看點燈；下雨的地面濕滑，長輩走回廊的木棧道小心。</p>
+            </div>
+            <div class="tl-tips">
+              <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>晚上還在下雨就縮短</b><br>預報晚上降水 20%；雨大就只看點燈 30 分，直接搭計程車回飯店。紅線末班 18:35。</span></div>
+              <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>平日屋台不一定全開</b><br>傳單寫公認飲食ブース、クラフト市、河口湖屋台村，但有幾處註記「土・日・祝日のみ」，11/18（三）攤位可能少；當天看町觀光連盟 Instagram。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=もみじ回廊+河口湖" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              もみじ回廊
+            </a>
+          </div>
+
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">18:30</span>
+              <span class="tl-icon">🍢</span>
+              <span class="tl-title">晚餐｜紅葉祭 公認飲食ブース・河口湖屋台村</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🍢" role="tabpanel" aria-label="方案 A"><span class="plan-title" hidden>晚餐｜紅葉祭 公認飲食ブース・河口湖屋台村</span><div class="plan-head"><span class="plan-tag">A</span>首選：就在紅葉祭會場，邊逛邊吃</div><div class="plan-body"><p>傳單寫有公認飲食ブース、クラフト市、河口湖屋台村；但有幾處註記「土・日・祝日のみ」，11/18（三）的平日出店未確認。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">就在もみじ回廊會場內，不用移動。</p></div><div class="plan-ref"><div class="pr-name">紅葉祭 公認飲食ブース・河口湖屋台村</div><div class="pr-feat">富士河口湖紅葉まつり會場的飲食攤位（無店頁）</div><div class="pr-facts">🕐 點燈日沒～21:00（町官方）<br>🎫 未查到<br>📍 河口湖北岸河口湖美術館通り一帶<br>⚠️ 平日出店未確認；當天看町觀光連盟 Instagram</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=もみじ回廊+河口湖" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://fujisan.ne.jp/news/6065/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="1" data-icon="🥘" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>晚餐｜甲州ほうとう小作 河口湖店</span><div class="plan-head"><span class="plan-tag">B</span>營業到 20:00，午餐沒選的話晚上吃</div><div class="plan-body"><p>250 席，個室（10 人×4 間），不接受預約；最後點餐 19:30。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從會場搭計程車，約 5 km。</p></div><div class="plan-ref"><div class="pr-name">甲州ほうとう小作 河口湖店</div><div class="pr-feat">席數最大的ほうとう店，250 席</div><div class="pr-facts">⭐ 食べログ <b>3.49</b>（1,608 則評論，2026/11 查）<br>🕐 每日 11:00～20:00（最後點餐 19:30）<br>🎫 未查到<br>📍 山梨県南都留郡富士河口湖町船津1638-1<br>⚠️ 不接受預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=甲州ほうとう小作+河口湖店" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/yamanashi/A1903/A190303/19000046/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🥘" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>晚餐｜ほうとう蔵 歩成 河口湖店</span><div class="plan-head"><span class="plan-tag">C</span>營業到 21:00，時間最寬鬆</div><div class="plan-body"><p>200 席，有隔板座位，不接受預約；營業到 21:00（最後點餐 20:30）。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從會場搭計程車；距離未查到（店離河口湖駅約 1.1 km）。</p></div><div class="plan-ref"><div class="pr-name">ほうとう蔵 歩成 河口湖店</div><div class="pr-feat">ほうとう專門店，200 席</div><div class="pr-facts">⭐ 食べログ <b>3.49</b>（1,534 則評論，2026/11 查）<br>🕐 每日 11:00～21:00（最後點餐 20:30）<br>🎫 ¥1,000～1,999<br>📍 山梨県南都留郡富士河口湖町船津6931<br>⚠️ 不接受預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=ほうとう蔵+歩成+河口湖店" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/yamanashi/A1903/A190303/19010099/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=もみじ回廊+河口湖" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              紅葉祭 公認飲食ブース・河口湖屋台村
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">19:40</span>
+              <span class="tl-icon">🚕</span>
+              <span class="tl-title">計程車｜紅葉迴廊 → 東横INN</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>約 4.8 km、7 分（OSRM，車資未查到），3 台；紅線末班 18:35 已過。<b>事先請飯店或河口湖駅前的車行預約</b>（Check List 有）。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=久保田一竹美術館" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              久保田一竹美術館（17 號站）
+            </a>
+          </div>
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">20:00</span>
+              <span class="tl-icon">🏨</span>
+              <span class="tl-title">入住｜東横INN富士河口湖大橋</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>第 5 晚。Check-in 15:00／Check-out 10:00；免費早餐 6:30～9:00；電話 0555-68-3045。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=東横INN富士河口湖大橋" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              東横INN富士河口湖大橋
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 6（晴天版） ====== -->
+    <section class="day-section" id="day-2" data-date="2026-11-19">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge"><span class="day-num">6</span><span class="day-label">DAY</span></div>
+          <div class="day-info">
+            <h2>Day 6｜11月19日（四）晴天版</h2>
+            <p class="date-str">晴天：早上先去新倉山看順光的富士山，回來搭遊覽船、大石公園，15:30 高速巴士直達上野；晚上東京可能下雪</p>
+          </div>
+        </div>
+        <div class="timeline">
+
+          <div class="tl-tips">
+            <div class="tip info"><span class="tip-ico">💡</span><span class="tip-body"><b>晴天版</b><br>晴天版把新倉山搬到早上；遊覽船改 11:30、大石公園縮短到 45 分。沒去新倉山的話照主行程表的 Day 6 走。</span></div>
+          </div>
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">07:00</span>
+              <span class="tl-icon">🍳</span>
+              <span class="tl-title">早餐＆退房｜東横INN（08:20 出門）</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>免費早餐 6:30～9:00；退房 10:00 前，<b>08:15 退房、行李寄櫃台</b>（能不能寄放要先問）；今天不用請櫃台叫計程車（碼頭改中午去）。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">08:30</span>
+              <span class="tl-icon">🚌</span>
+              <span class="tl-title">接駁車｜東横INN 08:30 → 河口湖駅 08:40，轉富士急行線 09:00 → 下吉田 09:14</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>飯店發 8～10 時每 10 分；河口湖 → 下吉田 平日早上：07:32、08:03（普通）、08:23（フジサン特急，要特急券）、<b>09:00（トーマスランド号，普通，只要乘車券）</b>、09:16（富士山ビュー特急，要特急券）；到站時間是把兩站時刻表配對推算的（官方沒列）。紙票 ¥310（IC ¥305）。</p>
+            </div>
+            <div class="tl-tips">
+              <div class="tip near"><span class="tip-ico">📍</span><span class="tip-body"><b>想早一點</b><br>08:03 的普通車 08:17 到下吉田：07:40 從飯店走 16 分到河口湖駅（1.25 km）就趕得上，展望デッキ人少、光線也好。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=河口湖駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              河口湖駅
+            </a>
+          </div>
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">09:25</span>
+              <span class="tl-icon">🗼</span>
+              <span class="tl-title">新倉山浅間公園・忠霊塔（早上順光的富士山）</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>免費、24 小時。山梨縣觀光網寫「午前中は富士山に対して太陽が順光」，晴天早上看最清楚。下吉田駅到浅間神社入口約 10 分（OSRM 0.75 km），398 階「咲くや姫階段」慢走約 15 分到忠霊塔，再上一小段到展望デッキ（官方：從車站約 25～30 分）。昨天的雨讓階梯濕滑，扶著扶手走；長輩可以在浅間神社等。緩坡道官方未查到。</p>
+              <ul class="spot-route">
+                <li><span class="sr-time">09:25</span><b>下吉田駅</b></li>
+                <li><span class="sr-time">09:35</span><b>新倉富士浅間神社</b></li>
+                <li><span class="sr-time">09:50</span><b>咲くや姫階段</b></li>
+                <li><span class="sr-time">10:10</span><b>忠霊塔・展望デッキ（拍照到 10:35）</b></li>
+                <li><span class="sr-time">10:40</span><b>下山</b></li>
+              </ul>
+            </div>
+            <div class="tl-tips">
+              <div class="tip info"><span class="tip-ico">💡</span><span class="tip-body"><b>11/19 晚上才會下雪</b><br>白天晴；山上風大，外套圍巾帶著。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=新倉山浅間公園" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              新倉山浅間公園
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">10:40</span>
+              <span class="tl-icon">🚃</span>
+              <span class="tl-title">富士急行線｜下吉田 10:46 トーマスランド号 → 河口湖（約 14 分，紙票 ¥310）</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>下吉田往河口湖平日早上：09:32、09:59（普通）、10:13（富士回遊，要特急券）、10:32（フジサン特急，要特急券）、<b>10:46（トーマスランド号）</b>、11:14（富士回遊）；河口湖到站時間官方沒列。</p>
+              <p>導遊型交通指引：</p>
+              <ol>
+                <li>10:40 從展望デッキ下來走到下吉田駅</li>
+                <li>10:46 トーマスランド号 → 河口湖約 11:00</li>
+                <li>出站步行約 10 分到船津浜的遊覧船碼頭（或紅線到 9 號站「遊覧船・ロープウェイ入口」+11 分）</li>
+              </ol>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=下吉田駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              下吉田駅
+            </a>
+          </div>
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">11:30</span>
+              <span class="tl-icon">⛵</span>
+              <span class="tl-title">河口湖遊覧船「天晴」11:30 班</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>冬期 9:30 起每 30 分（:00、:30），約 20 分；大人 ¥1,000、小學生 ¥500、未就學免費；不可預約；晴天從湖上看富士山。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=富士五湖汽船+船津浜乗り場" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              富士五湖汽船・船津浜乗り場
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">12:00</span>
+              <span class="tl-icon">🚌</span>
+              <span class="tl-title">レッドライン｜遊覧船・ロープウェイ入口（9）12:11 → 河口湖自然生活館（大石公園・20）12:27</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>河口湖駅 12:00 發的班次 +11 到 9 號站、+27 到終點；2Day Pass 昨天買的今天還能用。</p>
+            </div>
+          </div>
+
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">12:30</span>
+              <span class="tl-icon">🌸</span>
+              <span class="tl-title">大石公園・河口湖自然生活館（午餐＋伴手禮）</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>同主行程表（公園免費、自然生活館 9:00～17:15、伴手禮）；今天只有約 45 分，先去賣店，再到湖邊拍富士山。<b>13:12 的紅線一定要搭</b>（13:27 → 13:54 是最後的安全班次）。</p>
+              <ul class="spot-route">
+                <li><span class="sr-time">12:30</span><b>自然生活館 伴手禮</b></li>
+                <li><span class="sr-time">12:50</span><b>湖畔拍富士山</b></li>
+                <li><span class="sr-time">13:05</span><b>走到巴士站</b></li>
+              </ul>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=大石公園+富士河口湖町" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              大石公園
+            </a>
+          </div>
+
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">12:35</span>
+              <span class="tl-icon">☕</span>
+              <span class="tl-title">午餐｜Oishi Park Café</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="☕" role="tabpanel" aria-label="方案 A"><span class="plan-title" hidden>午餐｜Oishi Park Café</span><div class="plan-head"><span class="plan-tag">A</span>首選：大石公園內，營業到 16:45</div><div class="plan-body"><p>就在大石公園內，每日 9:15～16:45，席數與價位未查到。今天只有 30 分，買了帶上巴士或車站吃也行。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">在大石公園內，從自然生活館順路走到店即可；步行時間未查到。</p></div><div class="plan-ref"><div class="pr-name">Oishi Park Café（食べログ英文站名稱）</div><div class="pr-feat">大石公園內的咖啡廳，席數未查到</div><div class="pr-facts">⭐ 食べログ <b>3.30</b>（58 則評論，2026/11 查）<br>🕐 每日 9:15～16:45<br>🎫 未查到<br>📍 山梨県南都留郡富士河口湖町大石2585<br>⚠️ 不接受預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=Oishi+Park+Café" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/yamanashi/A1903/A190303/19012609/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="1" data-icon="🥐" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>午餐｜Lake Bake</span><div class="plan-head"><span class="plan-tag">B</span>麵包咖啡廳，35 席，出發前要確認</div><div class="plan-body"><p>35 席。頁面寫週三公休、每月第 2、4 個週四公休；11/19 是第 3 個週四，依頁面有開。但頁面另外註記「咖啡廳目前休業」，出發前務必確認，不行就改外帶。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從大石公園或河口湖自然生活館步行 10 分內，確切時間未查到。</p></div><div class="plan-ref"><div class="pr-name">Lake Bake（食べログ英文站名稱）</div><div class="pr-feat">麵包店附設咖啡廳，35 席</div><div class="pr-facts">⭐ 食べログ <b>3.62</b>（537 則評論，2026/11 查）<br>🕐 外帶 10:00～17:00、咖啡廳 10:00～16:00；週三公休、每月第 2、4 個週四公休<br>🎫 ～¥999<br>📍 山梨県南都留郡富士河口湖町大石2585-85<br>⚠️ 頁面註記咖啡廳目前休業，出發前務必確認；不接受預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=Lake+Bake" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/yamanashi/A1903/A190303/19004468/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="☕" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>午餐｜CAFE "With a view of Mt Fuji"</span><div class="plan-head"><span class="plan-tag">C</span>河口湖自然生活館 1F 附設喫茶（資料不全）</div><div class="plan-body"><p>在河口湖自然生活館 1F，11:30 買伴手禮的同一棟。營業時間、席數、價位未查到（頁面只寫 2021 年夏季休業），到場確認。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">在河口湖自然生活館 1F，和 12:30 買伴手禮同一棟，不用移動。</p></div><div class="plan-ref"><div class="pr-name">CAFE "With a view of Mt Fuji"（食べログ英文站名稱）</div><div class="pr-feat">河口湖自然生活館 1F 附設喫茶，資料不全</div><div class="pr-facts">⭐ 食べログ <b>3.28</b>（61 則評論，2026/11 查）<br>🕐 未查到<br>🎫 未查到<br>📍 山梨県南都留郡富士河口湖町大石2585 河口湖自然生活館 1F<br>⚠️ 營業時間與席數未查到；不接受預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=河口湖自然生活館+1F+カフェ" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/yamanashi/A1903/A190303/19003768/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=Oishi+Park+Café" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Oishi Park Café
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">13:12</span>
+              <span class="tl-icon">🚌</span>
+              <span class="tl-title">レッドライン｜河口湖自然生活館 13:12 → 河口湖駅 13:39</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>上り每 15 分（:12、:27、:42、:57），27 分。<b>13:12 這班不能錯過</b>（13:27 → 13:54 是最後的安全班次）。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=河口湖自然生活館" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              河口湖自然生活館（20 號站）
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">13:45</span>
+              <span class="tl-icon">🚌</span>
+              <span class="tl-title">接駁車｜河口湖駅 13:45 → 東横INN</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>河口湖駅發 13:45（13 時：00／30／45），約 10 分。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=河口湖駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              河口湖駅
+            </a>
+          </div>
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">14:00</span>
+              <span class="tl-icon">🧳</span>
+              <span class="tl-title">取行李｜東横INN</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>櫃台取 8 件行李，14:35 接駁車。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=東横INN富士河口湖大橋" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              東横INN富士河口湖大橋
+            </a>
+          </div>
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">14:35</span>
+              <span class="tl-icon">🚌</span>
+              <span class="tl-title">接駁車｜東横INN 14:35 → 河口湖駅 14:45</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>飯店發 14:05、<b>14:35</b>、15:05。滿座就走，9 人＋8 件行李可能坐不下，坐不下的 3 台計程車（1.25 km）。</p>
+            </div>
+          </div>
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">15:30</span>
+              <span class="tl-icon">🚌</span>
+              <span class="tl-title">高速バス 便 22｜河口湖駅 2 番のりば 15:30 → 東京駅 17:35 → 上野駅入谷口 18:00</span><span class="tl-tag">已預約</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>大人 ¥2,300、小孩 ¥1,150，全席指定；<b>直達上野駅入谷口 18:00</b>，不用在東京駅換車。河口湖駅 <b>2 番のりば</b>，提早 15 分到。</p>
+            </div>
+            <div class="tl-tips">
+              <div class="tip warn"><span class="tip-ico">⚠️</span><span class="tip-body"><b>晚上下雪的話巴士可能晚到</b><br>預報 18 時後降雪 60%；NEXCO 中日本：異常大雪時高速公路會有鏈條規制，中央道大月～河口湖不在列出的規制區間，但降雪仍可能延誤；即時路況看 c-ihighway.jp，巴士運行情報看 bus.fujikyu.co.jp。民宿入住時間晚了要先告知房東。</span></div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=河口湖駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              河口湖駅
+            </a>
+          </div>
+
+          <div class="timeline-item is-move transport">
+            <div class="tl-header">
+              <span class="tl-time">18:05</span>
+              <span class="tl-icon">🚇</span>
+              <span class="tl-title">日比谷線｜上野 → 入谷 → 淺草民宿（千束）</span>
+              <span class="tl-kind move">交通</span>
+            </div>
+            <div class="tl-detail">
+              <p>東京都內不搭計程車。高速巴士在上野駅入谷口下車，走進東京メトロ日比谷線上野站（入谷口側），搭往北千住方向 1 站到入谷（¥178，隨到隨搭），從 3 號出口步行約 9 分到民宿（0.69 km，OSRM）。8 件大行李分給年輕人拿，找電梯。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=上野駅" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              上野駅入谷口
+            </a>
+          </div>
+          <div class="timeline-item is-main">
+            <div class="tl-header">
+              <span class="tl-time">18:20</span>
+              <span class="tl-icon">🏠</span>
+              <span class="tl-title">入住｜淺草民宿（台東區千束 3-17-4）</span>
+              <span class="tl-kind main">主行程</span>
+            </div>
+            <div class="tl-detail">
+              <p>第 6～8 晚（11/19～11/21）。入住方式、退房時間待補。最近車站：日比谷線 入谷駅 3 號出口步行 8 分。</p>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=東京都台東区千束3-17-4" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              淺草民宿（千束）
+            </a>
+          </div>
+
+          <div class="timeline-item is-flex is-suggest">
+            <div class="tl-header">
+              <span class="tl-time">19:00</span>
+              <span class="tl-icon">🍶</span>
+              <span class="tl-title">晚餐｜Sake Dokoro Kawasemi</span>
+              <span class="tl-kind flex">彈性</span><span class="tl-plan" aria-hidden="true">A</span>
+            </div>
+            <div class="plans" data-plans>
+              <div class="plans-nav"><span class="plans-hint">方案</span><button type="button" class="plan-arrow" data-dir="-1" aria-label="上一個方案">‹</button><div class="plan-dots"><button type="button" class="plan-dot active" data-i="0" aria-label="方案 A">A</button><button type="button" class="plan-dot" data-i="1" aria-label="方案 B">B</button><button type="button" class="plan-dot" data-i="2" aria-label="方案 C">C</button><button type="button" class="plan-dot" data-i="3" aria-label="方案 D">D</button></div><button type="button" class="plan-arrow" data-dir="1" aria-label="下一個方案">›</button></div>
+              <div class="plans-viewport">
+                <div class="plans-track">
+                  <div class="plan is-active" data-i="0" data-icon="🍶" role="tabpanel" aria-label="方案 A"><span class="plan-title" hidden>晚餐｜Sake Dokoro Kawasemi</span><div class="plan-head"><span class="plan-tag">A</span>首選：入谷的居酒屋，半個室 4～10 人</div><div class="plan-body"><p>34 席，半個室（4～10 人）；週末及忙時 2 小時制。週四 17:00 起營業。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從淺草民宿步行，約 0.8 km、約 11 分（以概估座標的直線距離估算，住處座標需再用地圖確認）。</p></div><div class="plan-ref"><div class="pr-name">Sake Dokoro Kawasemi（食べログ英文站名稱）</div><div class="pr-feat">入谷的居酒屋，34 席，有半個室</div><div class="pr-facts">⭐ 食べログ <b>3.51</b>（198 則評論，2026/11 查）<br>🕐 週四 12:30～16:00、17:00～23:00（食物最後點餐 22:00）<br>🎫 ¥5,000～5,999<br>📍 東京都台東区下谷2-24-11 ハイマート入谷 1F<br>⚠️ 週末及忙時 2 小時制；可預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=Sake+Dokoro+Kawasemi" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131104/13254948/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="1" data-icon="🍱" role="tabpanel" aria-label="方案 B"><span class="plan-title" hidden>晚餐｜Iriya Kishimojin Monzen no Daya</span><div class="plan-head"><span class="plan-tag">B</span>鰻魚名店（3.95），每人一份鰻魚</div><div class="plan-body"><p>31 席（本館 20、別室 5、2 樓 6 席要走樓梯）。每人需點一份鰻魚；週四 17:30～20:00，晚餐結束得早。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從淺草民宿步行，約 1.1 km、約 16 分（以概估座標的直線距離估算）。</p></div><div class="plan-ref"><div class="pr-name">Iriya Kishimojin Monzen no Daya（食べログ英文站名稱）</div><div class="pr-feat">入谷鬼子母神前的鰻魚店，31 席</div><div class="pr-facts">⭐ 食べログ <b>3.95</b>（1,379 則評論，2026/11 查）<br>🕐 週四 11:00～14:30、17:30～20:00（週一公休）<br>🎫 晚 ¥10,000～14,999／午 ¥8,000～9,999<br>📍 東京都台東区下谷2-3-1<br>⚠️ 每人需點一份鰻魚；晚餐 20:00 結束</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=Iriya+Kishimojin+Monzen+no+Daya" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131104/13152282/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="2" data-icon="🍽️" role="tabpanel" aria-label="方案 C"><span class="plan-title" hidden>晚餐｜Akagi</span><div class="plan-head"><span class="plan-tag">C</span>可包廂，30 席</div><div class="plan-body"><p>30 席（榻榻米、吧台、桌席）；8 人以上可用個室。週四 17:00～22:30，週日公休。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從淺草民宿步行，約 1.1 km、約 16 分（以概估座標的直線距離估算）。</p></div><div class="plan-ref"><div class="pr-name">Akagi（食べログ英文站名稱）</div><div class="pr-feat">上野北側的料理店，30 席，8 人以上個室</div><div class="pr-facts">⭐ 食べログ <b>3.64</b>（418 則評論，2026/11 查）<br>🕐 週四 12:00～14:15、17:00～22:30（週日公休）<br>🎫 ¥8,000～9,999<br>📍 東京都台東区北上野2-29-3 メゾン森1F<br>⚠️ 個室限 8 人以上；可預約</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=Akagi" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131104/13157124/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                  <div class="plan" data-i="3" data-icon="🍶" role="tabpanel" aria-label="方案 D"><span class="plan-title" hidden>晚餐｜Kurashino Nomidokoro Ooirya</span><div class="plan-head"><span class="plan-tag">D</span>入谷的小酒場，僅 16 席</div><div class="plan-body"><p>僅 16 席，9 人需分兩桌且要先確認。週四 17:00～23:00，週一公休。</p><div class="plan-route"><div class="plan-route-title">🧭 導遊型交通指引</div><p class="plan-route-step">從淺草民宿步行，約 0.8 km、約 12 分（以概估座標的直線距離估算）。</p></div><div class="plan-ref"><div class="pr-name">Kurashino Nomidokoro Ooirya（食べログ英文站名稱）</div><div class="pr-feat">入谷的小酒場，16 席</div><div class="pr-facts">⭐ 食べログ <b>3.50</b>（187 則評論，2026/11 查）<br>🕐 週四 17:00～23:00（食物最後點餐 22:00；週一公休）<br>🎫 ¥5,000～5,999<br>📍 東京都台東区下谷2-21-8 河野ビル1F<br>⚠️ 9 人需分兩桌且要確認</div><div class="pr-links"><a class="pr-map" href="https://maps.google.com/maps?q=Kurashino+Nomidokoro+Ooirya" target="_blank" rel="noopener">在 Google Maps 開啟</a><a class="pr-src" href="https://tabelog.com/en/tokyo/A1311/A131104/13187589/" target="_blank" rel="noopener">查證來源</a></div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <a class="map-link" href="https://maps.google.com/maps?q=Sake+Dokoro+Kawasemi" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              Sake Dokoro Kawasemi
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>🇯🇵 東京秋季家族之旅 2026｜11/14 - 11/22</p>
+      <p><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></p>
+    </div>
+  </footer>
+
+  <!-- ====== BACK TO TOP ====== -->
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂部">↑</button>
+
+  <!-- ====== JAVASCRIPT ====== -->
+  <script src="../../assets/hero/hero.js"></script>
+  <script>
+    // 隨機挑一張風景照當頁首底圖
+    if (window.applyHero) window.applyHero('../../assets/hero/');
+  </script>
+  <script src="../trip.js"></script>
+  <script>/* 雨天備案頁：記住的日期、建議收合狀態和主行程表分開存 */ window.TRIP.key = function (k) { return '2026-11-rain:' + k; };</script>
+  <script src="../../assets/itinerary.js?v=20261108b"></script>
+
+</body>
+</html>

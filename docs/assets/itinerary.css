@@ -211,6 +211,10 @@ img {
   .flight-banner .fb-ap { display: none; }
 }
 
+/* 雨天備案頁的預報列：一行一天，文字可換行 */
+.flight-banner.is-forecast .flight-row { grid-template-columns: 1fr; gap: 4px; }
+.flight-banner.is-forecast .flight-item { white-space: normal; justify-content: flex-start; text-align: left; line-height: 1.4; }
+
 /* === Sticky Day Navigation === */
 .day-nav {
   background: var(--surface);
