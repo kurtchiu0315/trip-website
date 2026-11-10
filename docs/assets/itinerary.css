@@ -707,7 +707,7 @@ main {
 }
 
 /* 浮動的「☔」按鈕：在「回到頂部」上方，只在有雨天備案的那幾天顯示（itinerary.js 的 updateAltFab）。
-   主行程表上是 ☔（跳到備案），備案頁上是 ☔↩（跳回主行程表） */
+   主行程表上是 ☔（跳到備案），備案頁上是 ☀️（跳回晴天版的主行程表） */
 .rain-fab {
   position: fixed;
   bottom: 74px;
@@ -728,7 +728,6 @@ main {
   transition: transform 0.2s;
 }
 
-.rain-fab.is-back { width: auto; min-width: 44px; padding: 0 12px; border-radius: 22px; gap: 2px; }
 .rain-fab[hidden] { display: none; }
 .rain-fab:hover { transform: scale(1.08); }
 @media print { .rain-fab { display: none; } }
