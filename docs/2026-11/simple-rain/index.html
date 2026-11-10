@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⏰ 簡化行程表・雨天版｜東京 11/14～11/22</title>
+  <meta name="description" content="東京秋季家族之旅簡化行程表雨天版：高尾山改到 11/21、富士山改室內">
+  <meta name="theme-color" content="#B5451B">
+  <link rel="stylesheet" href="../../assets/itinerary.css?v=20261111a">
+  <!-- 字體非阻塞載入：CDN 連不上（例如在日本沒網路）時直接用系統內建中日文字型 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+</head>
+<body class="is-simple">
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header" data-hero>
+    <div class="container">
+      <h1>東京秋季家族之旅</h1>
+      <p class="trip-dates">簡化行程表・雨天版｜11/17 和 11/21 對調、11/18 河口湖改室內</p>
+      <div class="toolbar">
+        <a class="tb-link" href="../../index.html">← 回首頁</a>
+        <a class="tb-link" href="../simple/index.html">⏰ 晴天版</a>
+        <a class="tb-link" href="../rain/index.html">☔ 詳細雨天備案</a>
+        <button id="themeToggle" type="button" onclick="cycleTheme()">🌗 主題</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== STICKY DAY NAV ====== -->
+  <nav class="day-nav" id="dayNav" aria-label="日期切換">
+    <div class="day-nav-inner" role="tablist">
+      <button role="tab" aria-selected="true"  aria-controls="day-1" onclick="showDay(1)" id="nav-1" class="active">DAY 1<br><small>11/14 (六)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-2" onclick="showDay(2)" id="nav-2">DAY 2<br><small>11/15 (日)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-3" onclick="showDay(3)" id="nav-3">DAY 3<br><small>11/16 (一)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-4" onclick="showDay(4)" id="nav-4">DAY 4<br><small>11/17 (二)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-5" onclick="showDay(5)" id="nav-5">DAY 5<br><small>11/18 (三)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-6" onclick="showDay(6)" id="nav-6">DAY 6<br><small>11/19 (四)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-7" onclick="showDay(7)" id="nav-7">DAY 7<br><small>11/20 (五)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-8" onclick="showDay(8)" id="nav-8">DAY 8<br><small>11/21 (六)</small></button>
+      <button role="tab" aria-selected="false" aria-controls="day-9" onclick="showDay(9)" id="nav-9">DAY 9<br><small>11/22 (日)</small></button>
+    </div>
+  </nav>
+
+  <!-- ====== MAIN ====== -->
+  <main>
+
+    <!-- ====== DAY 1 ====== -->
+    <section class="day-section active" id="day-1" data-date="2026-11-14">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">1</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 1｜11月14日（六）</h2>
+            <p class="date-str">飛到東京，住東池袋</p>
+          </div>
+        </div>
+        <div class="s-list">
+          <div class="s-note">兩組搭不同班機，晚上在民宿會合。</div>
+          <div class="s-item">
+            <div class="s-time">12:35</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">✈️</span>林葉組 起飛（中華航空）</div>
+            <p class="s-desc">桃園第二航廈 → 成田，16:35 到</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">13:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">✈️</span>邱家組 起飛（台灣虎航）</div>
+            <p class="s-desc">桃園第一航廈 → 成田，17:30 到</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">18:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚆</span>坐 Skyliner 進東京</div>
+            <p class="s-desc">在機場買交通卡（Welcome Suica），坐快車進市區</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">19:15</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🏠</span>林葉組 到民宿（東池袋）</div>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">20:15</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🏠</span>邱家組 到民宿（東池袋）</div>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">20:40</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍜</span>晚餐</div>
+            <p class="s-desc">民宿附近吃</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 2 ====== -->
+    <section class="day-section" id="day-2" data-date="2026-11-15">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">2</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 2｜11月15日（日）</h2>
+            <p class="date-str">招福貓寺、明治神宮、新宿御苑，晚上吃牛舌</p>
+          </div>
+        </div>
+        <div class="s-list">
+          <div class="s-item is-go">
+            <div class="s-time">09:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚪</span>出門</div>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">10:35</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🐱</span>豪徳寺</div>
+            <p class="s-desc">招財貓的老家！傳說一位大名打獵回來，被門口的貓招手請進寺裡，剛進門就下起大雷雨，他躲過一劫。寺裡有一整片白色招財貓排排站，可以請一隻小貓帶回家。</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">12:10</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">⛩️</span>明治神宮</div>
+            <p class="s-desc">祭拜明治天皇與皇后，1920 年建成。整片 70 萬平方公尺的森林，是當年全國捐來約 10 萬棵樹親手種出來的。入口大鳥居高 12 公尺，用千年以上的檜木做成。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">13:45</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍱</span>午餐</div>
+            <p class="s-desc">新宿三丁目一帶</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">14:45</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍂</span>新宿御苑</div>
+            <p class="s-desc">以前是皇室專用的庭園，1949 年才開放給大家。一次看三種庭園：左右對稱的西式花園、大片草坪配大樹、日式池塘庭園。還有大溫室，種了 1,000 多種植物。這天剛好是菊花展最後一天。</p>
+            </div>
+          </div>
+          <div class="s-item is-shop">
+            <div class="s-time">16:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🛍️</span>自由時間：新宿<span class="s-shop-tag">可購物</span></div>
+            <p class="s-desc">到 18:30。逛衣服、看藥妝，或喝咖啡休息。之後要搬行李去河口湖，大件的東西晚點再買。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">19:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🥩</span>晚餐：仙台牛舌（已訂位）</div>
+            <p class="s-desc">新宿，吃牛舌定食</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">20:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🏠</span>回民宿</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 3 ====== -->
+    <section class="day-section" id="day-3" data-date="2026-11-16">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">3</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 3｜11月16日（一）</h2>
+            <p class="date-str">鎌倉大佛、江之島看夕陽</p>
+          </div>
+        </div>
+        <div class="s-list">
+          <div class="s-item is-go">
+            <div class="s-time">08:15</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚪</span>出門</div>
+            <p class="s-desc">坐電車約 1 小時半到鎌倉</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">10:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">⛩️</span>小町通、鶴岡八幡宮</div>
+            <p class="s-desc">小町通是吃吃喝喝的老街。走到底是源賴朝蓋的鎌倉守護神社，大石階建於 12 世紀，爬上去可以看到鎌倉街景和海。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">11:15</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍽️</span>午餐</div>
+            <p class="s-desc">鎌倉</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">13:05</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🗿</span>鎌倉大佛</div>
+            <p class="s-desc">1252 年開始鑄造的國寶，高約 11.3 公尺、重約 121 公噸。原本有大殿，被颱風和大海嘯毀了，從室町時代末就一直坐在露天。可以花 50 元鑽進佛像肚子裡看。</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">15:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🏝️</span>江之島</div>
+            <p class="s-desc">海上的小島，島上的江島神社是日本三大弁財天之一。日本第一座戶外電扶梯直接送上山頂，再登上海邊燈塔看夕陽，天氣好可以看到富士山。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">18:10</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍽️</span>晚餐</div>
+            <p class="s-desc">大船車站附近</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">20:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🏠</span>回民宿</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 4 ====== -->
+    <section class="day-section" id="day-4" data-date="2026-11-17">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">4</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 4｜11月17日（二）雨天版</h2>
+            <p class="date-str">六義園、上野（下午進博物館躲雨）、阿美橫町</p>
+          </div>
+        </div>
+        <div class="s-list">
+          <div class="s-item is-go">
+            <div class="s-time">08:50</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚪</span>出門</div>
+            <p class="s-desc">走到池袋站坐電車，約 35 分</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">09:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍁</span>六義園</div>
+            <p class="s-desc">江戶時代大官柳澤吉保花 7 年蓋的庭園，把和歌裡的 88 個美景做進園子裡。國家特別名勝，繞一圈約 1 小時，11/17 楓葉可能還沒轉紅。預報陰天後轉雨，早上先逛。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">12:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍜</span>午餐</div>
+            <p class="s-desc">駒込</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">13:50</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🌳</span>上野公園</div>
+            <p class="s-desc">日本最早的公園之一，有不忍池、博物館、動物園。山坡上有西鄉隆盛的銅像，是全國 2 萬 5 千多人捐錢做的。</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">14:15</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🏛️</span>博物館（室內躲雨）</div>
+            <p class="s-desc">東京國立博物館（日本與東洋的美術）或國立科學博物館（自然與科學，小孩最愛），都在上野公園裡。</p>
+            </div>
+          </div>
+          <div class="s-item is-shop">
+            <div class="s-time">16:45</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🛍️</span>阿美橫町<span class="s-shop-tag">可購物</span></div>
+            <p class="s-desc">戰後這裡有幾百個賣糖果的攤子，所以叫「糖果小巷」（アメ横）。現在約 400 家店，零食、乾貨、海鮮，很熱鬧。晚餐時間不固定，想多逛就晚點吃。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">18:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍽️</span>晚餐</div>
+            <p class="s-desc">上野</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">19:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🏠</span>回民宿，打包</div>
+            <p class="s-desc">明天很早出門，要帶大行李</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 5 ====== -->
+    <section class="day-section" id="day-5" data-date="2026-11-18">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">5</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 5｜11月18日（三）雨天版</h2>
+            <p class="date-str">去河口湖，下午看室內美術館，傍晚看夜楓</p>
+          </div>
+        </div>
+        <div class="s-list">
+          <div class="s-item is-go">
+            <div class="s-time">06:50</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚪</span>出門，帶大行李</div>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">08:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚄</span>坐特急「富士回遊」</div>
+            <p class="s-desc">新宿直達河口湖的特急，全車對號座，坐約 2 小時。</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">10:45</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🧳</span>飯店寄行李</div>
+            <p class="s-desc">東橫 INN 富士河口湖大橋</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">11:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🥘</span>午餐</div>
+            <p class="s-desc">山梨名產ほうとう：南瓜味噌燉寬麵，熱呼呼一大鍋。相傳是武田信玄的行軍餐（文獻多在江戶時代以後）。</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">13:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🎻</span>河口湖北岸的美術館（室內）</div>
+            <p class="s-desc">下雨改看室內，到時候選一間：音樂與森林美術館（有樂器表演），或久保田一竹美術館（和服染織藝術，離紅葉迴廊最近）。</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">16:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍁</span>紅葉迴廊（白天＋夜楓）</div>
+            <p class="s-desc">小溪兩旁約 60 棵大楓樹排成 150 公尺的紅色隧道，晚上打燈像走進畫裡。這幾天剛好是紅葉祭。雨大就看 30 分鐘點燈，早點回飯店。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">18:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍢</span>晚餐</div>
+            <p class="s-desc">紅葉祭的小吃攤</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">20:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🏨</span>入住飯店</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 6 ====== -->
+    <section class="day-section" id="day-6" data-date="2026-11-19">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">6</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 6｜11月19日（四）雨天版</h2>
+            <p class="date-str">早上去新倉山看富士山、大石公園，坐巴士回東京淺草</p>
+          </div>
+        </div>
+        <div class="s-list">
+          <div class="s-item">
+            <div class="s-time">07:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍳</span>飯店早餐</div>
+            <p class="s-desc">9 點退房出門</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">09:20</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🗻</span>新倉山淺間公園</div>
+            <p class="s-desc">世界知名的日本代表風景：紅色五重塔加上富士山。要爬 398 階「咲耶姬階梯」，走不動可以在下面神社等大家。早上陽光從正面照著富士山。</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">11:45</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🌸</span>大石公園</div>
+            <p class="s-desc">河口湖北邊看富士山最漂亮的地方，有 350 公尺長的花步道。湖、花、富士山一起入鏡，最適合拍全家福。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">12:05</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">☕</span>午餐</div>
+            <p class="s-desc">大石公園旁</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">14:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🧳</span>回飯店拿行李</div>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">15:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚌</span>坐高速巴士回東京</div>
+            <p class="s-desc">坐約 2 個半小時，18:00 到上野</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">18:20</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🏠</span>入住淺草民宿</div>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">19:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍶</span>晚餐</div>
+            <p class="s-desc">淺草</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 7 ====== -->
+    <section class="day-section" id="day-7" data-date="2026-11-20">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">7</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 7｜11月20日（五）</h2>
+            <p class="date-str">淺草寺、仲見世</p>
+          </div>
+        </div>
+        <div class="s-list">
+          <div class="s-item is-go">
+            <div class="s-time">08:50</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚪</span>出門</div>
+            <p class="s-desc">走路約 20 分到雷門</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">09:10</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">⛩️</span>淺草寺、雷門、仲見世</div>
+            <p class="s-desc">東京最古老的寺廟。628 年兩兄弟在隅田川捕魚，網子撈起一尊觀音像，就這樣有了淺草寺。雷門大燈籠高 3.9 公尺、重 700 公斤。仲見世是日本最古老的商店街之一，300 多年前就在賣東西。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">12:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🥩</span>午餐：炸牛排（已訂位）</div>
+            <p class="s-desc">雷門旁大樓的 2 樓分店，12:00 訂好位，11:50 前到；吃 45 分鐘，人多可能分幾桌坐。</p>
+            </div>
+          </div>
+          <div class="s-note">12:45～17:30 分兩組：長輩和小孩去河邊公園、招財貓神社，再回民宿休息；年輕人去晴空塔下的商場。18:00 在晚餐店會合。</div>
+          <div class="s-item">
+            <div class="s-time">13:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🌉</span>隅田公園</div>
+            <p class="s-desc">江戶時代是大名的庭園，河堤種滿櫻花。坐在河邊看對岸 634 公尺高的晴空塔，是金氏世界紀錄認證的世界最高塔。</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">14:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🐱</span>今戶神社</div>
+            <p class="s-desc">相傳是招財貓的發源地之一，也是求姻緣有名的神社。</p>
+            </div>
+          </div>
+          <div class="s-item is-shop">
+            <div class="s-time">15:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🛍️</span>回民宿休息，或去購物<span class="s-shop-tag">可購物</span></div>
+            <p class="s-desc">到 17:30。想休息的人回民宿；想逛的人在淺草一帶逛衣服、看藥妝。年輕人組在晴空塔下的商場逛到 16:30。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">18:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍲</span>晚餐</div>
+            <p class="s-desc">淺草</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 8 ====== -->
+    <section class="day-section" id="day-8" data-date="2026-11-21">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">8</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 8｜11月21日（六）雨天版</h2>
+            <p class="date-str">高尾山賞楓、爬到山頂，傍晚回淺草</p>
+          </div>
+        </div>
+        <div class="s-list">
+          <div class="s-item is-go">
+            <div class="s-time">07:05</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚪</span>出門</div>
+            <p class="s-desc">坐電車約 2 小時</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">09:20</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚡</span>坐纜車或吊椅上山</div>
+            <p class="s-desc">纜車是日本最陡的，最大坡度約 31 度。</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">09:40</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍁</span>高尾山、藥王院</div>
+            <p class="s-desc">藥王院在 744 年開山，已經 1,280 多年。天狗是這裡神明的使者，能消災招福，境內到處都是天狗像。途中有棵「章魚杉」，傳說開路時樹根一夜之間自己彎起來讓路。</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">11:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">⛰️</span>高尾山山頂</div>
+            <p class="s-desc">海拔 599 公尺，晴天看得到富士山。走不動的人在藥王院等就好。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">11:45</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍜</span>午餐</div>
+            <p class="s-desc">山上的茶屋</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">14:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🛍️</span>山下商店街</div>
+            <p class="s-desc">下山後的老街，邊走邊吃天狗燒、糰子。</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">16:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🏠</span>回民宿，整理行李</div>
+            <p class="s-desc">明天一早就要回台灣</p>
+            </div>
+          </div>
+          <div class="s-item is-shop">
+            <div class="s-time">17:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🛍️</span>淺草一帶逛街<span class="s-shop-tag">可購物</span></div>
+            <p class="s-desc">逛衣服、看藥妝。晚餐時間不固定，想多逛就晚點吃。</p>
+            </div>
+          </div>
+          <div class="s-item is-meal">
+            <div class="s-time">18:00</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🍲</span>晚餐</div>
+            <p class="s-desc">淺草</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DAY 9 ====== -->
+    <section class="day-section" id="day-9" data-date="2026-11-22">
+      <div class="container">
+        <div class="day-header">
+          <div class="day-badge">
+            <span class="day-num">9</span>
+            <span class="day-label">DAY</span>
+          </div>
+          <div class="day-info">
+            <h2>Day 9｜11月22日（日）</h2>
+            <p class="date-str">回台灣</p>
+          </div>
+        </div>
+        <div class="s-list">
+          <div class="s-note">兩組搭不同班機，邱家組先走。</div>
+          <div class="s-item is-go">
+            <div class="s-time">07:15</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚪</span>邱家組 出門</div>
+            <p class="s-desc">帶大行李坐 Skyliner 去成田</p>
+            </div>
+          </div>
+          <div class="s-item is-go">
+            <div class="s-time">09:30</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">🚪</span>林葉組 退房出門</div>
+            <p class="s-desc">先吃早餐再坐 Skyliner 去成田</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">11:25</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">✈️</span>邱家組 起飛（台灣虎航）</div>
+            <p class="s-desc">14:45 到桃園第一航廈</p>
+            </div>
+          </div>
+          <div class="s-item">
+            <div class="s-time">14:35</div>
+            <div class="s-body">
+              <div class="s-title"><span class="s-ico">✈️</span>林葉組 起飛（中華航空）</div>
+            <p class="s-desc">17:45 到桃園第二航廈</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>🇯🇵 東京秋季家族之旅 2026｜11/14 - 11/22</p>
+      <p><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></p>
+    </div>
+  </footer>
+
+  <script src="../../assets/hero/hero.js"></script>
+  <script>
+    if (window.applyHero) window.applyHero('../../assets/hero/');
+  </script>
+  <script src="../trip.js"></script>
+  <script>/* 簡化版：記住的日期和主行程表分開存 */ window.TRIP.key = function (k) { return '2026-11-simple-rain:' + k; };</script>
+  <script src="../../assets/itinerary.js?v=20261110e"></script>
+
+</body>
+</html>
