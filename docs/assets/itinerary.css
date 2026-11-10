@@ -706,6 +706,31 @@ main {
   transform: scale(1.1);
 }
 
+/* 浮動的「☔ 雨天備案」按鈕：在「回到頂部」上方，一直顯示（使用者 2026-11-10 要求） */
+.rain-fab {
+  position: fixed;
+  bottom: 74px;
+  right: 20px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0 14px;
+  background: var(--secondary);
+  color: white;
+  border-radius: 22px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 80;
+  transition: transform 0.2s;
+}
+
+.rain-fab:hover { transform: scale(1.05); }
+@media print { .rain-fab { display: none; } }
+
 /* === Responsive === */
 @media (min-width: 640px) {
   .site-header h1 {
