@@ -122,9 +122,12 @@ main { max-width: 680px; margin: 0 auto; padding: 28px 16px 48px; }
 .card.is-wide { padding: 24px 22px; }
 .card.is-wide h2 { font-size: 1.3rem; }
 .card.is-wide p  { font-size: 0.92rem; }
-.card.is-flat { padding: 10px 20px; border-left-color: var(--secondary); }
-.card.is-flat h2 { font-size: 0.98rem; margin-bottom: 2px; }
-.card.is-flat p  { font-size: 0.8rem; }
+.card-row { display: flex; gap: 10px; margin-bottom: 14px; }
+.card-row .card { margin-bottom: 0; }
+.card-row .card.is-main-col { flex: 4 1 0; min-width: 0; }
+.card.is-side { flex: 1 1 0; min-width: 0; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 12px 6px; border-left-color: var(--secondary);
+  font-size: 0.86rem; font-weight: 700; line-height: 1.45; }
 .divider { border: 0; border-top: 1px solid var(--border); opacity: 0.5; margin: 22px 0 20px; }
 
 .badge {
@@ -187,10 +190,13 @@ footer {
     <p>每天的地點與實際移動路線（電車、纜車、巴士、計程車、步行），可以切換餐廳方案；分頭行動的日子兩條線都畫。</p>
   </a>
 
-  <a class="card" href="2026-11/rain/index.html">
+  <div class="card-row">
+  <a class="card is-main-col" href="2026-11/rain/index.html">
     <h2>☔ 雨天備案<span class="badge">11/15・11/17・11/18・11/19・11/21</span></h2>
     <p>三個版本：高尾山 11/15 版（和豪徳寺日交換）、高尾山 11/21 版（和六義園・上野日交換，建議）、富士河口湖 11/18 早上下雨改室內、新倉山搬到 11/19 早上。11/17、11/18 預報 80～90% 有雨。</p>
   </a>
+  <a class="card is-side" href="2026-11/simple-rain/index.html">考慮天氣的<br>簡化行程表</a>
+  </div>
 
   <a class="card is-check" href="2026-11/checklist/index.html">
     <h2>✅ 行前 Check List</h2>
@@ -200,11 +206,6 @@ footer {
   <a class="card is-budget" href="2026-11/budget/index.html">
     <h2>💴 預算追蹤<span class="badge budget">每日</span></h2>
     <p>9 天的每日記帳，已查證的門票與車票自動計入；機票、三段住宿、Suica 儲值記在共同支出。</p>
-  </a>
-
-  <a class="card is-flat" href="2026-11/simple-rain/index.html">
-    <h2>⏰ 簡化行程表・雨天版</h2>
-    <p>高尾山改到 11/21、六義園和上野改到 11/17；11/18 河口湖改室內，新倉山改 11/19 早上。</p>
   </a>
 
 </main>
