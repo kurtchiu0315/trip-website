@@ -1654,3 +1654,16 @@ body.is-offline .spot-offline { display: block; }
   .lane { display: block !important; margin-bottom: 10px; }
   .lane-label { display: block !important; }
 }
+
+/* === 簡化行程表：只作用在 body.is-simple === */
+body.is-simple { font-size: 19px; line-height: 1.6; }
+body.is-simple .day-nav button { font-size: 16px; }
+body.is-simple .s-list { max-width: var(--max-w); margin: 0 auto; padding: 8px 16px 40px; }
+body.is-simple .s-item { display: grid; grid-template-columns: 4.2em 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+body.is-simple .s-time { font-size: 22px; font-weight: 800; color: var(--primary); font-variant-numeric: tabular-nums; }
+body.is-simple .s-title { font-size: 21px; font-weight: 700; color: var(--on-surface); }
+body.is-simple .s-ico { margin-right: 6px; }
+body.is-simple .s-desc { margin: 4px 0 0; font-size: 17px; color: var(--on-surface-muted); }
+body.is-simple .is-go .s-title,
+body.is-simple .is-go .s-time { color: var(--on-surface-muted); font-weight: 600; }
+body.is-simple .s-note { margin: 12px 0; padding: 12px 14px; border-radius: 12px; background: color-mix(in srgb, var(--primary) 10%, var(--surface)); font-size: 17px; }
