@@ -27,6 +27,19 @@
       return prev ? Math.ceil(prev.getBoundingClientRect().bottom + window.scrollY) : 0;
     }
 
+    /* 浮動的「☔」按鈕（.rain-fab）：只在有備案的那幾天顯示。
+       頁面上寫 data-days='{"5":"../rain/index.html#day-1", …}'，key 是這頁的 Day 編號、值是要跳去的網址；
+       沒有對應的那一天就隱藏。雨天備案頁用同一個機制跳回主行程表（使用者 2026-11-10 要求） */
+    function updateAltFab(n) {
+      var fab = document.querySelector('.rain-fab');
+      if (!fab) return;
+      var map = {};
+      try { map = JSON.parse(fab.getAttribute('data-days') || '{}'); } catch (e) { map = {}; }
+      var href = map[String(n)];
+      fab.hidden = !href;
+      if (href) fab.setAttribute('href', href);
+    }
+
     /* 日期列的實際高度寫進 CSS 變數，給 .day-section 的 scroll-margin-top 用（見 styles.css） */
     function syncNavHeight() {
       var nav = document.getElementById('dayNav');
@@ -50,6 +63,7 @@
       if (navBtn) { navBtn.classList.add('active'); navBtn.setAttribute('aria-selected', 'true'); }
 
       store.set(K('lastDay'), String(n));
+      updateAltFab(n);
 
       // 切到別天時，方案輪播撐開的頁尾墊片就沒有意義了，收回去免得多一塊空白
       var slackEl = document.querySelector('.scroll-slack');
