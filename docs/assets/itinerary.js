@@ -277,20 +277,24 @@
         }
       }
 
+      function branchLines(br, indent) {
+        br.querySelectorAll(':scope > .branch-panel').forEach(function (p) {
+          var label = p.querySelector(':scope > .branch-label');
+          lines.push(indent + '〔' + (label ? label.textContent.trim() : '') + '〕');
+          Array.prototype.forEach.call(p.children, function (c) {
+            if (c.classList.contains('timeline-item')) itemLines(c, indent + '　');
+            else if (c.classList.contains('branch')) branchLines(c, indent + '　');
+          });
+        });
+      }
+
       /* 分頭行動：「看：全部」時兩條線都列，並標出誰；只看一個人時只列那條線 */
       var who = document.body.getAttribute('data-who') || 'all';
       var tl = sec.querySelector('.timeline');
       Array.prototype.forEach.call(tl ? tl.children : [], function (el) {
         if (el.classList.contains('timeline-item')) { itemLines(el, ''); return; }
-        /* 依天氣二選一：兩邊都列，標出是哪一邊 */
-        if (el.classList.contains('branch')) {
-          el.querySelectorAll('.branch-panel').forEach(function (p) {
-            var label = p.querySelector('.branch-label');
-            lines.push('〔' + (label ? label.textContent.trim() : '') + '〕');
-            p.querySelectorAll('.timeline-item').forEach(function (item) { itemLines(item, '　'); });
-          });
-          return;
-        }
+        /* 依天氣二選一：每一邊都列，標出是哪一邊；分頁裡可以再放分頁 */
+        if (el.classList.contains('branch')) { branchLines(el, ''); return; }
         if (!el.classList.contains('split')) return;
         var head = el.querySelector('.split-head');
         var lanes = el.querySelectorAll('.lane');
@@ -588,12 +592,12 @@
       var t = e.target.closest && e.target.closest('.branch-tabs button');
       if (!t) return;
       var br = t.closest('.branch');
-      br.querySelectorAll('.branch-tabs button').forEach(function (x) {
+      br.querySelectorAll(':scope > .branch-tabs button').forEach(function (x) {
         var on = x === t;
         x.classList.toggle('active', on);
         x.setAttribute('aria-selected', on ? 'true' : 'false');
       });
-      br.querySelectorAll('.branch-panel').forEach(function (pn) { pn.classList.toggle('is-current', pn.dataset.b === t.dataset.b); });
+      br.querySelectorAll(':scope > .branch-panel').forEach(function (pn) { pn.classList.toggle('is-current', pn.dataset.b === t.dataset.b); });
     });
 
     /* ---------- 主行程的計畫B ---------- */

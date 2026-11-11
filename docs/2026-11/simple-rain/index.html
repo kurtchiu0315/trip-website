@@ -6,7 +6,7 @@
   <title>⏰ 簡化行程表・雨天版｜東京 11/14～11/22</title>
   <meta name="description" content="東京秋季家族之旅簡化行程表雨天版：高尾山改到 11/21、富士山改室內">
   <meta name="theme-color" content="#B5451B">
-  <link rel="stylesheet" href="../../assets/itinerary.css?v=20261112c">
+  <link rel="stylesheet" href="../../assets/itinerary.css?v=20261112d">
   <!-- 字體非阻塞載入：CDN 連不上（例如在日本沒網路）時直接用系統內建中日文字型 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -452,7 +452,7 @@
           </div>
           <div class="day-info">
             <h2>Day 6｜11月19日（四）雨天版</h2>
-            <p class="date-str">前一天沒去新倉山就早上去、有去就坐船，再逛大石公園，坐巴士回東京淺草</p>
+            <p class="date-str">前一天沒去新倉山就早上去、有去就坐船或纜車，再逛大石公園，坐巴士回東京淺草</p>
           </div>
         </div>
         <div class="s-list">
@@ -464,18 +464,36 @@
             </div>
           </div>
           <div class="branch">
-            <div class="branch-head"><b>🔀 看前一天有沒有去新倉山</b>　有去就坐船；沒去就早上去新倉山。</div>
+            <div class="branch-head"><b>🔀 看前一天有沒有去新倉山</b>　有去就坐船或纜車；沒去就早上去新倉山。</div>
             <div class="branch-tabs" role="tablist">
-              <button type="button" role="tab" data-b="went" aria-selected="false">✅ 前一天有去忠靈塔<small>坐船</small></button>
+              <button type="button" role="tab" data-b="went" aria-selected="false">✅ 前一天有去忠靈塔<small>船或纜車</small></button>
               <button type="button" role="tab" data-b="notyet" aria-selected="true" class="active">🗻 前一天沒去<small>早上去塔</small></button>
             </div>
             <div class="branch-panel" data-b="went">
-              <div class="branch-label">✅ 前一天有去：坐船、逛大石公園</div>
-              <div class="s-item">
-                <div class="s-time">09:30</div>
-                <div class="s-body">
-                  <div class="s-title"><span class="s-ico">⛵</span>河口湖遊覽船</div>
-                <p class="s-desc">船做成戰國時代武田軍的戰船模樣，紅色盔甲、家紋旗子，像古代將軍出巡。坐 20 分鐘，在湖上看富士山。</p>
+              <div class="branch-label">✅ 前一天有去：坐船或坐纜車，再逛大石公園</div>
+              <div class="branch">
+                <div class="branch-head"><b>⛵ 坐船或 🚡 坐纜車，二選一</b></div>
+                <div class="branch-tabs" role="tablist">
+                  <button type="button" role="tab" data-b="boat" aria-selected="true" class="active">⛵ 坐船</button>
+                  <button type="button" role="tab" data-b="rope" aria-selected="false">🚡 坐纜車</button>
+                </div>
+                <div class="branch-panel is-current" data-b="boat">
+                  <div class="s-item">
+                    <div class="s-time">09:30</div>
+                    <div class="s-body">
+                      <div class="s-title"><span class="s-ico">⛵</span>河口湖遊覽船</div>
+                    <p class="s-desc">船做成戰國時代武田軍的戰船模樣，紅色盔甲、家紋旗子，像古代將軍出巡。坐 20 分鐘，在湖上看富士山。</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="branch-panel" data-b="rope">
+                  <div class="s-item">
+                    <div class="s-time">09:15</div>
+                    <div class="s-body">
+                      <div class="s-title"><span class="s-ico">🚡</span>坐纜車上天上山</div>
+                    <p class="s-desc">3 分鐘就到 1,075 公尺的山頂展望台，同時看到富士山一路到山腳，和整個河口湖。</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="s-item">
@@ -760,7 +778,7 @@
   </script>
   <script src="../trip.js"></script>
   <script>/* 簡化版：記住的日期和主行程表分開存 */ window.TRIP.key = function (k) { return '2026-11-simple-rain:' + k; };</script>
-  <script src="../../assets/itinerary.js?v=20261112c"></script>
+  <script src="../../assets/itinerary.js?v=20261112d"></script>
 
 </body>
 </html>
