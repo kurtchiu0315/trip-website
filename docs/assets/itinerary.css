@@ -1681,8 +1681,9 @@ body.is-offline .spot-offline { display: block; }
 .branch-tabs { display: flex; gap: 6px; margin-bottom: 10px; }
 .branch-tabs button {
   flex: 1;
-  padding: 7px 10px;
-  border-radius: 999px;
+  padding: 6px 6px;
+  border-radius: 14px;
+  line-height: 1.3;
   border: 1.5px solid var(--chip-border);
   background: var(--surface);
   color: var(--on-surface);
@@ -1691,6 +1692,7 @@ body.is-offline .spot-offline { display: block; }
   font-weight: 700;
   cursor: pointer;
 }
+.branch-tabs button small { display: block; font-size: 0.74rem; font-weight: 400; opacity: 0.85; }
 .branch-tabs button.active { background: var(--secondary); border-color: var(--secondary); color: var(--surface); }
 .branch-panel { position: relative; padding-left: 20px; }
 .branch-panel::before {
@@ -1703,7 +1705,7 @@ body.is-offline .spot-offline { display: block; }
   background: var(--border);
 }
 .branch-panel:not(.is-current) { display: none; }
-.branch-label { display: none; margin: 0 0 8px -20px; font-size: 0.82rem; font-weight: 800; color: var(--on-surface-muted); }
+.branch-label { margin: 0 0 8px -20px; font-size: 0.82rem; font-weight: 800; color: var(--on-surface-muted); }
 .branch-panel .timeline-item:last-child { margin-bottom: 0; }
 body.is-simple .branch { margin: 8px 0; }
 body.is-simple .branch::before, body.is-simple .branch-panel::before { display: none; }
@@ -1713,7 +1715,6 @@ body.is-simple .branch-panel .s-item:last-child { border-bottom: 0; }
 @media print {
   .branch-tabs { display: none; }
   .branch-panel { display: block !important; margin-bottom: 10px; }
-  .branch-label { display: block !important; }
 }
 
 /* === 簡化行程表：只作用在 body.is-simple === */
