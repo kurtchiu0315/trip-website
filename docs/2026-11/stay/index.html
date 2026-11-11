@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏠 第一晚住宿｜Visit Japan Web 格式</title>
+<meta name="description" content="入境第一晚的住宿照 Visit Japan Web「日本的連絡處」欄位排好，可以一欄一欄複製">
+<meta name="theme-color" content="#B5451B">
+<style>
+:root {
+  --primary: #B5451B; --secondary: #4A6FA5; --bg: #FAF8F5; --surface: #FFFFFF;
+  --text: #2C2416; --muted: #7A6E5D; --border: #E0D8CC; --ok: #2E7D4F;
+  --shadow: 0 2px 8px rgba(44,36,22,0.08);
+  --font: 'Noto Sans TC', 'PingFang TC', 'Hiragino Sans', 'Microsoft JhengHei', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #E8825A; --secondary: #8FB3DE; --bg: #17140F; --surface: #221E17;
+    --text: #EDE6DA; --muted: #A69A88; --border: #3A332A; --ok: #7CCB98;
+    --shadow: 0 2px 8px rgba(0,0,0,0.5);
+  }
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; }
+main { max-width: 680px; margin: 0 auto; padding: 20px 16px 48px; }
+.back { color: var(--secondary); font-size: 0.9rem; text-decoration: none; }
+h1 { font-size: 1.4rem; margin: 10px 0 6px; }
+.lead { font-size: 0.88rem; color: var(--muted); margin-bottom: 18px; }
+.stay { background: var(--surface); border: 1px solid var(--border); border-left: 4px solid var(--primary);
+  border-radius: 12px; padding: 16px 18px; margin-bottom: 16px; box-shadow: var(--shadow); scroll-margin-top: 12px; }
+.stay.is-vjw { border-left-color: var(--ok); }
+.when { font-size: 0.8rem; font-weight: 700; color: var(--primary); }
+.stay h2 { font-size: 1.1rem; margin: 2px 0 10px; }
+.vjw-badge { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 1px 9px; border-radius: 999px;
+  background: var(--ok); color: var(--surface); margin-left: 6px; vertical-align: 2px; }
+.row { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; align-items: center;
+  padding: 8px 0; border-top: 1px solid var(--border); }
+.row .k { grid-column: 1 / -1; font-size: 0.76rem; color: var(--muted); }
+.row .v { font-size: 1.02rem; font-weight: 600; overflow-wrap: anywhere; min-width: 0; }
+.row .v.todo { color: var(--muted); font-weight: 400; }
+.row small { display: block; font-size: 0.78rem; color: var(--muted); font-weight: 400; }
+button.copy { font: inherit; font-size: 0.8rem; padding: 4px 12px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--border); background: var(--bg); color: var(--text); }
+button.copy.done { background: var(--ok); color: var(--surface); border-color: var(--ok); }
+.note { font-size: 0.82rem; color: var(--muted); margin-top: 8px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="../../index.html">← 回首頁</a>
+  <h1>🏠 Visit Japan Web 住宿欄位</h1>
+  <p class="lead">照 Visit Japan Web「日本的連絡處」的欄位排好，按「複製」再貼上。Visit Japan Web 只要填<b>入境第一晚</b>的住宿；每個人（包含小孩）都要各自登錄。先填郵遞區號，都道府縣和市區町村會自動帶出來。</p>
+
+  <section class="stay is-vjw" id="s1">
+    <div class="when">11/14（六）～11/18（三）・4 晚</div>
+    <h2>東池袋民宿</h2>
+    <div class="row"><span class="k">郵遞區號 Postal code</span><span class="v">170-0013</span><button class="copy" data-c="1700013">複製</button></div>
+    <div class="row"><span class="k">都道府縣 Prefecture</span><span class="v">Tokyo<small>東京都</small></span><button class="copy">複製</button></div>
+    <div class="row"><span class="k">市區町村 City</span><span class="v">Toshima-ku<small>豊島区</small></span><button class="copy">複製</button></div>
+    <div class="row"><span class="k">地址 Address</span><span class="v">3-11-3 Higashi-Ikebukuro<small>東池袋 3-11-3</small></span><button class="copy">複製</button></div>
+    <div class="row"><span class="k">住宿名稱 Name</span><span class="v">IKEBUKURO VILLA IKEBUKURO 5 MINUTES 2-11 PEOPLE<small>欄位太短就填 IKEBUKURO VILLA</small></span><button class="copy">複製</button></div>
+    <div class="row"><span class="k">電話 Phone</span><span class="v">818045876688<small>國內格式 080-4587-6688；網站不收 81 開頭就改填這個</small></span><button class="copy">複製</button></div>
+  </section>
+
+  <p class="note">郵遞區號用 zipcloud 郵遞區號查詢確認。Visit Japan Web 官方網址是 vjw.digital.go.jp，免費；有收「申請費」的是仿冒網站。</p>
+</main>
+<script>
+document.querySelectorAll('button.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var v = b.parentNode.querySelector('.v');
+    var text = b.dataset.c || v.childNodes[0].textContent.trim();
+    var done = function () {
+      b.textContent = '已複製'; b.classList.add('done');
+      setTimeout(function () { b.textContent = '複製'; b.classList.remove('done'); }, 1500);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, function () { fallback(text); done(); });
+    } else { fallback(text); done(); }
+  });
+});
+function fallback(text) {
+  var t = document.createElement('textarea'); t.value = text; document.body.appendChild(t);
+  t.select(); try { document.execCommand('copy'); } catch (e) {} t.remove();
+}
+</script>
+</body>
+</html>

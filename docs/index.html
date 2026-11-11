@@ -123,13 +123,13 @@ main { max-width: 680px; margin: 0 auto; padding: 28px 16px 48px; }
 .card.is-wide h2 { font-size: 1.3rem; }
 .card.is-wide p  { font-size: 0.92rem; }
 .stay { display: block; }
-.stay:hover { transform: none; }
+.stay:not(.is-link):hover { transform: none; border-left-color: var(--primary); }
+.stay .stay-go { margin-top: 8px; font-size: 0.84rem; font-weight: 700; color: var(--secondary); }
 .stay .stay-when { font-size: 0.8rem; font-weight: 700; color: var(--primary); }
 .stay h2 { margin-top: 2px; }
 .stay dl { display: grid; grid-template-columns: 4.5em 1fr; gap: 3px 8px; font-size: 0.84rem; margin-top: 6px; }
 .stay dt { color: var(--muted); }
 .stay dd { min-width: 0; overflow-wrap: anywhere; }
-.stay a { color: var(--secondary); }
 .stay .todo { color: var(--muted); }
 .card-row { display: flex; gap: 10px; margin-bottom: 14px; }
 .card-row .card { margin-bottom: 0; }
@@ -219,24 +219,25 @@ footer {
 
   <h3 class="group">🏠 住宿</h3>
 
-  <div class="card stay">
+  <a class="card stay is-link" href="2026-11/stay/index.html">
     <div class="stay-when">11/14（六）～11/18（三）・4 晚</div>
     <h2>東池袋民宿 IKEBUKURO VILLA</h2>
     <p>訂房名稱「IKEBUKURO VILLA IKEBUKURO 5 MINUTES 2-11 PEOPLE」；Visit Japan Web 的「日本的連絡處」填這間。</p>
     <dl>
-      <dt>地址</dt><dd><a href="https://maps.google.com/maps?q=東京都豊島区東池袋3-11-3" target="_blank" rel="noopener">〒170-0013 東京都豊島区東池袋 3-11-3</a></dd>
-      <dt>電話</dt><dd><a href="tel:+818045876688">080-4587-6688</a></dd>
+      <dt>地址</dt><dd>〒170-0013 東京都豊島区東池袋 3-11-3</dd>
+      <dt>電話</dt><dd>080-4587-6688</dd>
       <dt>入住</dt><dd class="todo">待補</dd>
       <dt>交通</dt><dd>池袋站東口步行約 14 分</dd>
     </dl>
-  </div>
+    <p class="stay-go">📝 點這裡看 Visit Japan Web 填寫格式 →</p>
+  </a>
 
   <div class="card stay">
     <div class="stay-when">11/18（三）～11/19（四）・1 晚</div>
     <h2>東横INN 富士河口湖大橋</h2>
     <dl>
-      <dt>地址</dt><dd><a href="https://maps.google.com/maps?q=東横INN富士河口湖大橋" target="_blank" rel="noopener">〒401-0301 山梨県南都留郡富士河口湖町船津 294-1</a></dd>
-      <dt>電話</dt><dd><a href="tel:+81555683045">0555-68-3045</a></dd>
+      <dt>地址</dt><dd>〒401-0301 山梨県南都留郡富士河口湖町船津 294-1</dd>
+      <dt>電話</dt><dd>0555-68-3045</dd>
       <dt>入住／退房</dt><dd>15:00／10:00</dd>
       <dt>早餐</dt><dd>免費 6:30～9:00</dd>
     </dl>
@@ -246,7 +247,7 @@ footer {
     <div class="stay-when">11/19（四）～11/22（日）・3 晚</div>
     <h2>淺草民宿（千束）</h2>
     <dl>
-      <dt>地址</dt><dd><a href="https://maps.google.com/maps?q=東京都台東区千束3-17-4" target="_blank" rel="noopener">〒111-0031 東京都台東区千束 3-17-4</a></dd>
+      <dt>地址</dt><dd>〒111-0031 東京都台東区千束 3-17-4</dd>
       <dt>電話</dt><dd class="todo">待補</dd>
       <dt>入住</dt><dd class="todo">待補</dd>
       <dt>退房</dt><dd class="todo">待補</dd>
