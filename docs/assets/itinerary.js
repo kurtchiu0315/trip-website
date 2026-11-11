@@ -282,6 +282,15 @@
       var tl = sec.querySelector('.timeline');
       Array.prototype.forEach.call(tl ? tl.children : [], function (el) {
         if (el.classList.contains('timeline-item')) { itemLines(el, ''); return; }
+        /* 依天氣二選一：兩邊都列，標出是哪一邊 */
+        if (el.classList.contains('branch')) {
+          el.querySelectorAll('.branch-panel').forEach(function (p) {
+            var label = p.querySelector('.branch-label');
+            lines.push('〔' + (label ? label.textContent.trim() : '') + '〕');
+            p.querySelectorAll('.timeline-item').forEach(function (item) { itemLines(item, '　'); });
+          });
+          return;
+        }
         if (!el.classList.contains('split')) return;
         var head = el.querySelector('.split-head');
         var lanes = el.querySelectorAll('.lane');
@@ -571,6 +580,21 @@
       });
       applyWho(store.get(K('who'), 'all'));
     }
+
+    /* ---------- 依天氣二選一 .branch（雨天備案頁） ----------
+       .branch 裡的 .branch-tabs 按鈕（data-b）切換同一塊裡的 .branch-panel（data-b），只換這一塊；
+       和 .split 不同，不加工具列按鈕、不存 localStorage。列印時兩邊都印 */
+    document.addEventListener('click', function (e) {
+      var t = e.target.closest && e.target.closest('.branch-tabs button');
+      if (!t) return;
+      var br = t.closest('.branch');
+      br.querySelectorAll('.branch-tabs button').forEach(function (x) {
+        var on = x === t;
+        x.classList.toggle('active', on);
+        x.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      br.querySelectorAll('.branch-panel').forEach(function (pn) { pn.classList.toggle('is-current', pn.dataset.b === t.dataset.b); });
+    });
 
     /* ---------- 主行程的計畫B ---------- */
     /* 收合的 <details> 列印時不會印出內容：印之前全部展開，印完還原 */

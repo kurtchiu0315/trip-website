@@ -1655,6 +1655,67 @@ body.is-offline .spot-offline { display: block; }
   .lane-label { display: block !important; }
 }
 
+/* === 依天氣二選一 .branch（雨天備案頁）：外框沿用 .split，用分頁切換，列印兩邊都印 === */
+.branch {
+  position: relative;
+  margin: 0 0 16px;
+  padding: 10px 10px 12px;
+  border: 1.5px dashed var(--secondary);
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+}
+.branch::before {
+  content: '';
+  position: absolute;
+  left: -17px;
+  top: 14px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2.5px solid var(--secondary);
+  z-index: 1;
+}
+.branch-head { margin-bottom: 8px; font-size: 0.88rem; color: var(--on-surface-muted); }
+.branch-head b { font-weight: 800; color: var(--secondary); }
+.branch-tabs { display: flex; gap: 6px; margin-bottom: 10px; }
+.branch-tabs button {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1.5px solid var(--chip-border);
+  background: var(--surface);
+  color: var(--on-surface);
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.branch-tabs button.active { background: var(--secondary); border-color: var(--secondary); color: var(--surface); }
+.branch-panel { position: relative; padding-left: 20px; }
+.branch-panel::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.branch-panel:not(.is-current) { display: none; }
+.branch-label { display: none; margin: 0 0 8px -20px; font-size: 0.82rem; font-weight: 800; color: var(--on-surface-muted); }
+.branch-panel .timeline-item:last-child { margin-bottom: 0; }
+body.is-simple .branch { margin: 8px 0; }
+body.is-simple .branch::before, body.is-simple .branch-panel::before { display: none; }
+body.is-simple .branch-panel { padding-left: 0; }
+body.is-simple .branch-label { margin-left: 0; }
+body.is-simple .branch-panel .s-item:last-child { border-bottom: 0; }
+@media print {
+  .branch-tabs { display: none; }
+  .branch-panel { display: block !important; margin-bottom: 10px; }
+  .branch-label { display: block !important; }
+}
+
 /* === 簡化行程表：只作用在 body.is-simple === */
 body.is-simple { font-size: 19px; line-height: 1.6; }
 body.is-simple .day-nav button { font-size: 16px; }
