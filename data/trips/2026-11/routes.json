@@ -900,89 +900,53 @@
       },
       {
         "from": "12:00",
-        "to": "13:00",
-        "who": "family",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "13:00",
-        "to": "14:00",
-        "who": "family",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "14:00",
-        "to": "14:45",
-        "who": "family",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "14:45",
-        "to": "18:00",
-        "who": "family",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "12:00",
         "to": "12:45",
-        "who": "solo",
         "legs": [
           {
             "mode": "walk"
+          }
+        ],
+        "cases": [
+          {
+            "to": [
+              "A",
+              "B"
+            ],
+            "legs": [
+              {
+                "mode": "rail",
+                "relation": 5392090,
+                "label": "東武スカイツリーライン",
+                "board": "浅草",
+                "alight": "とうきょうスカイツリー"
+              }
+            ]
           }
         ]
       },
       {
         "from": "12:45",
-        "to": "13:00",
-        "who": "solo",
-        "legs": [
-          {
-            "mode": "rail",
-            "relation": 5392090,
-            "label": "東武スカイツリーライン",
-            "board": "浅草",
-            "alight": "とうきょうスカイツリー"
-          }
-        ]
-      },
-      {
-        "from": "13:00",
-        "to": "16:45",
-        "who": "solo",
+        "to": "18:00",
         "legs": [
           {
             "mode": "walk"
           }
-        ]
-      },
-      {
-        "from": "16:45",
-        "to": "18:00",
-        "who": "solo",
-        "legs": [
+        ],
+        "cases": [
           {
-            "mode": "rail",
-            "relation": 5392090,
-            "label": "東武スカイツリーライン",
-            "board": "とうきょうスカイツリー",
-            "alight": "浅草"
+            "from": [
+              "A",
+              "B"
+            ],
+            "legs": [
+              {
+                "mode": "rail",
+                "relation": 5392090,
+                "label": "東武スカイツリーライン",
+                "board": "とうきょうスカイツリー",
+                "alight": "浅草"
+              }
+            ]
           }
         ]
       },
