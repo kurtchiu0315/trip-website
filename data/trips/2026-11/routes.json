@@ -53,16 +53,6 @@
         ]
       },
       {
-        "from": "19:00",
-        "to": "21:40",
-        "who": "family",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
         "from": "14:40",
         "to": "19:40",
         "who": "solo",
@@ -101,6 +91,36 @@
         ]
       },
       {
+        "from": "19:00",
+        "to": "19:15",
+        "who": "family",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "19:15",
+        "to": "19:45",
+        "who": "family",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "19:45",
+        "to": "20:45",
+        "who": "family",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
         "from": "21:25",
         "to": "21:40",
         "who": "solo",
@@ -113,6 +133,7 @@
       {
         "from": "21:40",
         "to": "21:50",
+        "who": "solo",
         "legs": [
           {
             "mode": "walk"
@@ -122,6 +143,7 @@
       {
         "from": "21:50",
         "to": "23:00",
+        "who": "solo",
         "legs": [
           {
             "mode": "walk"
