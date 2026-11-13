@@ -179,18 +179,18 @@
       "date": "2026-11-14",
       "time": "21:50",
       "icon": "🍜",
-      "title": "晚餐｜Chuji",
+      "title": "晚餐｜一蘭 池袋店",
       "ja": "",
-      "label": "🍜 Chuji",
+      "label": "一蘭 池袋店",
       "tag": "彈性",
       "kind": "spot",
       "note": "",
-      "query": "Chuji",
+      "query": "一蘭 池袋店",
       "order": 15,
       "slot": "d1-2150",
-      "lat": 35.73107459866761,
-      "lon": 139.71382200492476,
-      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13298404/dtlmap/",
+      "lat": 35.73251982866681,
+      "lon": 139.71420350493912,
+      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13019994/dtlmap/（2026-11-13，家人餐廳清單）",
       "geocodedQuery": "data/plan-coords.json"
     },
     {
@@ -212,6 +212,24 @@
       "geocodedQuery": "GSI 東京都豊島区東池袋3-11-3"
     },
     {
+      "day": 1,
+      "date": "2026-11-14",
+      "time": "",
+      "icon": "🍜",
+      "title": "🍜 Chuji",
+      "ja": "",
+      "label": "Chuji",
+      "tag": "",
+      "kind": "spot",
+      "note": "",
+      "query": "Chuji",
+      "order": 17,
+      "lat": 35.73107459866761,
+      "lon": 139.71382200492476,
+      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13298404/dtlmap/",
+      "geocodedQuery": "data/plan-coords.json"
+    },
+    {
       "day": 2,
       "date": "2026-11-15",
       "time": "09:30",
@@ -225,7 +243,7 @@
       "kind": "start",
       "note": "前一晚住的飯店",
       "query": "東京都豊島区東池袋3-11-3",
-      "order": 17,
+      "order": 18,
       "lat": 35.731876,
       "lon": 139.718689,
       "osm": "東京都豊島区東池袋三丁目１１番３号（國土地理院 地址檢索）",
@@ -243,7 +261,7 @@
       "kind": "transport",
       "note": "",
       "query": "池袋駅",
-      "order": 18,
+      "order": 19,
       "lat": 35.731946,
       "lon": 139.706626,
       "osm": "池袋駅, 立教通り, 西池袋三丁目, 西池袋, 豊島区, 東京, 171-0021, 日本",
@@ -261,7 +279,7 @@
       "kind": "spot",
       "note": "",
       "query": "豪徳寺",
-      "order": 19,
+      "order": 20,
       "lat": 35.647671,
       "lon": 139.647202,
       "osm": "東京都世田谷区豪徳寺二丁目２４番７号（國土地理院 地址檢索）",
@@ -279,7 +297,7 @@
       "kind": "transport",
       "note": "",
       "query": "豪徳寺駅",
-      "order": 20,
+      "order": 21,
       "lat": 35.6534875,
       "lon": 139.6468687,
       "osm": "小田急小田原線 豪徳寺（OpenStreetMap node 6793703209）",
@@ -297,7 +315,7 @@
       "kind": "spot",
       "note": "",
       "query": "明治神宮",
-      "order": 21,
+      "order": 22,
       "lat": 35.674842,
       "lon": 139.699627,
       "osm": "明治神宮, 1, 代々木神園町, 渋谷区, 東京, 151-8557, 日本",
@@ -315,7 +333,7 @@
       "kind": "transport",
       "note": "",
       "query": "明治神宮前駅",
-      "order": 22,
+      "order": 23,
       "lat": 35.66857,
       "lon": 139.704961,
       "osm": "明治神宮前駅, 表参道, 神宮前六丁目, 神宮前, 渋谷区, 東京, 150-0001, 日本",
@@ -325,19 +343,19 @@
       "day": 2,
       "date": "2026-11-15",
       "time": "13:45",
-      "icon": "🍱",
-      "title": "午餐｜新宿三丁目（午餐）",
+      "icon": "🍲",
+      "title": "午餐｜人形町今半 新宿高島屋店",
       "ja": "",
-      "label": "🍤 Tempura Funabashiya Shinjuku honten（食べログ英文站名稱）",
+      "label": "人形町今半 新宿高島屋店",
       "tag": "彈性",
       "kind": "spot",
       "note": "",
-      "query": "Tempura Funabashiya Shinjuku honten",
-      "order": 23,
+      "query": "人形町今半 新宿高島屋店",
+      "order": 24,
       "slot": "d2-1345",
-      "lat": 35.69105930868967,
-      "lon": 139.70327796452796,
-      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1304/A130401/13012090/dtlmap/",
+      "lat": 35.687625,
+      "lon": 139.702351,
+      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1304/A130401/13004274/dtlmap/（2026-11-13，家人餐廳清單）",
       "geocodedQuery": "data/plan-coords.json"
     },
     {
@@ -352,7 +370,7 @@
       "kind": "transport",
       "note": "",
       "query": "新宿三丁目駅",
-      "order": 24,
+      "order": 25,
       "lat": 35.692525,
       "lon": 139.705768,
       "osm": "新宿三丁目駅, 新宿五丁目, 新宿, 新宿区, 東京, 160-0022, 日本",
@@ -370,7 +388,7 @@
       "kind": "spot",
       "note": "",
       "query": "新宿御苑",
-      "order": 25,
+      "order": 26,
       "lat": 35.685072,
       "lon": 139.709547,
       "osm": "新宿御苑, 新宿区, 東京, 160-0014, 日本",
@@ -388,7 +406,7 @@
       "kind": "spot",
       "note": "",
       "query": "東京都庁",
-      "order": 26,
+      "order": 27,
       "slot": "d2-1630",
       "lat": 35.6897391,
       "lon": 139.6929973,
@@ -407,7 +425,7 @@
       "kind": "transport",
       "note": "",
       "query": "新宿駅",
-      "order": 27,
+      "order": 28,
       "lat": 35.688884,
       "lon": 139.698723,
       "osm": "新宿駅;3番出入口, 西新宿一丁目, 西新宿, 新宿区, 東京, 160-0023, 日本",
@@ -425,7 +443,7 @@
       "kind": "fixed",
       "note": "",
       "query": "牛たんの檸檬 新宿総本店",
-      "order": 28,
+      "order": 29,
       "lat": 35.696178,
       "lon": 139.697968,
       "osm": "國土地理院地址檢索 西新宿7-16-12（2026-11-07）",
@@ -443,7 +461,7 @@
       "kind": "transport",
       "note": "",
       "query": "新宿駅",
-      "order": 29,
+      "order": 30,
       "lat": 35.688884,
       "lon": 139.698723,
       "osm": "新宿駅;3番出入口, 西新宿一丁目, 西新宿, 新宿区, 東京, 160-0023, 日本",
@@ -463,7 +481,7 @@
       "kind": "start",
       "note": "前一晚住的飯店",
       "query": "東京都豊島区東池袋3-11-3",
-      "order": 30,
+      "order": 31,
       "lat": 35.731876,
       "lon": 139.718689,
       "osm": "東京都豊島区東池袋三丁目１１番３号（國土地理院 地址檢索）",
@@ -481,7 +499,7 @@
       "kind": "transport",
       "note": "",
       "query": "池袋駅",
-      "order": 31,
+      "order": 32,
       "lat": 35.731946,
       "lon": 139.706626,
       "osm": "池袋駅, 立教通り, 西池袋三丁目, 西池袋, 豊島区, 東京, 171-0021, 日本",
@@ -499,7 +517,7 @@
       "kind": "spot",
       "note": "",
       "query": "鶴岡八幡宮",
-      "order": 32,
+      "order": 33,
       "lat": 35.325184,
       "lon": 139.556179,
       "osm": "鶴岡八幡宮, 31, 雪ノ下二丁目, 鎌倉市, 神奈川県, 248-8588, 日本",
@@ -509,15 +527,15 @@
       "day": 3,
       "date": "2026-11-16",
       "time": "11:15",
-      "icon": "🍽️",
+      "icon": "🐟",
       "title": "午餐｜秋本",
       "ja": "",
-      "label": "🍽️ 秋本",
+      "label": "秋本",
       "tag": "彈性",
       "kind": "spot",
       "note": "",
       "query": "秋本",
-      "order": 33,
+      "order": 34,
       "slot": "d3-1115",
       "lat": 35.31974773807167,
       "lon": 139.55113437972227,
@@ -536,7 +554,7 @@
       "kind": "transport",
       "note": "",
       "query": "鎌倉駅",
-      "order": 34,
+      "order": 35,
       "lat": 35.319003,
       "lon": 139.55068,
       "osm": "鎌倉駅, 1, 小町一丁目, 鎌倉市, 神奈川県, 248-0006, 日本",
@@ -554,7 +572,7 @@
       "kind": "spot",
       "note": "",
       "query": "高徳院",
-      "order": 35,
+      "order": 36,
       "lat": 35.316499,
       "lon": 139.535729,
       "osm": "高徳院, 28, 長谷四丁目, 長谷, 御所ノ内, 鎌倉市, 神奈川県, 248-0016, 日本",
@@ -572,7 +590,7 @@
       "kind": "transport",
       "note": "",
       "query": "長谷駅",
-      "order": 36,
+      "order": 37,
       "lat": 35.311279,
       "lon": 139.535873,
       "osm": "長谷駅, 藤沢鎌倉線, 長谷二丁目, 長谷, 鎌倉市, 神奈川県, 248-0016, 日本",
@@ -590,7 +608,7 @@
       "kind": "transport",
       "note": "",
       "query": "江ノ島駅",
-      "order": 37,
+      "order": 38,
       "lat": 35.311044,
       "lon": 139.487542,
       "osm": "江ノ島, 国道467号, 片瀬海岸一丁目, 片瀬海岸, 藤沢市, 神奈川県, 251-0035, 日本",
@@ -608,7 +626,7 @@
       "kind": "spot",
       "note": "",
       "query": "江の島シーキャンドル",
-      "order": 38,
+      "order": 39,
       "lat": 35.299756,
       "lon": 139.478479,
       "osm": "江の島シーキャンドル, 片瀬３５９号線, 江の島二丁目, 藤沢市, 神奈川県, 251-0036, 日本",
@@ -626,7 +644,7 @@
       "kind": "transport",
       "note": "",
       "query": "江島神社",
-      "order": 39,
+      "order": 40,
       "lat": 35.30034,
       "lon": 139.479845,
       "osm": "江島神社, 片瀬３５９号線, 江の島一丁目, 藤沢市, 神奈川県, 251-0036, 日本",
@@ -644,7 +662,7 @@
       "kind": "transport",
       "note": "",
       "query": "湘南江の島駅",
-      "order": 40,
+      "order": 41,
       "lat": 35.311723,
       "lon": 139.487612,
       "osm": "湘南江の島, 国道467号, 片瀬海岸一丁目, 片瀬海岸, 藤沢市, 神奈川県, 251-0035, 日本",
@@ -654,19 +672,19 @@
       "day": 3,
       "date": "2026-11-16",
       "time": "18:10",
-      "icon": "🍽️",
-      "title": "晚餐｜Sushi Izakaya Umifuku Honten",
+      "icon": "🐟",
+      "title": "晚餐｜大船海鮮食堂 魚福",
       "ja": "",
-      "label": "🍣 Sushi Izakaya Umifuku Honten",
+      "label": "大船海鮮食堂 魚福",
       "tag": "彈性",
       "kind": "spot",
       "note": "",
-      "query": "Sushi Izakaya Umifuku Honten",
-      "order": 41,
+      "query": "大船海鮮食堂 魚福",
+      "order": 42,
       "slot": "d3-1810",
-      "lat": 35.35263751885058,
-      "lon": 139.5336338512285,
-      "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140401/14005616/dtlmap/",
+      "lat": 35.35242602885015,
+      "lon": 139.53183418122765,
+      "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140401/14083547/dtlmap/（2026-11-13，家人餐廳清單）",
       "geocodedQuery": "data/plan-coords.json"
     },
     {
@@ -681,11 +699,29 @@
       "kind": "transport",
       "note": "",
       "query": "大船駅",
-      "order": 42,
+      "order": 43,
       "lat": 35.355479,
       "lon": 139.533131,
       "osm": "大船駅, 大船停車場矢部線, 笠間一丁目, 笠間, 栄区, 横浜市, 神奈川県, 247-0006, 日本",
       "geocodedQuery": "大船駅"
+    },
+    {
+      "day": 3,
+      "date": "2026-11-16",
+      "time": "",
+      "icon": "🍣",
+      "title": "🍣 Sushi Izakaya Umifuku Honten",
+      "ja": "",
+      "label": "Sushi Izakaya Umifuku Honten",
+      "tag": "",
+      "kind": "spot",
+      "note": "",
+      "query": "Sushi Izakaya Umifuku Honten",
+      "order": 44,
+      "lat": 35.35263751885058,
+      "lon": 139.5336338512285,
+      "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140401/14005616/dtlmap/",
+      "geocodedQuery": "data/plan-coords.json"
     },
     {
       "day": 4,
@@ -701,7 +737,7 @@
       "kind": "start",
       "note": "前一晚住的飯店",
       "query": "東京都豊島区東池袋3-11-3",
-      "order": 43,
+      "order": 45,
       "lat": 35.731876,
       "lon": 139.718689,
       "osm": "東京都豊島区東池袋三丁目１１番３号（國土地理院 地址檢索）",
@@ -719,7 +755,7 @@
       "kind": "transport",
       "note": "",
       "query": "池袋駅",
-      "order": 44,
+      "order": 46,
       "lat": 35.731946,
       "lon": 139.706626,
       "osm": "池袋駅, 立教通り, 西池袋三丁目, 西池袋, 豊島区, 東京, 171-0021, 日本",
@@ -737,7 +773,7 @@
       "kind": "transport",
       "note": "",
       "query": "高尾山口駅",
-      "order": 45,
+      "order": 47,
       "lat": 35.632294,
       "lon": 139.26998,
       "osm": "高尾山口駅, 甲州街道, 初沢町, 八王子市, 東京, 193-0844, 日本",
@@ -755,7 +791,7 @@
       "kind": "transport",
       "note": "",
       "query": "清滝駅",
-      "order": 46,
+      "order": 48,
       "lat": 35.631103,
       "lon": 139.266899,
       "osm": "清滝, 稲荷山コース, 八王子市, 東京, 193-0844, 日本",
@@ -773,7 +809,7 @@
       "kind": "spot",
       "note": "",
       "query": "高尾山薬王院",
-      "order": 47,
+      "order": 49,
       "lat": 35.626,
       "lon": 139.250441,
       "osm": "高尾山薬王院, 男坂, 八王子市, 東京, 193-0844, 日本",
@@ -791,7 +827,7 @@
       "kind": "spot",
       "note": "",
       "query": "十一丁目茶屋",
-      "order": 49,
+      "order": 51,
       "slot": "d4-1200",
       "who": "family",
       "lat": 35.6302400285857,
@@ -811,7 +847,7 @@
       "kind": "spot",
       "note": "",
       "query": "高尾山",
-      "order": 50,
+      "order": 52,
       "who": "solo",
       "lat": 35.631094,
       "lon": 139.256094,
@@ -830,7 +866,7 @@
       "kind": "spot",
       "note": "",
       "query": "やまびこ茶屋",
-      "order": 51,
+      "order": 53,
       "slot": "d4-1220",
       "who": "solo",
       "lat": 35.62548919858498,
@@ -850,7 +886,7 @@
       "kind": "transport",
       "note": "",
       "query": "高尾山駅",
-      "order": 54,
+      "order": 56,
       "lat": 35.631094,
       "lon": 139.256094,
       "osm": "高尾山, 高尾山線, 高尾町, 八王子市, 東京, 193-0844, 日本",
@@ -868,7 +904,7 @@
       "kind": "spot",
       "note": "",
       "query": "高尾599ミュージアム",
-      "order": 56,
+      "order": 58,
       "lat": 35.630384,
       "lon": 139.268708,
       "osm": "高尾599ミュージアム, 高尾山線, 八王子市, 東京, 193-0844, 日本",
@@ -886,7 +922,7 @@
       "kind": "transport",
       "note": "",
       "query": "高尾山口駅",
-      "order": 57,
+      "order": 59,
       "lat": 35.632294,
       "lon": 139.26998,
       "osm": "高尾山口駅, 甲州街道, 初沢町, 八王子市, 東京, 193-0844, 日本",
@@ -896,19 +932,19 @@
       "day": 4,
       "date": "2026-11-17",
       "time": "18:30",
-      "icon": "🍽️",
-      "title": "晚餐｜Private room Kanbi Kyodo Shuko Aomoriya",
+      "icon": "🍱",
+      "title": "晚餐｜うなぎ屋吉川 池袋店",
       "ja": "",
-      "label": "Private room Kanbi Kyodo Shuko Aomoriya",
+      "label": "うなぎ屋吉川 池袋店",
       "tag": "彈性",
       "kind": "spot",
       "note": "",
-      "query": "Private room Kanbi Kyodo Shuko Aomoriya",
-      "order": 58,
+      "query": "うなぎ屋吉川 池袋店",
+      "order": 60,
       "slot": "d4-1830",
-      "lat": 35.73180685354982,
-      "lon": 139.70917117737548,
-      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13249813/dtlmap/",
+      "lat": 35.732196,
+      "lon": 139.713124,
+      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13310864/dtlmap/（2026-11-13，家人餐廳清單）",
       "geocodedQuery": "data/plan-coords.json"
     },
     {
@@ -923,7 +959,7 @@
       "kind": "transport",
       "note": "",
       "query": "東京都豊島区東池袋3-11-3",
-      "order": 59,
+      "order": 61,
       "lat": 35.731876,
       "lon": 139.718689,
       "osm": "東京都豊島区東池袋三丁目１１番３号（國土地理院 地址檢索）",
@@ -941,11 +977,29 @@
       "kind": "spot",
       "note": "",
       "query": "東京都豊島区南池袋1-26-9",
-      "order": 60,
+      "order": 62,
       "lat": 35.729088,
       "lon": 139.713593,
       "osm": "國土地理院地址檢索（2026-11-13），Radical Storage 池袋 推定地址",
       "geocodedQuery": "GSI 東京都豊島区南池袋1-26-9"
+    },
+    {
+      "day": 4,
+      "date": "2026-11-17",
+      "time": "",
+      "icon": "🍽",
+      "title": "🍽️ Private room Kanbi Kyodo Shuko Aomoriya",
+      "ja": "",
+      "label": "Private room Kanbi Kyodo Shuko Aomoriya",
+      "tag": "",
+      "kind": "spot",
+      "note": "",
+      "query": "Private room Kanbi Kyodo Shuko Aomoriya",
+      "order": 63,
+      "lat": 35.73180685354982,
+      "lon": 139.70917117737548,
+      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13249813/dtlmap/",
+      "geocodedQuery": "data/plan-coords.json"
     },
     {
       "day": 5,
@@ -961,7 +1015,7 @@
       "kind": "start",
       "note": "前一晚住的飯店",
       "query": "東京都豊島区東池袋3-11-3",
-      "order": 61,
+      "order": 64,
       "lat": 35.731876,
       "lon": 139.718689,
       "osm": "東京都豊島区東池袋三丁目１１番３号（國土地理院 地址檢索）",
@@ -979,7 +1033,7 @@
       "kind": "transport",
       "note": "",
       "query": "池袋駅",
-      "order": 62,
+      "order": 65,
       "lat": 35.731946,
       "lon": 139.706626,
       "osm": "池袋駅, 立教通り, 西池袋三丁目, 西池袋, 豊島区, 東京, 171-0021, 日本",
@@ -997,7 +1051,7 @@
       "kind": "spot",
       "note": "",
       "query": "新宿駅",
-      "order": 63,
+      "order": 66,
       "lat": 35.688884,
       "lon": 139.698723,
       "osm": "新宿駅;3番出入口, 西新宿一丁目, 西新宿, 新宿区, 東京, 160-0023, 日本",
@@ -1015,7 +1069,7 @@
       "kind": "transport",
       "note": "",
       "query": "河口湖駅",
-      "order": 64,
+      "order": 67,
       "lat": 35.498258,
       "lon": 138.769261,
       "osm": "河口湖駅, 御坂みち, 船津, 富士河口湖町, 南都留郡, 山梨県, 401-0392, 日本",
@@ -1033,7 +1087,7 @@
       "kind": "spot",
       "note": "",
       "query": "東横INN富士河口湖大橋",
-      "order": 65,
+      "order": 68,
       "lat": 35.504341,
       "lon": 138.760208,
       "osm": "國土地理院地址檢索 船津294（2026-11-07）",
@@ -1051,7 +1105,7 @@
       "kind": "spot",
       "note": "",
       "query": "ほうとう不動 河口湖駅前店",
-      "order": 66,
+      "order": 69,
       "slot": "d5-1130",
       "lat": 35.49886967851409,
       "lon": 138.7686629632418,
@@ -1070,7 +1124,7 @@
       "kind": "transport",
       "note": "",
       "query": "河口湖駅",
-      "order": 67,
+      "order": 70,
       "lat": 35.498258,
       "lon": 138.769261,
       "osm": "河口湖駅, 御坂みち, 船津, 富士河口湖町, 南都留郡, 山梨県, 401-0392, 日本",
@@ -1088,7 +1142,7 @@
       "kind": "spot",
       "note": "",
       "query": "河口湖 音楽と森の美術館",
-      "order": 68,
+      "order": 71,
       "slot": "d5-1330",
       "lat": 35.522194,
       "lon": 138.768906,
@@ -1107,7 +1161,7 @@
       "kind": "transport",
       "note": "",
       "query": "久保田一竹美術館",
-      "order": 69,
+      "order": 72,
       "lat": 35.527364,
       "lon": 138.759758,
       "osm": "九保田一竹美術館, 河口湖上九一色線, 河口, 富士河口湖町, 南都留郡, 山梨県, 401-0392, 日本",
@@ -1125,7 +1179,7 @@
       "kind": "spot",
       "note": "",
       "query": "もみじ回廊 河口湖",
-      "order": 70,
+      "order": 73,
       "lat": 35.5255857,
       "lon": 138.7624404,
       "osm": "Nominatim 查過並核對回傳地址（2026-11-07）",
@@ -1135,19 +1189,19 @@
       "day": 5,
       "date": "2026-11-18",
       "time": "18:30",
-      "icon": "🍢",
-      "title": "晚餐｜紅葉祭 公認飲食ブース・河口湖屋台村",
+      "icon": "🥘",
+      "title": "晚餐｜もみじ亭 河口湖",
       "ja": "",
-      "label": "紅葉祭 公認飲食ブース・河口湖屋台村",
+      "label": "もみじ亭 河口湖",
       "tag": "彈性",
       "kind": "spot",
       "note": "",
-      "query": "もみじ回廊 河口湖",
-      "order": 71,
+      "query": "もみじ亭 河口湖",
+      "order": 74,
       "slot": "d5-1830",
-      "lat": 35.5255857,
-      "lon": 138.7624404,
-      "osm": "Nominatim 查過並核對回傳地址（2026-11-07）",
+      "lat": 35.52515798849574,
+      "lon": 138.763482753511,
+      "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19000183/dtlmap/（2026-11-13，家人餐廳清單）",
       "geocodedQuery": "data/plan-coords.json"
     },
     {
@@ -1162,7 +1216,7 @@
       "kind": "transport",
       "note": "",
       "query": "久保田一竹美術館",
-      "order": 72,
+      "order": 75,
       "lat": 35.527364,
       "lon": 138.759758,
       "osm": "九保田一竹美術館, 河口湖上九一色線, 河口, 富士河口湖町, 南都留郡, 山梨県, 401-0392, 日本",
@@ -1180,7 +1234,7 @@
       "kind": "spot",
       "note": "",
       "query": "東横INN富士河口湖大橋",
-      "order": 73,
+      "order": 76,
       "lat": 35.504341,
       "lon": 138.760208,
       "osm": "國土地理院地址檢索 船津294（2026-11-07）",
@@ -1198,7 +1252,7 @@
       "kind": "spot",
       "note": "",
       "query": "新倉山浅間公園",
-      "order": 75,
+      "order": 78,
       "lat": 35.500487,
       "lon": 138.80082,
       "osm": "新倉山浅間公園, 新倉, 富士吉田市, 山梨県, 403-8601, 日本",
@@ -1216,7 +1270,7 @@
       "kind": "spot",
       "note": "",
       "query": "下吉田駅",
-      "order": 76,
+      "order": 79,
       "lat": 35.497729,
       "lon": 138.803525,
       "osm": "下吉田駅, 下吉田停車場線, 新町三丁目, 新倉, 富士吉田市, 山梨県, 403-8601, 日本",
@@ -1236,7 +1290,7 @@
       "kind": "start",
       "note": "前一晚住的飯店",
       "query": "東横INN富士河口湖大橋",
-      "order": 77,
+      "order": 80,
       "lat": 35.504341,
       "lon": 138.760208,
       "osm": "國土地理院地址檢索 船津294（2026-11-07）",
@@ -1254,7 +1308,7 @@
       "kind": "transport",
       "note": "",
       "query": "東横INN富士河口湖大橋",
-      "order": 79,
+      "order": 82,
       "lat": 35.504341,
       "lon": 138.760208,
       "osm": "國土地理院地址檢索 船津294（2026-11-07）",
@@ -1272,7 +1326,7 @@
       "kind": "spot",
       "note": "",
       "query": "新倉山浅間公園",
-      "order": 80,
+      "order": 83,
       "lat": 35.500487,
       "lon": 138.80082,
       "osm": "新倉山浅間公園, 新倉, 富士吉田市, 山梨県, 403-8601, 日本",
@@ -1290,7 +1344,7 @@
       "kind": "transport",
       "note": "",
       "query": "下吉田駅",
-      "order": 81,
+      "order": 84,
       "lat": 35.497729,
       "lon": 138.803525,
       "osm": "下吉田駅, 下吉田停車場線, 新町三丁目, 新倉, 富士吉田市, 山梨県, 403-8601, 日本",
@@ -1308,7 +1362,7 @@
       "kind": "spot",
       "note": "",
       "query": "大石公園 富士河口湖町",
-      "order": 83,
+      "order": 86,
       "lat": 35.52329,
       "lon": 138.746537,
       "osm": "大石公園, 大石, 富士河口湖町, 南都留郡, 山梨県, 401-0392, 日本",
@@ -1318,19 +1372,19 @@
       "day": 6,
       "date": "2026-11-19",
       "time": "12:05",
-      "icon": "☕",
-      "title": "午餐｜Oishi Park Café",
+      "icon": "🍕",
+      "title": "午餐｜BRAND NEW DAY COFFEE 富士河口湖",
       "ja": "",
-      "label": "Oishi Park Café",
+      "label": "BRAND NEW DAY COFFEE 富士河口湖",
       "tag": "彈性",
       "kind": "spot",
       "note": "",
-      "query": "Oishi Park Café",
-      "order": 84,
+      "query": "BRAND NEW DAY COFFEE 富士河口湖",
+      "order": 87,
       "slot": "d6-1205",
-      "lat": 35.52272942849153,
-      "lon": 138.7454287434991,
-      "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19012609/dtlmap/",
+      "lat": 35.52306,
+      "lon": 138.744703,
+      "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19010432/dtlmap/（2026-11-13，家人餐廳清單）",
       "geocodedQuery": "data/plan-coords.json"
     },
     {
@@ -1345,7 +1399,7 @@
       "kind": "transport",
       "note": "",
       "query": "河口湖自然生活館",
-      "order": 85,
+      "order": 88,
       "lat": 35.523108,
       "lon": 138.745372,
       "osm": "河口湖自然生活館, 河口湖上九一色線, 大石, 富士河口湖町, 南都留郡, 山梨県, 401-0392, 日本",
@@ -1363,7 +1417,7 @@
       "kind": "spot",
       "note": "",
       "query": "富士山パノラマロープウェイ",
-      "order": 86,
+      "order": 89,
       "lat": 35.50378,
       "lon": 138.774407,
       "osm": "〜河口湖〜 富士山パノラマロープウェイ, 御坂みち, 船津, 浅川, 富士河口湖町, 南都留郡, 山梨県, 401-0392, 日本",
@@ -1381,7 +1435,7 @@
       "kind": "spot",
       "note": "",
       "query": "東横INN富士河口湖大橋",
-      "order": 88,
+      "order": 91,
       "lat": 35.504341,
       "lon": 138.760208,
       "osm": "國土地理院地址檢索 船津294（2026-11-07）",
@@ -1399,7 +1453,7 @@
       "kind": "spot",
       "note": "",
       "query": "河口湖駅",
-      "order": 90,
+      "order": 93,
       "lat": 35.498258,
       "lon": 138.769261,
       "osm": "河口湖駅, 御坂みち, 船津, 富士河口湖町, 南都留郡, 山梨県, 401-0392, 日本",
@@ -1417,11 +1471,30 @@
       "kind": "spot",
       "note": "",
       "query": "東京都豊島区南池袋1-26-9",
-      "order": 91,
+      "order": 94,
       "lat": 35.729088,
       "lon": 139.713593,
       "osm": "國土地理院地址檢索（2026-11-13），Radical Storage 池袋 推定地址",
       "geocodedQuery": "GSI 東京都豊島区南池袋1-26-9"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "20:15",
+      "icon": "🍜",
+      "title": "晚餐｜ひもかわうどん桐生 池袋店",
+      "ja": "",
+      "label": "ひもかわうどん桐生 池袋店",
+      "tag": "彈性",
+      "kind": "spot",
+      "note": "",
+      "query": "ひもかわうどん桐生 池袋店",
+      "order": 95,
+      "slot": "d6-2015",
+      "lat": 35.724745,
+      "lon": 139.714767,
+      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13288929/dtlmap/（2026-11-13，家人餐廳清單）",
+      "geocodedQuery": "data/plan-coords.json"
     },
     {
       "day": 6,
@@ -1435,7 +1508,7 @@
       "kind": "spot",
       "note": "",
       "query": "東京都台東区千束3-17-4",
-      "order": 94,
+      "order": 97,
       "lat": 35.721958,
       "lon": 139.791306,
       "osm": "國土地理院地址檢索（2026-11-07）",
@@ -1453,11 +1526,29 @@
       "kind": "spot",
       "note": "",
       "query": "富士五湖汽船 船津浜乗り場",
-      "order": 95,
+      "order": 98,
       "lat": 35.503071,
       "lon": 138.767746,
       "osm": "國土地理院地址檢索 船津4034（2026-11-07）",
       "geocodedQuery": "GSI 山梨県南都留郡富士河口湖町船津4034"
+    },
+    {
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "",
+      "icon": "☕",
+      "title": "☕ Oishi Park Café",
+      "ja": "",
+      "label": "Oishi Park Café",
+      "tag": "",
+      "kind": "spot",
+      "note": "",
+      "query": "Oishi Park Café",
+      "order": 99,
+      "lat": 35.52272942849153,
+      "lon": 138.7454287434991,
+      "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19012609/dtlmap/",
+      "geocodedQuery": "data/plan-coords.json"
     },
     {
       "day": 7,
@@ -1473,7 +1564,7 @@
       "kind": "start",
       "note": "前一晚住的飯店",
       "query": "東京都台東区千束3-17-4",
-      "order": 96,
+      "order": 100,
       "lat": 35.721958,
       "lon": 139.791306,
       "osm": "國土地理院地址檢索（2026-11-07）",
@@ -1491,7 +1582,7 @@
       "kind": "spot",
       "note": "",
       "query": "浅草寺",
-      "order": 98,
+      "order": 102,
       "lat": 35.713403,
       "lon": 139.795526,
       "osm": "浅草寺, 1, 浅草二丁目, 浅草, 台東区, 東京, 111-0032, 日本",
@@ -1509,7 +1600,7 @@
       "kind": "fixed",
       "note": "",
       "query": "浅草牛かつ 分店",
-      "order": 99,
+      "order": 103,
       "lat": 35.710716,
       "lon": 139.796432,
       "osm": "國土地理院地址檢索 雷門2-18-9 ザ・シティ浅草雷門（2026-11-07）",
@@ -1527,31 +1618,12 @@
       "kind": "spot",
       "note": "",
       "query": "東京スカイツリー",
-      "order": 100,
+      "order": 104,
       "slot": "d7-1245",
       "lat": 35.710054,
       "lon": 139.810714,
       "osm": "東京スカイツリー, 2, 押上一丁目, 押上, 墨田区, 東京, 131-0045, 日本",
       "geocodedQuery": "東京スカイツリー"
-    },
-    {
-      "day": 7,
-      "date": "2026-11-20",
-      "time": "18:00",
-      "icon": "🍲",
-      "title": "晚餐｜Edo Niku Kappou Sasaya Asakusa",
-      "ja": "",
-      "label": "Edo Niku Kappou Sasaya Asakusa",
-      "tag": "彈性",
-      "kind": "spot",
-      "note": "",
-      "query": "Edo Niku Kappou Sasaya Asakusa",
-      "order": 101,
-      "slot": "d7-1800",
-      "lat": 35.71242305870602,
-      "lon": 139.7972330346779,
-      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131102/13316569/dtlmap/",
-      "geocodedQuery": "data/plan-coords.json"
     },
     {
       "day": 7,
@@ -1565,7 +1637,7 @@
       "kind": "transport",
       "note": "",
       "query": "浅草駅",
-      "order": 102,
+      "order": 106,
       "lat": 35.711351,
       "lon": 139.798328,
       "osm": "浅草駅, 江戸通り, 花川戸一丁目, 花川戸, 台東区, 東京, 111-0033, 日本",
@@ -1583,7 +1655,7 @@
       "kind": "spot",
       "note": "",
       "query": "隅田公園 台東区",
-      "order": 103,
+      "order": 107,
       "lat": 35.715506,
       "lon": 139.803143,
       "osm": "隅田公園, 台東区, 東京, 日本",
@@ -1601,7 +1673,7 @@
       "kind": "spot",
       "note": "",
       "query": "東京都台東区千束3-17-4",
-      "order": 104,
+      "order": 108,
       "lat": 35.721958,
       "lon": 139.791306,
       "osm": "國土地理院地址檢索（2026-11-07）",
@@ -1619,11 +1691,29 @@
       "kind": "spot",
       "note": "",
       "query": "とうきょうスカイツリー駅",
-      "order": 105,
+      "order": 109,
       "lat": 35.710631,
       "lon": 139.810914,
       "osm": "とうきょうスカイツリー駅;1番線, 押上一丁目, 押上, 墨田区, 東京, 131-0045, 日本",
       "geocodedQuery": "とうきょうスカイツリー駅"
+    },
+    {
+      "day": 7,
+      "date": "2026-11-20",
+      "time": "",
+      "icon": "🍲",
+      "title": "🍲 Edo Niku Kappou Sasaya Asakusa",
+      "ja": "",
+      "label": "Edo Niku Kappou Sasaya Asakusa",
+      "tag": "",
+      "kind": "spot",
+      "note": "",
+      "query": "Edo Niku Kappou Sasaya Asakusa",
+      "order": 110,
+      "lat": 35.71242305870602,
+      "lon": 139.7972330346779,
+      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131102/13316569/dtlmap/",
+      "geocodedQuery": "data/plan-coords.json"
     },
     {
       "day": 8,
@@ -1639,7 +1729,7 @@
       "kind": "start",
       "note": "前一晚住的飯店",
       "query": "東京都台東区千束3-17-4",
-      "order": 106,
+      "order": 111,
       "lat": 35.721958,
       "lon": 139.791306,
       "osm": "國土地理院地址檢索（2026-11-07）",
@@ -1657,7 +1747,7 @@
       "kind": "transport",
       "note": "",
       "query": "入谷駅",
-      "order": 107,
+      "order": 112,
       "lat": 35.721563,
       "lon": 139.785452,
       "osm": "入谷駅, 昭和通り, 入谷一丁目, 入谷, 台東区, 東京, 110-0012, 日本",
@@ -1675,30 +1765,11 @@
       "kind": "spot",
       "note": "",
       "query": "六義園",
-      "order": 108,
+      "order": 113,
       "lat": 35.7334,
       "lon": 139.746305,
       "osm": "六義園, 3, 文京区, 東京, 日本",
       "geocodedQuery": "六義園"
-    },
-    {
-      "day": 8,
-      "date": "2026-11-21",
-      "time": "12:00",
-      "icon": "🍜",
-      "title": "午餐｜Komatsu An Sohonke Komagome honten",
-      "ja": "",
-      "label": "Komatsu An Sohonke Komagome honten",
-      "tag": "彈性",
-      "kind": "spot",
-      "note": "",
-      "query": "Komatsu An Sohonke Komagome honten",
-      "order": 109,
-      "slot": "d8-1200",
-      "lat": 35.73531425867542,
-      "lon": 139.74682080494446,
-      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1323/A132301/13012329/dtlmap/",
-      "geocodedQuery": "data/plan-coords.json"
     },
     {
       "day": 8,
@@ -1712,7 +1783,7 @@
       "kind": "transport",
       "note": "",
       "query": "上野駅",
-      "order": 110,
+      "order": 115,
       "lat": 35.714041,
       "lon": 139.777116,
       "osm": "上野駅, 台東区, 東京, 日本",
@@ -1730,7 +1801,7 @@
       "kind": "spot",
       "note": "",
       "query": "上野恩賜公園",
-      "order": 111,
+      "order": 116,
       "lat": 35.714019,
       "lon": 139.773929,
       "osm": "上野公園, 83, 台東区, 東京, 110-0007, 日本",
@@ -1748,7 +1819,7 @@
       "kind": "spot",
       "note": "",
       "query": "上野動物園",
-      "order": 112,
+      "order": 117,
       "slot": "d8-1415",
       "lat": 35.7153426,
       "lon": 139.768896,
@@ -1767,7 +1838,7 @@
       "kind": "spot",
       "note": "",
       "query": "アメ横",
-      "order": 113,
+      "order": 118,
       "lat": 35.710024,
       "lon": 139.774541,
       "osm": "アメヤ横丁, アメ横通り, 上野六丁目, 上野, 台東区, 東京, 110-0005, 日本",
@@ -1777,19 +1848,19 @@
       "day": 8,
       "date": "2026-11-21",
       "time": "18:00",
-      "icon": "🍽️",
-      "title": "晚餐｜Yoshiike Shokudo",
+      "icon": "🥩",
+      "title": "晚餐｜焼肉 房家ホルモン館 上野六丁目店",
       "ja": "",
-      "label": "Yoshiike Shokudo",
+      "label": "焼肉 房家ホルモン館 上野六丁目店",
       "tag": "彈性",
       "kind": "spot",
       "note": "",
-      "query": "Yoshiike Shokudo",
-      "order": 114,
+      "query": "焼肉 房家ホルモン館 上野六丁目店",
+      "order": 119,
       "slot": "d8-1800",
-      "lat": 35.70740736870189,
-      "lon": 139.77424226464336,
-      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13167969/dtlmap/",
+      "lat": 35.708820737896204,
+      "lon": 139.77614218349453,
+      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13186440/dtlmap/（2026-11-13，家人餐廳清單）",
       "geocodedQuery": "data/plan-coords.json"
     },
     {
@@ -1804,11 +1875,29 @@
       "kind": "transport",
       "note": "明天兩組分別 07:15、09:45 出發，今晚把行李整理好、Suica 餘額看一下（Welcome Suica 餘額不退）。",
       "query": "上野駅",
-      "order": 115,
+      "order": 120,
       "lat": 35.714041,
       "lon": 139.777116,
       "osm": "上野駅, 台東区, 東京, 日本",
       "geocodedQuery": "上野駅"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "",
+      "icon": "🍜",
+      "title": "🍜 Komatsu An Sohonke Komagome honten",
+      "ja": "",
+      "label": "Komatsu An Sohonke Komagome honten",
+      "tag": "",
+      "kind": "spot",
+      "note": "",
+      "query": "Komatsu An Sohonke Komagome honten",
+      "order": 121,
+      "lat": 35.73531425867542,
+      "lon": 139.74682080494446,
+      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1323/A132301/13012329/dtlmap/",
+      "geocodedQuery": "data/plan-coords.json"
     },
     {
       "day": 8,
@@ -1822,11 +1911,29 @@
       "kind": "spot",
       "note": "",
       "query": "駒込駅",
-      "order": 116,
+      "order": 122,
       "lat": 35.736585,
       "lon": 139.747241,
       "osm": "駒込, 本郷通り, 駒込一丁目, 駒込, 豊島区, 東京, 170-0003, 日本",
       "geocodedQuery": "駒込駅"
+    },
+    {
+      "day": 8,
+      "date": "2026-11-21",
+      "time": "",
+      "icon": "🍽",
+      "title": "🍽️ Yoshiike Shokudo",
+      "ja": "",
+      "label": "Yoshiike Shokudo",
+      "tag": "",
+      "kind": "spot",
+      "note": "",
+      "query": "Yoshiike Shokudo",
+      "order": 123,
+      "lat": 35.70740736870189,
+      "lon": 139.77424226464336,
+      "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13167969/dtlmap/",
+      "geocodedQuery": "data/plan-coords.json"
     },
     {
       "day": 9,
@@ -1842,7 +1949,7 @@
       "kind": "start",
       "note": "前一晚住的飯店",
       "query": "東京都台東区千束3-17-4",
-      "order": 117,
+      "order": 124,
       "lat": 35.721958,
       "lon": 139.791306,
       "osm": "國土地理院地址檢索（2026-11-07）",
@@ -1860,7 +1967,7 @@
       "kind": "transport",
       "note": "",
       "query": "入谷駅",
-      "order": 119,
+      "order": 126,
       "who": "family",
       "lat": 35.721563,
       "lon": 139.785452,
@@ -1879,7 +1986,7 @@
       "kind": "spot",
       "note": "",
       "query": "Coffee Ojo",
-      "order": 120,
+      "order": 127,
       "slot": "d9-0955",
       "who": "family",
       "lat": 35.710035868700736,
@@ -1899,7 +2006,7 @@
       "kind": "transport",
       "note": "",
       "query": "京成上野駅",
-      "order": 121,
+      "order": 128,
       "who": "family",
       "lat": 35.711378,
       "lon": 139.774156,
@@ -1918,7 +2025,7 @@
       "kind": "spot",
       "note": "",
       "query": "成田国際空港 第2ターミナル",
-      "order": 122,
+      "order": 129,
       "who": "family",
       "lat": 35.773254,
       "lon": 140.387588,
@@ -1937,7 +2044,7 @@
       "kind": "transport",
       "note": "",
       "query": "入谷駅",
-      "order": 124,
+      "order": 131,
       "who": "solo",
       "lat": 35.721563,
       "lon": 139.785452,
@@ -1956,7 +2063,7 @@
       "kind": "transport",
       "note": "",
       "query": "京成上野駅",
-      "order": 125,
+      "order": 132,
       "who": "solo",
       "lat": 35.711378,
       "lon": 139.774156,
@@ -1975,7 +2082,7 @@
       "kind": "spot",
       "note": "",
       "query": "成田国際空港 第2ターミナル",
-      "order": 126,
+      "order": 133,
       "who": "solo",
       "lat": 35.773254,
       "lon": 140.387588,
@@ -1994,63 +2101,47 @@
         {
           "k": "A",
           "icon": "🍜",
-          "title": "晚餐｜Chuji",
-          "head": "首選：LABI 7F 的大店，價位最親切",
+          "title": "晚餐｜一蘭 池袋店",
+          "head": "豚骨拉麵，一人一格的吧台，開到 22:45",
           "pts": [
             {
-              "label": "🍜 Chuji",
-              "query": "Chuji",
-              "lat": 35.73107459866761,
-              "lon": 139.71382200492476,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13298404/dtlmap/",
+              "label": "一蘭 池袋店",
+              "query": "一蘭 池袋店",
+              "lat": 35.73251982866681,
+              "lon": 139.71420350493912,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13019994/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
         },
         {
           "k": "B",
-          "icon": "🥩",
-          "title": "晚餐｜Yakiniku Ushigoro Ikebukuro ten",
-          "head": "評分最高的燒肉，有完全包廂",
+          "icon": "🍜",
+          "title": "晚餐｜麺創房 無敵家",
+          "head": "濃厚豚骨拉麵名店，開到凌晨，要排隊",
           "pts": [
             {
-              "label": "Yakiniku Ushigoro Ikebukuro ten（食べログ英文站名稱）",
-              "query": "Yakiniku Ushigoro Ikebukuro ten",
-              "lat": 35.72896033786415,
-              "lon": 139.71563138374034,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13286495/dtlmap/",
+              "label": "麺創房 無敵家",
+              "query": "麺創房 無敵家",
+              "lat": 35.7269132378642,
+              "lon": 139.71166458372247,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13003927/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
         },
         {
           "k": "C",
-          "icon": "🍖",
-          "title": "晚餐｜Seikoen Ikebukuro nishiguchi honten",
-          "head": "西口的燒肉店",
+          "icon": "🍜",
+          "title": "晚餐｜鶏の穴",
+          "head": "雞白湯拉麵，21:00 就打烊",
           "pts": [
             {
-              "label": "Seikoen Ikebukuro nishiguchi honten（食べログ英文站名稱）",
-              "query": "Seikoen Ikebukuro nishiguchi honten",
-              "lat": 35.73257427527382,
-              "lon": 139.7093891794926,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13029866/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "D",
-          "icon": "🥩",
-          "title": "晚餐｜Yakiniku Kuro 5 Honten",
-          "head": "45 席的燒肉店",
-          "pts": [
-            {
-              "label": "Yakiniku Kuro 5 Honten（食べログ英文站名稱）",
-              "query": "Yakiniku Kuro 5 Honten",
-              "lat": 35.73372673866485,
-              "lon": 139.71045538495392,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13053518/dtlmap/",
+              "label": "鶏の穴",
+              "query": "鶏の穴",
+              "lat": 35.732601237861545,
+              "lon": 139.7147324837778,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13050789/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
@@ -2062,52 +2153,36 @@
       "day": 2,
       "date": "2026-11-15",
       "time": "13:45",
-      "order": 23,
+      "order": 24,
       "plans": [
         {
           "k": "A",
-          "icon": "🍤",
-          "title": "午餐｜Tempura Funabashiya Shinjuku honten（食べログ英文站名稱）",
-          "head": "首選：天婦羅，126 席、有包廂",
+          "icon": "🍲",
+          "title": "午餐｜人形町今半 新宿高島屋店",
+          "head": "高級壽喜燒老店，午間便當 ¥3,300 起",
           "pts": [
             {
-              "label": "🍤 Tempura Funabashiya Shinjuku honten（食べログ英文站名稱）",
-              "query": "Tempura Funabashiya Shinjuku honten",
-              "lat": 35.69105930868967,
-              "lon": 139.70327796452796,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1304/A130401/13012090/dtlmap/",
+              "label": "人形町今半 新宿高島屋店",
+              "query": "人形町今半 新宿高島屋店",
+              "lat": 35.687625,
+              "lon": 139.702351,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1304/A130401/13004274/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
         },
         {
           "k": "B",
-          "icon": "🍱",
-          "title": "午餐｜Nobori Tei Shinjuku ten（食べログ英文站名稱）",
-          "head": "備案：鰻魚，42 席",
+          "icon": "🍲",
+          "title": "午餐｜ごまいち 新宿御苑店",
+          "head": "平價壽喜燒御膳 ¥1,380，離新宿御苑最近",
           "pts": [
             {
-              "label": "Nobori Tei Shinjuku ten（食べログ英文站名稱）",
-              "query": "Nobori Tei Shinjuku ten",
-              "lat": 35.69000968869057,
-              "lon": 139.70403545451683,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1304/A130401/13022116/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "C",
-          "icon": "🍽️",
-          "title": "午餐｜Tonkatsu GS（食べログ英文站名稱）",
-          "head": "備案：豬排，26 席要分兩桌",
-          "pts": [
-            {
-              "label": "Tonkatsu GS（食べログ英文站名稱）",
-              "query": "Tonkatsu GS",
-              "lat": 35.690375638691066,
-              "lon": 139.7063144745189,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1304/A130401/13257510/dtlmap/",
+              "label": "ごまいち 新宿御苑店",
+              "query": "ごまいち 新宿御苑店",
+              "lat": 35.688888,
+              "lon": 139.708901,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1304/A130402/13288675/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
@@ -2119,7 +2194,7 @@
       "day": 2,
       "date": "2026-11-15",
       "time": "16:30",
-      "order": 26,
+      "order": 27,
       "plans": [
         {
           "k": "A",
@@ -2167,16 +2242,16 @@
       "day": 3,
       "date": "2026-11-16",
       "time": "11:15",
-      "order": 33,
+      "order": 34,
       "plans": [
         {
           "k": "A",
-          "icon": "🍽️",
+          "icon": "🐟",
           "title": "午餐｜秋本",
-          "head": "首選：小町通上，11:15 提早入店",
+          "head": "吻仔魚丼，日本料理百名店 2021",
           "pts": [
             {
-              "label": "🍽️ 秋本",
+              "label": "秋本",
               "query": "秋本",
               "lat": 35.31974773807167,
               "lon": 139.55113437972227,
@@ -2187,48 +2262,16 @@
         },
         {
           "k": "B",
-          "icon": "🍜",
-          "title": "午餐｜鎌倉 松原庵",
-          "head": "70 席，席數最夠",
+          "icon": "🍱",
+          "title": "午餐｜鎌倉かつ亭 あら珠 総本店",
+          "head": "炸豬排，46 席，全年無休",
           "pts": [
             {
-              "label": "鎌倉 松原庵",
-              "query": "鎌倉 松原庵",
-              "lat": 35.31139223807375,
-              "lon": 139.54100887964498,
-              "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140402/14008453/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "C",
-          "icon": "🍛",
-          "title": "午餐｜オクシモロン コマチ",
-          "head": "咖哩，要分兩批",
-          "pts": [
-            {
-              "label": "オクシモロン コマチ",
-              "query": "オクシモロン コマチ",
-              "lat": 35.322761708875596,
-              "lon": 139.55260996091346,
-              "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140402/14014612/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "D",
-          "icon": "🍽️",
-          "title": "午餐｜Oryori Tomiyama",
-          "head": "評分最高但只有 15 席",
-          "pts": [
-            {
-              "label": "Oryori Tomiyama（食べログ英文站名稱）",
-              "query": "Oryori Tomiyama",
-              "lat": 35.31992648887724,
-              "lon": 139.55213570088515,
-              "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140402/14068100/dtlmap/",
+              "label": "鎌倉かつ亭 あら珠 総本店",
+              "query": "鎌倉かつ亭 あら珠 総本店",
+              "lat": 35.31903648887769,
+              "lon": 139.5517623808764,
+              "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140402/14074582/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
@@ -2240,68 +2283,36 @@
       "day": 3,
       "date": "2026-11-16",
       "time": "18:10",
-      "order": 41,
+      "order": 42,
       "plans": [
         {
           "k": "A",
-          "icon": "🍣",
-          "title": "晚餐｜Sushi Izakaya Umifuku Honten",
-          "head": "首選：114 席的壽司居酒屋，席數最多",
+          "icon": "🐟",
+          "title": "晚餐｜大船海鮮食堂 魚福",
+          "head": "海鮮定食，有生的也有熟的，站前 40 秒",
           "pts": [
             {
-              "label": "🍣 Sushi Izakaya Umifuku Honten",
-              "query": "Sushi Izakaya Umifuku Honten",
-              "lat": 35.35263751885058,
-              "lon": 139.5336338512285,
-              "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140401/14005616/dtlmap/",
+              "label": "大船海鮮食堂 魚福",
+              "query": "大船海鮮食堂 魚福",
+              "lat": 35.35242602885015,
+              "lon": 139.53183418122765,
+              "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140401/14083547/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
         },
         {
           "k": "B",
-          "icon": "🍶",
-          "title": "晚餐｜Shikouba",
-          "head": "56 席，有個室",
+          "icon": "🍱",
+          "title": "晚餐｜嗜好場 大船",
+          "head": "和食，有包廂，9 人可以坐同一間",
           "pts": [
             {
-              "label": "Shikouba（食べログ英文站名稱）",
-              "query": "Shikouba",
+              "label": "嗜好場 大船",
+              "query": "嗜好場 大船",
               "lat": 35.35391152884965,
               "lon": 139.53325761124165,
-              "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140401/14098556/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "C",
-          "icon": "🍣",
-          "title": "晚餐｜Sushi Sake Sakana Sugitama Oofuna",
-          "head": "57 席，含 20 席榻榻米",
-          "pts": [
-            {
-              "label": "Sushi Sake Sakana Sugitama Oofuna（食べログ英文站名稱）",
-              "query": "Sushi Sake Sakana Sugitama Oofuna",
-              "lat": 35.352319538850274,
-              "lon": 139.53205680122642,
-              "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140401/14080251/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "D",
-          "icon": "🍶",
-          "title": "晚餐｜Gashin Ofuna Honten",
-          "head": "48 席，6 人以上要聯絡店家",
-          "pts": [
-            {
-              "label": "Gashin Ofuna Honten（食べログ英文站名稱）",
-              "query": "Gashin Ofuna Honten",
-              "lat": 35.349974729241914,
-              "lon": 139.53280772309918,
-              "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140401/14052420/dtlmap/",
+              "osm": "食べログ地圖 https://tabelog.com/en/kanagawa/A1404/A140401/14098556/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
@@ -2313,7 +2324,7 @@
       "day": 4,
       "date": "2026-11-17",
       "time": "12:00",
-      "order": 49,
+      "order": 51,
       "who": "family",
       "plans": [
         {
@@ -2371,7 +2382,7 @@
       "day": 4,
       "date": "2026-11-17",
       "time": "12:20",
-      "order": 51,
+      "order": 53,
       "who": "solo",
       "plans": [
         {
@@ -2413,68 +2424,52 @@
       "day": 4,
       "date": "2026-11-17",
       "time": "18:30",
-      "order": 58,
+      "order": 60,
       "plans": [
         {
           "k": "A",
-          "icon": "🍽️",
-          "title": "晚餐｜Private room Kanbi Kyodo Shuko Aomoriya",
-          "head": "首選：西口的個室居酒屋，9 人開兩間包廂",
+          "icon": "🍱",
+          "title": "晚餐｜うなぎ屋吉川 池袋店",
+          "head": "玉子燒鰻魚飯；能不能帶小孩要先打電話",
           "pts": [
             {
-              "label": "Private room Kanbi Kyodo Shuko Aomoriya",
-              "query": "Private room Kanbi Kyodo Shuko Aomoriya",
-              "lat": 35.73180685354982,
-              "lon": 139.70917117737548,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13249813/dtlmap/",
+              "label": "うなぎ屋吉川 池袋店",
+              "query": "うなぎ屋吉川 池袋店",
+              "lat": 35.732196,
+              "lon": 139.713124,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13310864/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
         },
         {
           "k": "B",
-          "icon": "🥟",
-          "title": "晚餐｜Shin Chinmi",
-          "head": "西口的中華，60 席",
+          "icon": "🍢",
+          "title": "晚餐｜鳥貴族 池袋東口店",
+          "head": "烤雞串連鎖店，桌席 108 席，可訂位",
           "pts": [
             {
-              "label": "Shin Chinmi（食べログ英文站名稱）",
-              "query": "Shin Chinmi",
-              "lat": 35.73204218866578,
-              "lon": 139.7099994849372,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13062526/dtlmap/",
+              "label": "鳥貴族 池袋東口店",
+              "query": "鳥貴族 池袋東口店",
+              "lat": 35.7290919,
+              "lon": 139.7127468,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13138912/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
         },
         {
           "k": "C",
-          "icon": "🥟",
-          "title": "晚餐｜Jufukuro",
-          "head": "西口的中華，營業到 23:30",
+          "icon": "🍜",
+          "title": "晚餐｜鶏の穴",
+          "head": "雞白湯拉麵，21:00 就打烊",
           "pts": [
             {
-              "label": "Jufukuro（食べログ英文站名稱）",
-              "query": "Jufukuro",
-              "lat": 35.7320226378602,
-              "lon": 139.70930868377573,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13147894/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "D",
-          "icon": "🍺",
-          "title": "晚餐｜Sakaba Fukuro",
-          "head": "席數最多的大眾酒場",
-          "pts": [
-            {
-              "label": "Sakaba Fukuro（食べログ英文站名稱）",
-              "query": "Sakaba Fukuro",
-              "lat": 35.73016042866685,
-              "lon": 139.7096128849185,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13003957/dtlmap/",
+              "label": "鶏の穴",
+              "query": "鶏の穴",
+              "lat": 35.732601237861545,
+              "lon": 139.7147324837778,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13050789/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
@@ -2486,13 +2481,13 @@
       "day": 5,
       "date": "2026-11-18",
       "time": "11:30",
-      "order": 66,
+      "order": 69,
       "plans": [
         {
           "k": "A",
           "icon": "🥘",
           "title": "午餐｜ほうとう不動 河口湖駅前店",
-          "head": "首選：離河口湖駅最近（120 m），110 席",
+          "head": "河口湖的餺飥名店，站前 1 分",
           "pts": [
             {
               "label": "ほうとう不動 河口湖駅前店",
@@ -2506,32 +2501,16 @@
         },
         {
           "k": "B",
-          "icon": "🥘",
-          "title": "午餐｜甲州ほうとう小作 河口湖店",
-          "head": "250 席、有 4 間 10 人個室",
+          "icon": "🍛",
+          "title": "午餐｜HAO STAY KITCHEN",
+          "head": "丼飯、拉麵的食堂；資料很少，先打電話",
           "pts": [
             {
-              "label": "甲州ほうとう小作 河口湖店",
-              "query": "甲州ほうとう小作 河口湖店",
-              "lat": 35.495757238512304,
-              "lon": 138.75687233321864,
-              "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19000046/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "C",
-          "icon": "🥘",
-          "title": "午餐｜ほうとう蔵 歩成 河口湖店",
-          "head": "200 席、有隔板座位",
-          "pts": [
-            {
-              "label": "ほうとう蔵 歩成 河口湖店",
-              "query": "ほうとう蔵 歩成 河口湖店",
-              "lat": 35.49050361851689,
-              "lon": 138.76077696316284,
-              "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19010099/dtlmap/",
+              "label": "HAO STAY KITCHEN",
+              "query": "HAO STAY KITCHEN",
+              "lat": 35.50014631593675,
+              "lon": 138.7687130039588,
+              "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19012994/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
@@ -2543,7 +2522,7 @@
       "day": 5,
       "date": "2026-11-18",
       "time": "13:30",
-      "order": 68,
+      "order": 71,
       "plans": [
         {
           "k": "A",
@@ -2632,52 +2611,20 @@
       "day": 5,
       "date": "2026-11-18",
       "time": "18:30",
-      "order": 71,
+      "order": 74,
       "plans": [
         {
           "k": "A",
-          "icon": "🍢",
-          "title": "晚餐｜紅葉祭 公認飲食ブース・河口湖屋台村",
-          "head": "首選：就在紅葉祭會場，邊逛邊吃",
-          "pts": [
-            {
-              "label": "紅葉祭 公認飲食ブース・河口湖屋台村",
-              "query": "もみじ回廊 河口湖",
-              "lat": 35.5255857,
-              "lon": 138.7624404,
-              "osm": "Nominatim 查過並核對回傳地址（2026-11-07）",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "B",
           "icon": "🥘",
-          "title": "晚餐｜甲州ほうとう小作 河口湖店",
-          "head": "營業到 20:00，午餐沒選的話晚上吃",
+          "title": "晚餐｜もみじ亭 河口湖",
+          "head": "紅葉迴廊旁的餺飥、定食；幾點關門要先問",
           "pts": [
             {
-              "label": "甲州ほうとう小作 河口湖店",
-              "query": "甲州ほうとう小作 河口湖店",
-              "lat": 35.495757238512304,
-              "lon": 138.75687233321864,
-              "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19000046/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "C",
-          "icon": "🥘",
-          "title": "晚餐｜ほうとう蔵 歩成 河口湖店",
-          "head": "營業到 21:00，時間最寬鬆",
-          "pts": [
-            {
-              "label": "ほうとう蔵 歩成 河口湖店",
-              "query": "ほうとう蔵 歩成 河口湖店",
-              "lat": 35.49050361851689,
-              "lon": 138.76077696316284,
-              "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19010099/dtlmap/",
+              "label": "もみじ亭 河口湖",
+              "query": "もみじ亭 河口湖",
+              "lat": 35.52515798849574,
+              "lon": 138.763482753511,
+              "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19000183/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
@@ -2689,32 +2636,48 @@
       "day": 6,
       "date": "2026-11-19",
       "time": "12:05",
-      "order": 84,
+      "order": 87,
       "plans": [
         {
           "k": "A",
-          "icon": "☕",
-          "title": "午餐｜Oishi Park Café",
-          "head": "首選：大石公園內，營業到 16:45",
+          "icon": "🍕",
+          "title": "午餐｜BRAND NEW DAY COFFEE 富士河口湖",
+          "head": "披薩、炸物，大石公園旁的ハナテラス 2 樓",
           "pts": [
             {
-              "label": "Oishi Park Café",
-              "query": "Oishi Park Café",
-              "lat": 35.52272942849153,
-              "lon": 138.7454287434991,
-              "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19012609/dtlmap/",
+              "label": "BRAND NEW DAY COFFEE 富士河口湖",
+              "query": "BRAND NEW DAY COFFEE 富士河口湖",
+              "lat": 35.52306,
+              "lon": 138.744703,
+              "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19010432/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
         },
         {
           "k": "B",
-          "icon": "🥐",
-          "title": "午餐｜Lake Bake",
-          "head": "麵包咖啡廳，35 席，出發前要確認",
+          "icon": "🥘",
+          "title": "午餐｜紅梅や 河口湖大石公園店",
+          "head": "餺飥、鄉土料理、天婦羅，71 席，可以訂位",
           "pts": [
             {
-              "label": "Lake Bake（食べログ英文站名稱）",
+              "label": "紅梅や 河口湖大石公園店",
+              "query": "紅梅や 河口湖大石公園店",
+              "lat": 35.523584,
+              "lon": 138.745597,
+              "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19013700/dtlmap/（2026-11-13，家人餐廳清單）",
+              "geocodedQuery": "data/plan-coords.json"
+            }
+          ]
+        },
+        {
+          "k": "C",
+          "icon": "🥐",
+          "title": "午餐｜Lake Bake",
+          "head": "麵包百名店，買了外帶",
+          "pts": [
+            {
+              "label": "Lake Bake",
               "query": "Lake Bake",
               "lat": 35.523953458491405,
               "lon": 138.74746452351005,
@@ -2722,19 +2685,60 @@
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "d6-2015",
+      "day": 6,
+      "date": "2026-11-19",
+      "time": "20:15",
+      "order": 95,
+      "plans": [
+        {
+          "k": "A",
+          "icon": "🍜",
+          "title": "晚餐｜ひもかわうどん桐生 池袋店",
+          "head": "寬扁烏龍麵、天婦羅；20:30 最後點餐",
+          "pts": [
+            {
+              "label": "ひもかわうどん桐生 池袋店",
+              "query": "ひもかわうどん桐生 池袋店",
+              "lat": 35.724745,
+              "lon": 139.714767,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13288929/dtlmap/（2026-11-13，家人餐廳清單）",
+              "geocodedQuery": "data/plan-coords.json"
+            }
+          ]
+        },
+        {
+          "k": "B",
+          "icon": "🍜",
+          "title": "晚餐｜武蔵野うどん うちたて家",
+          "head": "烏龍麵百名店；週四有沒有開要先問",
+          "pts": [
+            {
+              "label": "武蔵野うどん うちたて家",
+              "query": "武蔵野うどん うちたて家",
+              "lat": 35.726157,
+              "lon": 139.712664,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13003889/dtlmap/（2026-11-13，家人餐廳清單）",
+              "geocodedQuery": "data/plan-coords.json"
+            }
+          ]
         },
         {
           "k": "C",
-          "icon": "☕",
-          "title": "午餐｜CAFE \"With a view of Mt Fuji\"",
-          "head": "河口湖自然生活館 1F 附設喫茶（資料不全）",
+          "icon": "🍜",
+          "title": "晚餐｜一蘭 池袋店",
+          "head": "豚骨拉麵，一人一格的吧台，開到 22:45",
           "pts": [
             {
-              "label": "CAFE \"With a view of Mt Fuji\"（食べログ英文站名稱）",
-              "query": "河口湖自然生活館 1F カフェ",
-              "lat": 35.52281305849154,
-              "lon": 138.7456388334998,
-              "osm": "食べログ地圖 https://tabelog.com/en/yamanashi/A1903/A190303/19003768/dtlmap/",
+              "label": "一蘭 池袋店",
+              "query": "一蘭 池袋店",
+              "lat": 35.73251982866681,
+              "lon": 139.71420350493912,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1305/A130501/13019994/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
@@ -2746,7 +2750,7 @@
       "day": 7,
       "date": "2026-11-20",
       "time": "12:45",
-      "order": 100,
+      "order": 104,
       "plans": [
         {
           "k": "A",
@@ -2831,141 +2835,11 @@
       ]
     },
     {
-      "id": "d7-1800",
-      "day": 7,
-      "date": "2026-11-20",
-      "time": "18:00",
-      "order": 101,
-      "plans": [
-        {
-          "k": "A",
-          "icon": "🍲",
-          "title": "晚餐｜Edo Niku Kappou Sasaya Asakusa",
-          "head": "原訂行程：榻榻米宴會廳吃江戸肉割烹",
-          "pts": [
-            {
-              "label": "Edo Niku Kappou Sasaya Asakusa",
-              "query": "Edo Niku Kappou Sasaya Asakusa",
-              "lat": 35.71242305870602,
-              "lon": 139.7972330346779,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131102/13316569/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "B",
-          "icon": "🥞",
-          "title": "晚餐｜Tsukushi",
-          "head": "もんじゃ，40 席",
-          "pts": [
-            {
-              "label": "Tsukushi（食べログ英文站名稱）",
-              "query": "Tsukushi",
-              "lat": 35.71337787870444,
-              "lon": 139.7941966746897,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131102/13010498/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "C",
-          "icon": "🥞",
-          "title": "晚餐｜Asakusa Monja Monro",
-          "head": "もんじゃ，83 席",
-          "pts": [
-            {
-              "label": "Asakusa Monja Monro（食べログ英文站名稱）",
-              "query": "Asakusa Monja Monro",
-              "lat": 35.712983108704655,
-              "lon": 139.7940694246858,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131102/13300191/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "d8-1200",
-      "day": 8,
-      "date": "2026-11-21",
-      "time": "12:00",
-      "order": 109,
-      "plans": [
-        {
-          "k": "A",
-          "icon": "🍜",
-          "title": "午餐｜Komatsu An Sohonke Komagome honten",
-          "head": "原訂行程：駒込駅旁的蕎麥麵，有包廂",
-          "pts": [
-            {
-              "label": "Komatsu An Sohonke Komagome honten",
-              "query": "Komatsu An Sohonke Komagome honten",
-              "lat": 35.73531425867542,
-              "lon": 139.74682080494446,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1323/A132301/13012329/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "B",
-          "icon": "🍱",
-          "title": "午餐｜Unagi Kappo Izuei Honten",
-          "head": "上野公園旁的鰻魚，270 席",
-          "pts": [
-            {
-              "label": "Unagi Kappo Izuei Honten（食べログ英文站名稱）",
-              "query": "Unagi Kappo Izuei Honten",
-              "lat": 35.709678768699945,
-              "lon": 139.7727002946674,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13003586/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "C",
-          "icon": "🍙",
-          "title": "午餐｜Ponta Honke",
-          "head": "上野的炸豬排，食べログ 3.77",
-          "pts": [
-            {
-              "label": "Ponta Honke（食べログ英文站名稱）",
-              "query": "Ponta Honke",
-              "lat": 35.70635113789679,
-              "lon": 139.7730122834718,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13003587/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "D",
-          "icon": "🍜",
-          "title": "午餐｜Isen Honten",
-          "head": "湯島的炸豬排，50 席",
-          "pts": [
-            {
-              "label": "Isen Honten（食べログ英文站名稱）",
-              "query": "Isen Honten",
-              "lat": 35.707478537895824,
-              "lon": 139.7722048834837,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13003619/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "d8-1415",
       "day": 8,
       "date": "2026-11-21",
       "time": "14:15",
-      "order": 112,
+      "order": 117,
       "plans": [
         {
           "k": "A",
@@ -3022,20 +2896,20 @@
       "day": 8,
       "date": "2026-11-21",
       "time": "18:00",
-      "order": 114,
+      "order": 119,
       "plans": [
         {
           "k": "A",
-          "icon": "🍽️",
-          "title": "晚餐｜Yoshiike Shokudo",
-          "head": "原訂行程：御徒町吉池本店 9F，緊鄰アメ横",
+          "icon": "🥩",
+          "title": "晚餐｜焼肉 房家ホルモン館 上野六丁目店",
+          "head": "一頭牛燒肉，線上可訂 9 人",
           "pts": [
             {
-              "label": "Yoshiike Shokudo",
-              "query": "Yoshiike Shokudo",
-              "lat": 35.70740736870189,
-              "lon": 139.77424226464336,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13167969/dtlmap/",
+              "label": "焼肉 房家ホルモン館 上野六丁目店",
+              "query": "焼肉 房家ホルモン館 上野六丁目店",
+              "lat": 35.708820737896204,
+              "lon": 139.77614218349453,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13186440/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
@@ -3043,47 +2917,31 @@
         {
           "k": "B",
           "icon": "🥩",
-          "title": "晚餐｜Yakiniku Ueno Taishoen Honten",
-          "head": "燒肉，88 席，個室 2～30 人",
+          "title": "晚餐｜焼肉ここから 上野店",
+          "head": "燒肉，歡迎嬰幼兒，開到凌晨",
           "pts": [
             {
-              "label": "Yakiniku Ueno Taishoen Honten（食べログ英文站名稱）",
-              "query": "Yakiniku Ueno Taishoen Honten",
-              "lat": 35.70903812870027,
-              "lon": 139.7724305146611,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13003600/dtlmap/",
+              "label": "焼肉ここから 上野店",
+              "query": "焼肉ここから 上野店",
+              "lat": 35.70880353789502,
+              "lon": 139.77233738349702,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13227583/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
         },
         {
           "k": "C",
-          "icon": "🐟",
-          "title": "晚餐｜Nodoguro no Akubi Okachimachi ten",
-          "head": "居酒屋，100 席，個室 2～30 人以上",
+          "icon": "🥩",
+          "title": "晚餐｜叙々苑 上野マルイ店",
+          "head": "高級燒肉，上野丸井 9 樓",
           "pts": [
             {
-              "label": "Nodoguro no Akubi Okachimachi ten（食べログ英文站名稱）",
-              "query": "Nodoguro no Akubi Okachimachi ten",
-              "lat": 35.707368337982516,
-              "lon": 139.77559463286653,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13266427/dtlmap/",
-              "geocodedQuery": "data/plan-coords.json"
-            }
-          ]
-        },
-        {
-          "k": "D",
-          "icon": "🦑",
-          "title": "晚餐｜Ueno Ika Center",
-          "head": "FUNDES 上野 7F，100 席",
-          "pts": [
-            {
-              "label": "Ueno Ika Center（食べログ英文站名稱）",
-              "query": "Ueno Ika Center",
-              "lat": 35.71262141869961,
-              "lon": 139.77751851469372,
-              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13211396/dtlmap/",
+              "label": "叙々苑 上野マルイ店",
+              "query": "叙々苑 上野マルイ店",
+              "lat": 35.71124715869998,
+              "lon": 139.77592504468097,
+              "osm": "食べログ地圖 https://tabelog.com/en/tokyo/A1311/A131101/13030661/dtlmap/（2026-11-13，家人餐廳清單）",
               "geocodedQuery": "data/plan-coords.json"
             }
           ]
@@ -3095,7 +2953,7 @@
       "day": 9,
       "date": "2026-11-22",
       "time": "09:55",
-      "order": 120,
+      "order": 127,
       "who": "family",
       "plans": [
         {
