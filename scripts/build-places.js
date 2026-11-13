@@ -52,6 +52,7 @@ const FIXED_COORDS = {
   },
   '東横INN富士河口湖大橋': { lat: 35.504341, lon: 138.760208, osm: '國土地理院地址檢索 船津294（2026-11-07）', geocodedQuery: 'GSI 山梨県南都留郡富士河口湖町船津294' },
   '富士五湖汽船 船津浜乗り場': { lat: 35.503071, lon: 138.767746, osm: '國土地理院地址檢索 船津4034（2026-11-07）', geocodedQuery: 'GSI 山梨県南都留郡富士河口湖町船津4034' },
+  '河口湖 音楽と森の美術館': { lat: 35.522194, lon: 138.768906, osm: '國土地理院地址檢索（2026-11-13）河口 3077 番地（官方地址 河口 3077-20，山梨縣觀光網）', geocodedQuery: 'GSI 山梨県南都留郡富士河口湖町河口3077-20' },
   '東京都豊島区南池袋1-26-9': { lat: 35.729088, lon: 139.713593, osm: '國土地理院地址檢索（2026-11-13），Radical Storage 池袋 推定地址', geocodedQuery: 'GSI 東京都豊島区南池袋1-26-9' },
   '東京都台東区千束3-17-4': { lat: 35.721958, lon: 139.791306, osm: '國土地理院地址檢索（2026-11-07）', geocodedQuery: 'GSI 東京都台東区千束3-17-4' },
   '牛たんの檸檬 新宿総本店': { lat: 35.696178, lon: 139.697968, osm: '國土地理院地址檢索 西新宿7-16-12（2026-11-07）', geocodedQuery: 'GSI 東京都新宿区西新宿7-16-12' },
@@ -105,7 +106,27 @@ function extract() {
   let order = 0;       // 行程表上的先後順序，地圖同一時間的地點依此排序
   let hotel = null;    // 前一晚住的飯店（最近一張「入住｜」卡片）
 
-  const sections = html.split(/<section class="day-section[^"]*" id="day-/).slice(1);
+  /* 依天氣二選一的分頁 .branch（2026-11-13 起 Day 5、6 在主行程表）：地圖只畫預設那一邊（.branch-panel.is-current），
+     其他分頁整塊拿掉；用 <div／</div> 計數找出分頁的結尾，巢狀的分頁一起處理 */
+  const dropPanels = (h) => {
+    const re = /<div class="branch-panel"(?![^>]*is-current)[^>]*>/g;
+    let m;
+    while ((m = re.exec(h))) {
+      let depth = 0, end = -1;
+      const tag = /<div\b|<\/div>/g;
+      tag.lastIndex = m.index;
+      let t;
+      while ((t = tag.exec(h))) {
+        depth += t[0] === '<div' ? 1 : -1;
+        if (depth === 0) { end = tag.lastIndex; break; }
+      }
+      if (end < 0) throw new Error('.branch-panel 的 <div> 沒有對上');
+      h = h.slice(0, m.index) + h.slice(end);
+      re.lastIndex = m.index;
+    }
+    return h;
+  };
+  const sections = dropPanels(html).split(/<section class="day-section[^"]*" id="day-/).slice(1);
 
   for (const sec of sections) {
     const day = parseInt(sec, 10);
@@ -181,7 +202,11 @@ function extract() {
         if (who) places[places.length - 1].who = who;
         if (/^入住｜/.test(title)) hotel = { name: title.replace(/^入住｜/, ''), query };
       }
-      if (isFlex) slots.push(extractSlot(item, Object.assign({ id: slot, day, date, time, order: itemOrder }, who ? { who } : {})));
+      if (isFlex) {
+        const sl = extractSlot(item, Object.assign({ id: slot, day, date, time, order: itemOrder }, who ? { who } : {}));
+        // 沒有方案的彈性卡（例如「下午待排」「晚餐未定」）沒有地點，不放進 slots，地圖頁才不會讀到空的 plans
+        if (sl.plans.length) slots.push(sl);
+      }
     }
 
     // --- 只出現在「今日相關地圖」的地點 ---
