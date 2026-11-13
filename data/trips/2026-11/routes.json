@@ -892,7 +892,8 @@
         "to": "17:50",
         "legs": [
           {
-            "mode": "walk"
+            "mode": "car",
+            "label": "東横INN 接駁車"
           }
         ]
       },
