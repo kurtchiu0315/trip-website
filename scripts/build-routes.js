@@ -585,8 +585,8 @@ function pickLegs(def, fromK, toK) {
             }
           }
         }
-        // 只有「可以選沒有地點的方案」的彈性行程能被跨過
-        if (!J.variants.some((v) => !v.pts.length)) break;
+        // 只有「可以選沒有地點的方案」的彈性行程能被跨過；沒有方案的彈性卡（例如「下午待排」）沒有地點，也跨過
+        if (J.variants.length && !J.variants.some((v) => !v.pts.length)) break;
       }
     }
     for (const g of gaps) {
