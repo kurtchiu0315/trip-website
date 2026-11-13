@@ -446,6 +446,7 @@ Nominatim 對少數地點解析不佳，腳本內 `QUERY_OVERRIDE` 可指定替�
   - 內容一樣只能引用已查證的資料
   - 列印時由 `beforeprint` 全部展開、`afterprint` 還原；`copyDay()` 會在該項下面多一行「└ 計畫B｜…」
   - 這趟的用法：（Day 7 午餐已訂位，原本的計畫B 已拿掉）
+- **交通卡標題的站名加淡色底 `.stn`**（使用者 2026-11-13）：itinerary.js 載入時自動處理 `.timeline-item.is-move .tl-title`，把「路線｜A 14:12 → B 約 14:28」裡「→」隔開的每一段拆成站名＋時間或備註，站名包成 `<span class="stn">`；路線名（結尾是 線、ライン、号、特急、Skyliner）不包，「新宿 10 番線」只包「新宿」，標題後面的 `.ja-name` 原樣保留。HTML 不用手動標；寫新交通卡時標題照「路線｜起站 時間 → 迄站 時間」的格式就會套用。樣式在 itinerary.css（淡色底、圓角、不加框，深色模式用 `--chip-bg`）。只做標題，內文的站名不標。
 - **導遊型交通指引**：交通卡片裡「導遊型交通指引：」＋ `<ol>`，每一步一個 `<li>`
   - **彈性方案也要有自己的指引**：`.plan-body` 裡的 `.plan-route`（`.plan-route-title`「🧭 導遊型交通指引」＋ `<ol>`，
     只有一步時用 `<p class="plan-route-step">`，補充的另一種走法放 `.plan-route-note`），寫「從前一站怎麼到這個方案」。

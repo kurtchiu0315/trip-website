@@ -600,6 +600,34 @@
       br.querySelectorAll(':scope > .branch-panel').forEach(function (pn) { pn.classList.toggle('is-current', pn.dataset.b === t.dataset.b); });
     });
 
+    /* ---------- 交通卡標題的站名加淡色底 ----------
+       使用者 2026-11-13：交通卡標題「路線｜A 14:12 → B 約 14:28」裡的起站、迄站要一眼看得出來。
+       載入時把「→」隔開的每一段拆成「站名＋後面的時間或備註」，站名包成 .stn；
+       路線名（○○線、ライン、号）不包。標題裡有子元素（.ja-name）的不動。copyDay() 讀 textContent，不受影響 */
+    document.querySelectorAll('.timeline-item.is-move .tl-title').forEach(function (el) {
+      /* 標題後面可以接 .ja-name；只處理最前面的文字，子元素原樣留著 */
+      var first = el.firstChild;
+      if (!first || first.nodeType !== 3) return;
+      if ([].some.call(el.children, function (c) { return !c.classList.contains('ja-name'); })) return;
+      var text = first.textContent, bar = text.indexOf('｜');
+      if (bar < 0 || text.indexOf('→') < 0) return;
+      var frag = document.createDocumentFragment();
+      frag.appendChild(document.createTextNode(text.slice(0, bar + 1)));
+      text.slice(bar + 1).split('→').forEach(function (seg, i) {
+        if (i) frag.appendChild(document.createTextNode(' → '));
+        seg = seg.trim();
+        var m = seg.search(/\s*(約\s*)?\d{1,2}:\d{2}|\s+\d+\s*番線|（(?!\d+）)|，/);
+        var name = (m < 0 ? seg : seg.slice(0, m)).trim(), rest = m < 0 ? '' : seg.slice(m);
+        if (!name || /(線|ライン|号|特急|Skyliner)$/.test(name)) { frag.appendChild(document.createTextNode(seg)); return; }
+        var sp = document.createElement('span');
+        sp.className = 'stn';
+        sp.textContent = name;
+        frag.appendChild(sp);
+        if (rest) frag.appendChild(document.createTextNode(rest));
+      });
+      el.replaceChild(frag, first);
+    });
+
     /* ---------- 主行程的計畫B ---------- */
     /* 收合的 <details> 列印時不會印出內容：印之前全部展開，印完還原 */
     window.addEventListener('beforeprint', function () {

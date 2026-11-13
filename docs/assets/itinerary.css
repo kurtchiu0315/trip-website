@@ -1717,6 +1717,17 @@ body.is-simple .branch-panel .s-item:last-child { border-bottom: 0; }
   .branch-panel { display: block !important; margin-bottom: 10px; }
 }
 
+/* === 交通卡標題的站名：淡色底小標籤（itinerary.js 自動包 .stn） === */
+.tl-title .stn {
+  margin: 0 2px;
+  padding: 1px 5px;
+  border-radius: 6px;
+  background: var(--chip-bg, var(--surface-alt));
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+@media print { .tl-title .stn { background: none; } }
+
 /* === 簡化行程表：只作用在 body.is-simple === */
 body.is-simple { font-size: 19px; line-height: 1.6; }
 body.is-simple .day-nav button { font-size: 16px; }

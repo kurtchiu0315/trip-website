@@ -18,7 +18,7 @@
  * 行程表的樣式與程式在共用的 docs/assets/，也要預先快取，離線才排得出版面。
  */
 const TRIP_ID = '2026-11';
-const CACHE = 'trip-' + TRIP_ID + '-v12';
+const CACHE = 'trip-' + TRIP_ID + '-v13';
 const LEGACY = null;   // 這趟沒有舊名稱的快取
 
 const PRECACHE = [
