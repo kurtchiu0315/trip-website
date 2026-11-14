@@ -434,7 +434,7 @@
     "4": [
       {
         "from": "start",
-        "to": "07:40",
+        "to": "08:50",
         "legs": [
           {
             "mode": "walk"
@@ -442,179 +442,82 @@
         ]
       },
       {
-        "from": "07:40",
-        "to": "09:45",
+        "from": "08:50",
+        "to": "09:30",
         "legs": [
-          {
-            "mode": "rail",
-            "relation": 1972960,
-            "label": "JR 山手線 內回り",
-            "board": "池袋",
-            "alight": "新宿"
-          },
-          {
-            "mode": "rail",
-            "relation": 11271039,
-            "label": "京王線",
-            "board": "新宿",
-            "alight": "北野"
-          },
-          {
-            "mode": "rail",
-            "relation": 14306815,
-            "label": "京王高尾線",
-            "board": "北野",
-            "alight": "高尾山口"
-          }
-        ]
-      },
-      {
-        "from": "09:45",
-        "to": "09:50",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "09:50",
-        "to": "10:05",
-        "legs": [
-          {
-            "mode": "rail",
-            "relation": 10939593,
-            "label": "高尾山ケーブルカー",
-            "board": "清滝",
-            "alight": "高尾山"
-          }
-        ]
-      },
-      {
-        "from": "10:05",
-        "to": "11:45",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "11:45",
-        "to": "12:20",
-        "who": "solo",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "10:05",
-        "to": "12:00",
-        "who": "family",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ],
-        "cases": [
-          {
-            "to": [
-              "C"
-            ],
-            "legs": [
-              {
-                "mode": "rail",
-                "relation": 10939593,
-                "label": "高尾山ケーブルカー",
-                "board": "高尾山",
-                "alight": "清滝"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "from": "12:00",
-        "to": "14:00",
-        "who": "family",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "12:20",
-        "to": "14:00",
-        "who": "solo",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "14:00",
-        "to": "15:00",
-        "legs": [
-          {
-            "mode": "rail",
-            "relation": 10939558,
-            "label": "高尾山ケーブルカー",
-            "board": "高尾山",
-            "alight": "清滝"
-          }
-        ]
-      },
-      {
-        "from": "15:00",
-        "to": "16:10",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "16:10",
-        "to": "18:30",
-        "legs": [
-          {
-            "mode": "rail",
-            "relation": 14306815,
-            "label": "京王高尾線",
-            "board": "高尾山口",
-            "alight": "北野"
-          },
-          {
-            "mode": "rail",
-            "relation": 11271039,
-            "label": "京王線",
-            "board": "北野",
-            "alight": "新宿"
-          },
           {
             "mode": "rail",
             "relation": 1972920,
             "label": "JR 山手線 外回り",
-            "board": "新宿",
+            "board": "池袋",
+            "alight": "駒込"
+          }
+        ]
+      },
+      {
+        "from": "09:30",
+        "to": "13:30",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1972920,
+            "label": "JR 山手線 外回り",
+            "board": "駒込",
+            "alight": "上野"
+          }
+        ]
+      },
+      {
+        "from": "13:30",
+        "to": "13:50",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "13:50",
+        "to": "14:15",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "14:15",
+        "to": "16:45",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "16:45",
+        "to": "17:50",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "17:50",
+        "to": "18:30",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 1972960,
+            "label": "JR 山手線 内回り",
+            "board": "上野",
             "alight": "池袋"
           }
         ]
       },
       {
         "from": "18:30",
-        "to": "20:00",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "20:00",
         "to": "20:30",
         "legs": [
           {
@@ -1012,7 +915,7 @@
     "8": [
       {
         "from": "start",
-        "to": "08:50",
+        "to": "07:05",
         "legs": [
           {
             "mode": "walk"
@@ -1020,8 +923,161 @@
         ]
       },
       {
-        "from": "08:50",
-        "to": "09:30",
+        "from": "07:05",
+        "to": "09:10",
+        "legs": [
+          {
+            "mode": "subway",
+            "relation": 8026155,
+            "label": "地下鐵 日比谷線",
+            "board": "入谷",
+            "alight": "秋葉原"
+          },
+          {
+            "mode": "rail",
+            "relation": 3351488,
+            "label": "JR 中央・総武線各停",
+            "board": "秋葉原",
+            "alight": "新宿"
+          },
+          {
+            "mode": "rail",
+            "relation": 11271039,
+            "label": "京王線",
+            "board": "新宿",
+            "alight": "北野"
+          },
+          {
+            "mode": "rail",
+            "relation": 14306815,
+            "label": "京王高尾線",
+            "board": "北野",
+            "alight": "高尾山口"
+          }
+        ]
+      },
+      {
+        "from": "09:10",
+        "to": "09:20",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ]
+      },
+      {
+        "from": "09:20",
+        "to": "09:40",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 10939593,
+            "label": "高尾山ケーブルカー",
+            "board": "清滝",
+            "alight": "高尾山"
+          }
+        ]
+      },
+      {
+        "from": "09:40",
+        "to": "11:45",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ],
+        "cases": [
+          {
+            "to": [
+              "C"
+            ],
+            "legs": [
+              {
+                "mode": "rail",
+                "relation": 10939593,
+                "label": "高尾山ケーブルカー",
+                "board": "高尾山",
+                "alight": "清滝"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "from": "11:45",
+        "to": "13:30",
+        "legs": [
+          {
+            "mode": "walk"
+          }
+        ],
+        "cases": [
+          {
+            "from": [
+              "C"
+            ],
+            "legs": [
+              {
+                "mode": "rail",
+                "relation": 10939593,
+                "label": "高尾山ケーブルカー",
+                "board": "清滝",
+                "alight": "高尾山"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "from": "13:30",
+        "to": "14:30",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 10939593,
+            "label": "高尾山ケーブルカー",
+            "board": "高尾山",
+            "alight": "清滝"
+          }
+        ]
+      },
+      {
+        "from": "14:30",
+        "to": "16:20",
+        "legs": [
+          {
+            "mode": "rail",
+            "relation": 14306815,
+            "label": "京王高尾線",
+            "board": "高尾山口",
+            "alight": "北野"
+          },
+          {
+            "mode": "rail",
+            "relation": 11271039,
+            "label": "京王線",
+            "board": "北野",
+            "alight": "新宿"
+          },
+          {
+            "mode": "rail",
+            "relation": 10312043,
+            "label": "JR 中央・総武線各停",
+            "board": "新宿",
+            "alight": "秋葉原"
+          },
+          {
+            "mode": "subway",
+            "relation": 443272,
+            "label": "地下鐵 日比谷線",
+            "board": "秋葉原",
+            "alight": "入谷"
+          }
+        ]
+      },
+      {
+        "from": "16:20",
+        "to": "18:00",
         "legs": [
           {
             "mode": "subway",
@@ -1029,49 +1085,6 @@
             "label": "地下鐵 日比谷線",
             "board": "入谷",
             "alight": "上野"
-          },
-          {
-            "mode": "rail",
-            "relation": 1972960,
-            "label": "JR 山手線 內回り",
-            "board": "上野",
-            "alight": "駒込"
-          }
-        ]
-      },
-      {
-        "from": "13:30",
-        "to": "13:50",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "13:50",
-        "to": "14:15",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "14:15",
-        "to": "16:45",
-        "legs": [
-          {
-            "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "16:45",
-        "to": "18:00",
-        "legs": [
-          {
-            "mode": "walk"
           }
         ]
       },
@@ -1081,19 +1094,6 @@
         "legs": [
           {
             "mode": "walk"
-          }
-        ]
-      },
-      {
-        "from": "09:30",
-        "to": "13:30",
-        "legs": [
-          {
-            "mode": "rail",
-            "relation": 1972920,
-            "label": "JR 山手線 外回り",
-            "board": "駒込",
-            "alight": "上野"
           }
         ]
       }
